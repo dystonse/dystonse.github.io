@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll! TEST"
+title:  "Welcome to Jekyll! TEST UMLAUT: Ä"
 date:   2020-03-12 02:02:34 +0100
 categories: jekyll update
 ---
