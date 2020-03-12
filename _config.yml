@@ -17,7 +17,7 @@ title: Dystonse Blog
 email: mail@dystonse.org
 description: >- # this means to ignore newlines until "baseurl:"
   Hier schreiben Lena und Kirstin über ÖPNV, Open Data, Programmierung und alles
-  andere, was bei der Arbeit an dystonse so anfällt.
+  andere, was bei der Arbeit an dystonse so anfällt. Eine zufällig Zahl: 4
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dystonse
