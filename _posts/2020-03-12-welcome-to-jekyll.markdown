@@ -1,25 +1,18 @@
 ---
 layout: post
-title:  "Welcome to Jekyll! TEST UMLAUT: Ä"
+title:  "Warum ein Dystonse-Blog?"
 date:   2020-03-12 02:02:34 +0100
-categories: jekyll update
+categories: meta
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Wir werden zwar hauptsächlich fürs Programmieren bezahlt, aber nicht nur die Prinzipien von Open Source und Open Data verpflichten uns zur Transparenz.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Auch die Förderbedingungen sehen vor, dass wir unsere Erkenntnisse mit der Welt teilen. Da ist zwar primär von Veröffentlichungen in wissenschaftlichen Magazinen (Open Access!) die Rede, aber Blog Posts erfüllen natürlich einen ähnlichen Zweck.
 
-Jekyll also offers powerful support for code snippets:
+In erster Linie testen wir gerade die Technik, mit der wir Blogbeiträge online bringen.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Dieser Blog wird mit Jekyll auf GitHub Pages betrieben, was ja eigentlich ganz einfach sein soll. Im Moment gibt es jedoch eine Menge technischer Probleme:
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+ * Fehler, die wir selbst machen, weil wir die Dokumentation falsch verstanden haben und uns Vorwissen mit Ruby fehlt _(und mal ehrlich: sich jetzt besonders tiefgehend mit Ruby und der Versionierung von Bundles auseinander zu setzen, nur um ein angeblich extrem einfaches Blogsystem ans Laufen zu bringen, wäre gerade zu viel)_
+ * Fehler, die außerhalb jeder Kontrolle liegen, da das Deployment gerade völlig zufällig fehlschlägt ([hier](https://github.com/dystonse/dystonse.github.io/commit/b3949bb7189108129afb8698b7552835e30f7af3) ein beispielhafter Commit, der aus einer komplett kaputten Seite eine funktionierende Seite macht.)
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Bleibt also nicht übrig, als abzuwarten, bis GitHub seine Infrastruktur wieder zuverlässig im Griff hat...
