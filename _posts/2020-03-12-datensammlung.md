@@ -38,7 +38,7 @@ Die Vielfalt der Formate ist aber gar nicht das einzige Problem, vermutlich auch
 ## Referenzierungen
 Viel größere Schwierigkeiten bereiten die Referenzierungen zwischen den unterschiedlichen Datenquellen. Ein Beispiel:
 
-> Erhalten wir z.B. Echtzeitdaten für die Fahrt `125413240` auf der Route `34518_2`, das gerade pünktlich auf dem Weg zum Halt `0` ist, dann müssen wir aus den statischen Daten abfragen, welche konkrete Fahrt, Route und Haltestelle damit gemeint sind. 
+> Erhalten wir z.B. Echtzeitdaten für die Fahrt `125413240` auf der Route `34518_2`, deren Fahrzeug gerade pünktlich auf dem Weg zum Halt `0` ist, dann müssen wir aus den statischen Daten abfragen, welche konkrete Fahrt, Route und Haltestelle damit gemeint sind. 
 
 Wenn diese Daten aus einer anderen Quelle kommen, ist es alles andere als selbstverständlich, dass dort die gleichen IDs genutzt werden. Die Zuordnung kann trivial sein, oder kompliziert. Vielleicht auch unzuverlässig oder schlichtweg unmöglich. Und was davon der Fall ist, wissen wir erst, nachdem wir es ausprobiert haben.
 
@@ -71,3 +71,15 @@ Irgendwo müssen wir ja anfangen, nur wo? Für die Auswahl eines ersten Testgebi
  * Referenzierbarkeit zwischen Echtzeit- und Fahrplandaten
  * Unsere Ortskenntnis
  * Unsere Möglichkeit, für Testfahrten ins Testgebiet zu reisen
+
+Kurzfristig brauchen wir erstmal eine einzelne Datenquelle, mit der wir überhaupt arbeiten können.
+
+Mittelfristig brauchen wir aber eine Architektur, die mit allen Kombinationen aus Format und Datenmodell arbeiten kann.
+
+Langfristig werden sich die Probleme lösen, da auch Echtzeitdaten flächendeckend und einheitlich formatiert frei verfügbar werden sollen _(vermutlich ab dem Jahr 2024, aber wo war doch gleich die Quelle für diese Zeitangabe?)_. 
+
+# Einfach mal anfangen
+Von den uns bekannten Datenquellen haben die Daten des _Verkehrsverbund Bremen Niedersachsen_ unsere oben genannten Anforderungen am besten erfüllt. Seit dem Abend des 12.03.2020 sammeln wir jene Echtzeitdaten im 2-Minuten-Takt, und wenn das nachfolgende Badge nichts gegenteiliges sagt, dann sammeln wir noch heute…
+
+![badge](https://healthchecks.io/badge/5441c6f8-5c30-4c41-826d-02327f/s_7xl3wR/record-vbn-realtime.svg)
+
