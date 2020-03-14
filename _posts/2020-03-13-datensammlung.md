@@ -58,6 +58,9 @@ Apropos Ungenauigkeit: oft werden die Daten ursprünglich in einer Form erfasst,
 
 Es wäre naheliegend für uns (wenn auch sehr aufwändig), für alle vier Datentypen Umrechnungen in alle drei anderen zu entwickeln (also 12 Konvertierungen) und deren Genauigkeit zu evaluieren. Dazu bräuchten wir idealerweise Testdaten, die bereits alle vier Datentypen enthalten. Leider ist uns kein Datensatz bekannt, der mehr als zwei davon abdeckt. Viel Aufwand für ein Vorhaben, das sich dann nichtmal evaluieren lässt? Lieber nicht.
 
+# Weitere Anforderungen an offene Daten
+In den letzten Absätzen ging es vorallem um sehr technische Problemstellungen. Auch rechtlich / organisatorisch ist die Lage komplex. Eigentlich wurde alles wichtige dazu schon vor 5 Jahren in der [EVU-Open-Data-FAQ](https://github.com/UlmApi/beyondtransit/blob/gh-pages/evu-daten-faq.md) gesagt - absolute Leseempfehlung!
+
 # Was tun?
 Irgendwo müssen wir ja anfangen, nur wo? Für die Auswahl eines ersten Testgebiets sind folgende Faktoren relevant:
  
