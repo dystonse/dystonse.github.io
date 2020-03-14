@@ -27,7 +27,7 @@ Somit ist in den ersten Wochen unserer Projektförderung ein beachtlicher Teil u
  * Mäßig strukturiert: [Tabellarischer Vergleich der Datenquellen](https://github.com/dystonse/dystonse/blob/master/project-status/Datenquellen.md#vergleich-von-echtzeit-datenquellen)
  * Strukturiert: [Metadaten als JSON](https://github.com/dystonse/dystonse/blob/master/project-status/datasources.json)
 
-Nach unserem aktuellen Wissen gibt es noch keine vergleichbare Übersicht über ÖPV-Echtzeitdaten. Vermutlich kann sie auch für andere Open Data Projekte nützlich sein.
+Nach unserem aktuellen Wissen gibt es noch keine vergleichbare Übersicht über ÖPV-Echtzeitdaten (es gibt eine [Liste der Listen](https://git.digitaltransport4africa.org/learn/tools/awesome-transit#3rd-party-gtfs-url-directories) aber die Infos über Echtzeitdaten sind da sehr begrenzt). Vermutlich kann unsere kleine, Deutschland-zentrierte Liste also auch für andere Open Data Projekte nützlich sein.
 
 # Uneinheitliche Daten auf allen drei Ebenen
 ## Formate
@@ -54,7 +54,7 @@ Die ersten drei Fälle sind offensichtlich ähnlich - und falls das Fahrzeug sic
 
 Natürlich lassen sich alle vier Arten von Daten ineinander umrechnen, wenn auch mit verschieden viel Aufwand und Ungenauigkeit.
 
-Apropos Ungenauigkeit: oft werden die Daten ursprünglich in einer Form erfasst, aber vom Verkehrsbetreiber bereits umgerechnet und nur in jener Form veröffentlicht. Inklusive der systembedingten Ungenauigkeiten. Gerade im Fall von Prognosen (Typ 2 und 3 in obiger Liste) handelt es sich um Blackboxen, als intransparente Berechnungen bei denen weder das mathematische Verfahren bekannt ist, noch die weiteren Daten, die darin einfließen. Im Fall von Positionsdaten aus HAFAS-Schnittstellen haben wir sogar den Verdacht, dass hier "echte" Positionsdaten in Verspätungen oder Prognosen konvertiert wurden, aus denen dann wieder simulierte Positionsdaten entstehen.
+Apropos Ungenauigkeit: oft werden die Daten ursprünglich in einer Form erfasst, aber vom Verkehrsbetreiber bereits umgerechnet und nur in jener Form veröffentlicht. Inklusive der systembedingten Ungenauigkeiten. Gerade im Fall von Prognosen (Typ 2 und 3 in obiger Liste) handelt es sich um Blackboxen, also intransparente Berechnungen bei denen weder das mathematische Verfahren bekannt ist, noch die weiteren Daten, die darin einfließen. Im Fall von Positionsdaten aus HAFAS-Schnittstellen haben wir sogar den Verdacht, dass hier "echte" Positionsdaten in Verspätungen oder Prognosen konvertiert wurden, aus denen dann wieder simulierte Positionsdaten entstehen.
 
 Es wäre naheliegend für uns (wenn auch sehr aufwändig), für alle vier Datentypen Umrechnungen in alle drei anderen zu entwickeln (also 12 Konvertierungen) und deren Genauigkeit zu evaluieren. Dazu bräuchten wir idealerweise Testdaten, die bereits alle vier Datentypen enthalten. Leider ist uns kein Datensatz bekannt, der mehr als zwei davon abdeckt. Viel Aufwand für ein Vorhaben, das sich dann nichtmal evaluieren lässt? Lieber nicht.
 
