@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Echtzeit-Daten - Probleme und Lösungen"
-date:   2020-03-12 02:02:34 +0100
+date:   2020-03-13 02:02:34 +0100
 categories: meta
 ---
 # Wozu wir statische (Fahrplan-) und dynamische (Echtzeit-)Daten brauchen
