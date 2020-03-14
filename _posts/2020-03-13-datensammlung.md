@@ -78,8 +78,28 @@ Mittelfristig brauchen wir aber eine Architektur, die mit allen Kombinationen au
 
 Langfristig werden sich die Probleme lösen, da auch Echtzeitdaten flächendeckend und einheitlich formatiert frei verfügbar werden sollen _(vermutlich ab dem Jahr 2024, aber wo war doch gleich die Quelle für diese Zeitangabe?)_. 
 
-# Einfach mal anfangen
-Von den uns bekannten Datenquellen haben die Daten des _Verkehrsverbund Bremen Niedersachsen_ unsere oben genannten Anforderungen am besten erfüllt. Seit dem Abend des 12.03.2020 sammeln wir jene Echtzeitdaten im 2-Minuten-Takt, und wenn das nachfolgende Badge nichts gegenteiliges sagt, dann sammeln wir noch heute…
+# Einfach mal anfangen!
+Von den uns bekannten Datenquellen haben die Daten des _Verkehrsverbund Bremen Niedersachsen_ unsere oben genannten Anforderungen am besten erfüllt.
+
+Noch haben wir keine Pipeline fertig, die die Echtzeitdaten parst, in eine Datenbank schreibt, mit den Fahrplandaten zusammen führt, statistische Auswertungen generiert… sondern einfach nur ein Shellscript, das die Daten herunterlädt und zippt, damit unsere Mircro-SD-Karte im Raspberry Pi nicht so schnell voll ist. 
+
+```
+set -e
+DIR=/var/opt/gtfsrt/vbn
+DATE=`date +"%Y-%m-%dT%H:%M:%S%:z"`
+FILENAMEPB=$DIR/vbn-gtfsrt-$DATE.pb
+FILENAMEZIP=$DIR/vbn-gtfsrt-$DATE.zip
+PINGURL=https://hc-ping.com/<zensiert>
+
+curl http://gtfsr.vbn.de/gtfsr_connect.bin -o $FILENAMEPB \
+         --silent --show-error --retry-connrefused \
+         --retry 20 --retry-max-time 100
+zip $FILENAMEZIP $FILENAMEPB
+rm $FILENAMEPB
+curl -s $PINGURL
+```
+
+Seit dem Abend des 12.03.2020 sammeln wir damit jene Echtzeitdaten im 2-Minuten-Takt, und wenn das nachfolgende Badge nichts gegenteiliges sagt, dann sammeln wir noch heute…
 
 ![badge](https://healthchecks.io/badge/5441c6f8-5c30-4c41-826d-02327f/s_7xl3wR/record-vbn-realtime.svg)
 
