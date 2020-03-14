@@ -2,12 +2,12 @@
 layout: post
 title:  "Echtzeit-Daten - Probleme und Lösungen"
 date:   2020-03-13 02:02:34 +0100
-categories: meta
+categories: opendata
+excerpt_separator: <!--more-->
 ---
-# Wozu wir statische (Fahrplan-) und dynamische (Echtzeit-)Daten brauchen
 Unser Projekt soll am Ende eine besonders nützliche ÖPNV-Routensuche sein. Bis dahin ist noch viel zu tun, beginnend bei der Datensammlung.
 
-Zum einen brauchen wir ein paar statische Daten, wie z.B. Linienverläufe und die Namen der Haltepunkte. Seit Beginn des Jahres 2020 lassen sich diese zum Glück gebündelt für ganz Deutschland beziehen. Dank der [EU-Verordnung 2017/1926](https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32017R1926&from=EN) müssen die Verkehrsunternehmen diese bereit stellen. In Deutschland hat man sich für das NeTEx-Format entschieden, doch auch es gibt bereits einen [Dienst](http://gtfs.de/), der diese ins international verwendete [GTFS-Format](https://developers.google.com/transit/gtfs/reference) umwandelt.
+Zum einen brauchen wir ein paar statische Daten, wie z.B. Linienverläufe und die Namen der Haltepunkte. Seit Beginn des Jahres 2020 lassen sich diese zum Glück gebündelt für ganz Deutschland beziehen. Dank der [EU-Verordnung 2017/1926](https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri=CELEX:32017R1926&from=EN) müssen die Verkehrsunternehmen diese bereit stellen. In Deutschland hat man sich für das NeTEx-Format entschieden, doch auch es gibt bereits einen [Dienst](http://gtfs.de/), der diese ins international verwendete [GTFS-Format](https://developers.google.com/transit/gtfs/reference) umwandelt.<!--more-->
 
 Zum anderen brauchen wir die dynamischen Echtzeit-Daten. Daraus leiten wir über längere Zeiträume Statistiken und Modelle ab, die wir später mit den neusten Echtzeitdaten kombinieren, um unsere eigenen Prognosen für einzelne Fahrzeuge herzustellen. Und auf Basis jener Prognosen erstellen wir letztlich die Routenvorschläge und die Bewertung von deren Zuverlässigkeit. Man sieht: Echtzeitdaten sind für unser Vorhaben gleich doppelt wichtig.
 
