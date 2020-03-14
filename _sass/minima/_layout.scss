@@ -1,8 +1,24 @@
 /**
  * Site header
  */
+
+.site-masthead {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 5px solid #3a91c6;
+  height: 20vw;
+  min-height: 120px;
+  max-height: 200px;
+  background-image: url(/assets/header2.jpg);
+  background-size: cover;
+  background-position: center 45%;
+}
+
+
+
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 5px solid #b64963;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
