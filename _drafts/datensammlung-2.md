@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 Unser erster Post [Echtzeit-Daten - Probleme und Lösungen](/opendata/2020/03/13/datensammlung.html) ist nun vor mehr als einem Monat erschienen und endete mit den Worten:
 
-> Noch haben wir keine Pipeline fertig, die die Echtzeitdaten parst, in eine Datenbank schreibt, mit den Fahrplandaten zusammen führt, statistische Auswertungen generiert… sondern einfach nur ein Shellscript, das die Daten herunterlädt und zippt, damit unsere Mircro-SD-Karte im Raspberry Pi nicht so schnell voll ist. 
+> Noch haben wir keine Pipeline fertig, die die Echtzeitdaten parst, in eine Datenbank schreibt, mit den Fahrplandaten zusammen führt, statistische Auswertungen generiert… sondern einfach nur ein Shellscript, das die Daten herunterlädt und zippt, damit unsere Micro-SD-Karte im Raspberry Pi nicht so schnell voll ist. 
 >
 > Seit dem Abend des 12.03.2020 sammeln wir damit jene Echtzeitdaten im 2-Minuten-Takt, und wenn das nachfolgende Badge nichts gegenteiliges sagt, dann sammeln wir noch heute…
 > 
@@ -41,7 +41,7 @@ Zwischenzeitlich haben wir überlegt, die Fahrpläne, die wir täglich herunter 
 
 **TODO:** Kikis Ansatz aus  `Nextcloud/Prototypefund/Dystonse/Lose Notizen zur Datenarchivierung.md` erwähnen.
 
-Es bleibt also dabei, dass die Fahrpläne nur als `zip`-Datei herum liegen. Für die Echtzeitdaten wäre das keine Lösung, denn hier brauchen wir dringend Analysen, die sich über große Teile unserer gesammelten Daten erstrecken, und dazu braucht es _mindestens_ eine relationale Datenbank. Vielleicht stellen wir auch bald fest, dass wir NoSQL / Data Warehouse / Big Data / Blockchain brauchen. Letzteres war ein Scherz, und für den Moment versuchen wir es mit einer sehr simplen [ein-Tabellen-Lösung in mysql](https://github.com/dystonse/dystonse-docker/blob/master/db/dystonse.sql).
+Es bleibt also dabei, dass die Fahrpläne nur als `zip`-Datei herum liegen. Für die Echtzeitdaten wäre das keine Lösung, denn hier brauchen wir dringend Analysen, die sich über große Teile unserer gesammelten Daten erstrecken, und dazu braucht es _mindestens_ eine relationale Datenbank. Vielleicht stellen wir auch bald fest, dass wir NoSQL / Data Warehouse / Big Data / Blockchain brauchen. Letzteres war ein Scherz, und für den Moment versuchen wir es mit einer sehr simplen [ein-Tabellen-Lösung in MySQL](https://github.com/dystonse/dystonse-docker/blob/master/db/dystonse.sql).
 
 ### Importer
 Um die Echtzeitdaten in unsere Datenbank zu bekommen, haben wir ein eigenes Tool geschrieben. Sicher hätte es auch hier fertige Lösungen gegeben, aber die Gründe für eine eigene Implementierung haben überwogen:
@@ -67,20 +67,26 @@ In einem ersten Schritt wollten wir wissen: wie viele Daten haben wir eigentlich
 ### Quantitaive Betrachtung
 Unsere Datenbank hat kürzlich die 50 Millionen Einträge geknackt, und ist nun über 9GB groß - also großer als der Arbeitsspeicher unseres DB-Servers. Einfache, unschuldig wirkende Queries brauchen da ohne passenden Index mindestens 30 Minuten und [ebenso einfache trotz scheinbar passender Indices](https://twitter.com/dystonse/status/1250863486894211079) auch mal mehr als 24 Stunden. Ab und bewirken Indices dann doch noch Wunder, wenn plötzlich doch nach [220 Millisekunden](https://twitter.com/dystonse/status/1247249325559816193) Ergebnisse vorliegen. Brauchen wir denn wirklich _noch mehr_ Daten, die alles _noch langsamer_ machen?
 
-**TODO:** hier Graph einfügen, Neue CSV-Dateien werden gerade generiert.
+![Datenmenge aus den ersten 5 Wochen](../assets/Datenmenge_04.png)
 
 Was man hier sehen kann:
 
  * Die Daten des VRN machen nur einen Bruchteil der Gesamtdatenmenge aus
  * In den Nachtstunden gehen die Daten praktisch auf Null zurück
  * Vom 20.3. bis 24.3. haben wir einfach mal gar keine Datenpunkte aufgezeichnet. Nachforschungen ergaben: Auch da haben wir alle zwei Minuten einen validen Datensatz vom VBN erhalten, der aber einfach keine stop_updates enthielt.
- * Die Menge der Daten des VBN schwankt von Tag zu Tag enorm, ohne dass ein Muster erkennbar wäre (wie z.B. weniger Fahrten an Sonntagen)
+ * Die Menge der Daten des VBN schwankt von Tag zu Tag enorm. Betrachtet man das Tagesmittel (die dunkelgraue Kurve ist ein rollender Mittelwert über 24 Stunden) lässt sich nur sehr schwach erahnen, dass an Wochenenden und Feiertagen (deren Daten rot hervor gehoben sind) weniger Verkehr als an anderen Tagen stattfindet.
 
 ### Qualitative Betrachtung
 Die heruntergeladenen Echtzeitdaten haben defintiv ihre Mängel. Unter Importer schreibt je Fehler eine Zeile in die Logdatei, und davon entstehen alle 2 Minuten gleich tausende. Die Häufigsten Fehler sind falsch aufgebaute Protobuf-Dateien, sowie `trip_id`s, die in den Echtzeitdaten auftreten aber keine Entsprechung in den Fahrplänen haben. Je Importversuch erhalten wir eine kleine Statistik wie die folgende:
 
 ```
-TODO: Statistik hinein kopieren
+import-vbn_1   | Done!
+import-vbn_1   | Finished processing files.
+import-vbn_1   | Schedule files   : 1 of 1 successful.
+import-vbn_1   | Realtime files   : 1 of 1 successful.
+import-vbn_1   | Trip updates     : 559 of 1801 successful.
+import-vbn_1   | Stop time updates: 2305 of 2305 successful.
+import-vbn_1   | Finished one iteration. Sleeping until next directory scan.
 ```
 
 Aber uns fehlt derzeit noch die Gesamtauswertung darüber. Ganz grob schätzen wir, dass 50% der erhaltenen Echtzeitdaten gar nicht erst in die Datenbank kommen, da sie zu unlesbar oder unvollständig sind, um sie sinnvoll weiter zu verarbeiten.
@@ -109,9 +115,15 @@ Auch schon auf dem Weg dorthin wird die Datenqualität sichtbar - jedoch nicht d
 
 Hier erstmal ein Ergebnis:
 
-**TODO:** Bild einfügen, dafür ein anschauliches heraussuchen, so auch schon in den Morgenstunden interessante Dinge sichtbar sind
+![Bildfahrplan der Linie 2 in Bremen](../assets/Bildfahrplan_Bremen_6_a.png)
 
-Zu sehen ist **Linie ??** aus **??**. Am unteren Rand sind Haltepunkte angegeben - nicht etwa alle Haltepunkte der Linie, sondern nur jene der längsten Linienvariante. Im Diagram eingetragen sind die Sollzeiten laut Fahrplan (schwarz) sowie die Ist-Zeiten (farbig) der Fahrten, und zwar für alle bisher aufgezeichneten Tage. Der Plan umfasst mehrere Linienvarianten, die also nur eine (zusammenhängede) Teilsequenz der Halte bedienen, sowie Fahrten von sämtlichen Wochentagen (Wochentage grün, Samstage gelb, Sonntage rot).
+Zu sehen ist Straßenbahn-Linie 6 aus Bremen. Am unteren Rand sind Haltepunkte angegeben - nicht etwa alle Haltepunkte der Linie, sondern nur jene einer bestimmten, kurzen Linienvariante zwischen Flughafen Süd und Hauptbahnhof. Diese Variante ist schön übersichtlich, da es davon nur eine einzige Fahr gibt (nämlich die um kurz nach fünf Uhr morgens).
+
+Im Diagram eingetragen sind die Sollzeiten laut Fahrplan (schwarz) sowie die Ist-Zeiten (farbig) der Fahrten, und zwar für alle bisher aufgezeichneten Tage. Grün sind dabei die Fahrten, die an Werktagen aufgezeichnet wurden, und rot die an Sonntagen. (Theoretisch gibt es auch gelbe Linien für Samstagsfahrten, aber die bekommen wir nur selten zu sehen - warum auch immer.)
+
+Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Univerität Nord verkehren. Einige befahren nur Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagram (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
+
+![Bildfahrplan der Linie 2 in Bremen](../assets/Bildfahrplan_Bremen_6_b.png)
 
 Was war alles nötig, um zu dieser Darstellung zu gelangen?
 
@@ -122,10 +134,11 @@ Was war alles nötig, um zu dieser Darstellung zu gelangen?
  * Aussortieren offensichtlich falscher Datenpunkte (noch nicht ganz fertig)
  * Darstellung in einer Grafik (wir verwenden `plotters`, sind damit aber nicht so ganz zufrieden. Bessere Vorschläge?)
 
-Als Liste betrachtet sieht das alles naheliegend und einfach aus. Zwischendurch haben wir aber auch Um- und Irrwege gemacht, so z.B. der Versuch, als allen Linienvarianten eine Art "Master-Abfolge" zu finden, in der jede Variante gut darstellbar ist. Aber gleich unsere erste, quasi zufällig bestimmte Testline - der Bus 340 in Oldenburg - lieferte ein Beispiel für eine Linie, die sich eben nicht linear darstellen lässt. Erinnerungen an den Busverkehr in Wernigerode wurden wach, und damit die Erkenntniss: Manche Buslinien lassen sich nicht in ein einzelnes Diagram stopfen. 
+Als Liste betrachtet sieht das alles naheliegend und einfach aus. Zwischendurch haben wir aber auch Um- und Irrwege gemacht, so z.B. der Versuch, als allen Linienvarianten eine Art "Master-Abfolge" zu finden, in der jede Variante gut darstellbar ist. Aber gleich unsere erste, quasi zufällig bestimmte Testline - [der Bus 340 in Oldenburg](https://web.archive.org/web/20200419225955/https://www.weser-ems-bus.de/weseremsbus/view/mdb/kursbuch/mdb_302664_6340_allg_20191215.pdf) - lieferte ein Beispiel für eine Linie, die sich eben nicht linear darstellen lässt. Stattdessen ergibt sich dieses Diagram mit Verzweigungen und sogar Kreisen:
 
-**TODO:** Link zu den Busfahrplänen aus Oldenburg und Wernigerode
-**TODO:** Unseren mit graphviz hergestellten Linienplan hier einfügen / verlinken
+![Haltestellenabfolge der Linie 340 in Oldeburg](../assets/haltestellen_03.png)
+
+Erinnerungen an den [Busverkehr in Wernigerode](https://web.archive.org/web/20200419230244/http://pdf.hvb-harz.de/downloads/stadt_wr/wr_tag.pdf) wurden wach, und damit die Erkenntniss: Manche Buslinien lassen sich nicht in ein einzelnes Diagram stopfen.
 
 ## Qualität unserer Daten
 Die oben genannte Vermutung hat sich bestätigt - nämlich dass die Daten, die es überhaupt in unsere Datenbank geschaft haben, im Wesentlichen von guter Qualität sind.
@@ -140,4 +153,4 @@ Und an einigen Orten - also kurzen Abschnitten bestimmter Linien - treten sehr o
 
 Die grafische Darstellung erlaubt aber auch nochmal einen anderen Blickwinkel auf die Quantität unserer Daten. Auf einmal scheinen 50 Millionen Datensätze gar nicht mehr _so_ viel, und auf gar keinen Fall _zu_ viel. Für kaum eine Linie ergibt sich ein dichtes Bündel aus sich überlagernden Linien, und bei den meisten ist jede einzelne Fahrt mit bloßem Auge gut ersichtlich. Von statistischer Signifikanz sind wir da noch weit entfernt.
 
-Können wir einfach abwarten, bis genug Daten angekommen sind? Oder müssen wir mal näher ergründen, warum wir für manche Linien nur eine Handvoll aufgezeichneter Fahrten haben, wenn doch die technische Ausstattung offensichtlich vorhanden ist?
+Können wir einfach abwarten, bis genug Daten angekommen sind? Oder müssen wir mal näher ergründen, warum wir für manche Linien nur eine Handvoll aufgezeichneter Fahrten haben, wenn doch die technische Ausstattung offensichtlich vorhanden ist? Oder doch noch weitere Datenquellen anzapfen, bei denen dichtere Daten geliefert werden? Wir werden sehen…
