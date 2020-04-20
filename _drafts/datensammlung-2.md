@@ -112,7 +112,7 @@ Zu sehen ist Straßenbahn-Linie 6 aus Bremen. Am unteren Rand sind Haltepunkte a
 
 Im Diagramm eingetragen sind die Sollzeiten laut Fahrplan (schwarz) sowie die Ist-Zeiten (farbig) der Fahrten, und zwar für alle bisher aufgezeichneten Tage. Grün sind dabei die Fahrten, die an Werktagen aufgezeichnet wurden, und rot die an Sonntagen. _(Theoretisch gibt es auch gelbe Linien für Samstagsfahrten, aber die bekommen wir nur selten zu sehen - warum auch immer.)_
 
-Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Univerität Nord verkehren. Einige befahren nur (zusammenhängende) Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagram (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
+Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Univerität Nord verkehren. Einige befahren nur (zusammenhängende) Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagramm (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
 
 ![Bildfahrplan der Linie 2 in Bremen](/assets/Bildfahrplan_Bremen_6_b.png)
 
@@ -125,7 +125,7 @@ Was war alles nötig, um zu dieser Darstellung zu gelangen?
  * Aussortieren offensichtlich falscher Datenpunkte (noch nicht ganz fertig)
  * Darstellung in einer Grafik (wir verwenden `plotters`, sind damit aber nicht so ganz zufrieden. Bessere Vorschläge?)
 
-Als Liste betrachtet, sieht das alles naheliegend und einfach aus. Zwischendurch haben wir aber auch Um- und Irrwege gemacht, so z.B. der Versuch, aus allen Linienvarianten eine Art "Master-Abfolge" zu finden, in der jede Variante gut darstellbar ist: Gleich unsere erste, quasi zufällig bestimmte Testlinie - [der Bus 340 in Oldenburg](https://web.archive.org/web/20200419225955/https://www.weser-ems-bus.de/weseremsbus/view/mdb/kursbuch/mdb_302664_6340_allg_20191215.pdf) - lieferte ein Beispiel für eine Linie, die sich eben nicht linear darstellen lässt.  Stattdessen ergibt sich dieses Diagram mit Verzweigungen und sogar Kreisen:
+Als Liste betrachtet, sieht das alles naheliegend und einfach aus. Zwischendurch haben wir aber auch Um- und Irrwege gemacht, so z.B. der Versuch, aus allen Linienvarianten eine Art "Master-Abfolge" zu finden, in der jede Variante gut darstellbar ist: Gleich unsere erste, quasi zufällig bestimmte Testlinie - [der Bus 340 in Oldenburg](https://web.archive.org/web/20200419225955/https://www.weser-ems-bus.de/weseremsbus/view/mdb/kursbuch/mdb_302664_6340_allg_20191215.pdf) - lieferte ein Beispiel für eine Linie, die sich eben nicht linear darstellen lässt.  Stattdessen ergibt sich dieses Diagramm mit Verzweigungen und sogar Kreisen:
 
 ![Haltestellenabfolge der Linie 340 in Oldeburg](/assets/haltestellen_03_ausschnitt.png)
 
@@ -162,15 +162,22 @@ _(Buslinie 440 in Oldenburg)_
 
 ## Fazit und Ausblick
 
-Die grafische Darstellung zeigt uns nicht nur die _Qualität_ unser Daten (und die ist doch eigentlich ganz gut. Wir mussten erstaunlich lange Suchen, um überhaupt ein paar Beispiele offensichtlicher Fehler zu finden).
+Die grafische Darstellung zeigt uns nicht nur die _Qualität_ unserer Daten (und die ist eigentlich ganz gut: Wir mussten erstaunlich lange suchen, um überhaupt Beispiele offensichtlicher Fehler für diesen Text zu finden).
 
 **Die Daten bildlich zu sehen erlaubt uns einen anderen Blickwinkel auf die _Quantität_ unserer Daten.** Auf einmal scheinen 50 Millionen Datensätze gar nicht mehr _so_ viel, und auf gar keinen Fall _zu_ viel. Für kaum eine Linie ergibt sich ein dichtes Bündel aus sich überlagernden Linien, und bei vielen ist jede einzelne Fahrt mit bloßem Auge gut ersichtlich. Statistisch signifikante Ergebnisse werden wir damit erstmal nur für sehr wenige Linien erreichen.
 
-Können wir einfach abwarten, bis genug Daten angekommen sind? Oder müssen wir mal näher ergründen, warum wir für manche Linien nur eine Handvoll aufgezeichneter Fahrten haben, wenn doch die technische Ausstattung offensichtlich vorhanden ist? Oder doch noch weitere Datenquellen anzapfen, bei denen dichtere Daten geliefert werden? Wir werden sehen…
+Können wir einfach abwarten, bis genug Daten angekommen sind? Oder müssen wir mal näher ergründen, warum wir für manche Linien nur eine Handvoll aufgezeichneter Fahrten haben, wenn doch die technische Ausstattung offensichtlich vorhanden ist? Oder doch noch weitere Datenquellen anzapfen, bei denen dichtere Daten geliefert werden?
+
+Wir werden sehen…
 
 <br/><br/><br/>
 
 ---
+
+## Wer's genau wissen will
+Sämtliche Bildfahrpläne, die wir bisher generiert haben (bisher etwa 600 Grafiken für knapp 200 Linien von 28 Betreibern) können [hier](https://cloud.lenaschimmel.de/index.php/s/A8tKFxN9qLbzbRs) gezippt herunter geladen werden. (183 MB gezippt, 243 MB entpackt)
+
+
 
 ## Leseempfehlungen
 Bei unseren Recherchen sind wir auf die folgenden Artikel gestoßen, die sehr inspirierend sind:
