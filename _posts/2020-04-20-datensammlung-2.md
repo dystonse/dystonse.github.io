@@ -2,6 +2,7 @@
 layout: post
 title:  "Echtzeit-Daten - Rückblick nach über einem Monat"
 categories: opendata
+date:   2020-04-20 15:26:34 +0100
 excerpt_separator: <!--more-->
 ---
 
