@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Echtzeit-Daten - Rückblick nach über einem Monat"
-date:   2020-04-20 10:00:00 +0100
 categories: opendata
 excerpt_separator: <!--more-->
 ---
@@ -14,7 +13,7 @@ Unser erster Post [Echtzeit-Daten - Probleme und Lösungen](/opendata/2020/03/13
 > 
 > ![badge](https://healthchecks.io/badge/5441c6f8-5c30-4c41-826d-02327f/s_7xl3wR/record-vbn-realtime.svg)
 
-Was ist seitdem passiert?
+**Was ist seitdem passiert?**
 
 <!--more-->
 
@@ -33,7 +32,7 @@ Unser **Raspberry Pi 3 Model B+** würde früher oder später an seine Grenzen s
 Wobei wir mit dem Raspberry Pi eh nicht nur Performance- und Kapazitätsprobleme hatten. Docker läuft darauf zwar ganz ordentlich - aber die Toolchain, um Multiarch-Dockerimages zu bauen (also solche, die z.B. sowohl auf `amd64`- als auch `armv7`-Architektur laufen) ist noch immer etwas unhandlich und leider auch fehlerhaft. Beim Versuch, das zu beheben, sind wir [erstaunlich tief in sämtliche Abstraktionsschichten](https://github.com/dystonse/dystonse-gtfs-data#known-problems-with-cross-compiling) des ganzen Stacks abgetaucht, letztlich aber ohne Lösung. Das ist sehr schade, eine kleine Farm aus Pis hätte eigentlich ganz gut in unserem Home Office ausgesehen...
 
 ### Datenbank
-Bisher haben wir sowohl Echtzeitdaten als auch Fahrpläne nur als `zip`-Datei archiviert.
+Zuvor hatten wir sowohl Echtzeitdaten als auch Fahrpläne nur als `zip`-Datei archiviert.
 
 Bei den Fahrplänen waren wir uns nicht sicher, ob wir die überhaupt in einer relationalen Datenbank brauchen. Es gibt dazu das Tool [gtfsdb](https://github.com/OpenTransitTools/gtfsdb), das wir zwar leicht zum Laufen bekamen, aber das für den Praxiseinsatz einfach zu langsam war. [Mehrere Stunden warten, um _einen_ Fahrplan zu importieren?](https://twitter.com/dystonse/status/1240757487923539972) Nein Danke.
 
@@ -56,7 +55,7 @@ Rust ist eine eigenwillige, aber ansonsten ganz wunderbare Sprache, und nachdem 
 
 Was ursprünglich `dystonse-gtfs-importer` war, ist in seiner Komplexität nach und nach gestiegen und fungiert nun als Multifunktionswerkzeug [`dystonse-gtfs-data`](https://github.com/dystonse/dystonse-gtfs-data) für verschiedene Dinge, die wir mit unseren Daten so machen. Und dank fertiger _Crates_ (so heißen die Pakete in Rust) wie [gtfs-structures](https://github.com/rust-transit/gtfs-structure) und [gtfs-rt](https://github.com/barzamin/gtfs-rt) können wir uns hier auf unsere Anwendungslogik konzentrieren, während das Parsen der beiden Eingabeformate im Wesentlichen fertig und dennoch [anpassbar](https://github.com/dystonse/gtfs-structure) ist.
 
-### Quellen
+### Datenquellen
 Durch einen [Hinweis der MITFAHR|DE|ZENTRALE](https://twitter.com/mfdz_de/status/1235612004007784453) sind wir zusätzlich zu den Daten des VBN (Verkehrsverbund Bremen/Niedersachsen) auch auf ebenso offene Daten des VRN (Verkehrsverbund Rhein Neckar) gestoßen. Und dank der Kapselung mit `docker-compose` sind es für uns tatsächlich nur wenige Minuten Aufwand, eine weitere Quelle in unsere kontinuierliche Sammlung mit aufzunehmen. Seit dem 31.3. sammeln wir daher jetzt zusätzlich auch Echtzeit-Daten aus dem VRN.
 
 ## Analyse der Daten
@@ -67,13 +66,15 @@ In einem ersten Schritt wollten wir wissen: wie viele Daten haben wir eigentlich
 ### Quantitative Betrachtung
 Unsere Datenbank hat kürzlich die 50 Millionen Einträge geknackt, und ist nun über 9GB groß - also größer als der Arbeitsspeicher unseres DB-Servers. Einfache, unschuldig wirkende Queries brauchen da ohne passenden Index mindestens 30 Minuten und [ebenso einfache, trotz scheinbar passender Indizes](https://twitter.com/dystonse/status/1250863486894211079) auch mal mehr als 24 Stunden. Ab und zu bewirken Indizes dann doch noch Wunder, wenn plötzlich nach [220 Millisekunden](https://twitter.com/dystonse/status/1247249325559816193) Ergebnisse vorliegen. Brauchen wir denn wirklich _noch mehr_ Daten, die alles _noch langsamer_ machen?
 
-![Datenmenge aus den ersten 5 Wochen](../assets/Datenmenge_04.png)
+Aber betrachten wir doch zunächst, wann wir diese Daten gesammelt haben:
+
+![Datenmenge aus den ersten 5 Wochen](/assets/Datenmenge_04.png)
 
 Was man hier sehen kann:
 
  * Die Daten des VRN machen nur einen Bruchteil der Gesamtdatenmenge aus
- * In den Nachtstunden gehen die Daten praktisch auf Null zurück
- * Vom 20.3. bis 24.3. haben wir einfach mal gar keine Datenpunkte aufgezeichnet. Nachforschungen ergaben: Auch da haben wir alle zwei Minuten einen validen Datensatz vom VBN erhalten, der aber einfach keine stop_updates enthielt.
+ * In den Nachtstunden gehen die neu eingehenden Daten praktisch auf Null zurück
+ * Vom 20.3. bis 24.3. haben wir einfach mal gar keine Datenpunkte aufgezeichnet. Nachforschungen ergaben: Auch da haben wir alle zwei Minuten einen validen Datensatz vom VBN erhalten, der aber einfach keine `stop_time_updates` enthielt.
  * Die Menge der Daten des VBN schwankt von Tag zu Tag enorm. Betrachtet man das Tagesmittel (die dunkelgraue Kurve ist ein rollender Mittelwert über 24 Stunden) lässt sich nur sehr schwach erahnen, dass an Wochenenden und Feiertagen (deren Daten rot hervor gehoben sind) weniger Verkehr als an anderen Tagen stattfindet.
 
 ### Qualitative Betrachtung
@@ -89,41 +90,31 @@ import-vbn_1   | Stop time updates: 2305 of 2305 successful.
 import-vbn_1   | Finished one iteration. Sleeping until next directory scan.
 ```
 
+_(Dabei bezieht sich die Gesamtanzahl einer Zeile nur auf die erfolgreichen Elemente der vorherigen Zeile. Im konkreten Beispiel enthielten die 559 erfolgreichen `trip updates` insgesamt 2305 `stop time updates`, von denen alle erfolgreich waren. Wie viele `stop time updates` in den fehlgeschlagenen `trip updates` enthalten gewesen wären, ist nicht bekannt.)_
+
 Aber uns fehlt derzeit noch die Gesamtauswertung darüber. Ganz grob schätzen wir, dass 50% der erhaltenen Echtzeitdaten gar nicht erst in die Datenbank kommen, da sie zu unlesbar oder unvollständig sind, um sie sinnvoll weiter zu verarbeiten.
 
 Was in der Datenbank landet, wirkt auf den ersten Blick überwiegend plausibel. Aber ehrlich gesagt: in den rohen Daten kann man eigentlich eh fast gar nichts sehen.
 
-**TODO:** Ich würde gerne dieses Filmzitat einbauen, aber es einfach nur da drunter zu packen scheint mir etwas zu platt
+![Auszug aus unserer Datenbank](/assets/database.png)
 
-> Neo: "Ist das..." [deutet auf die mittleren drei Bildschirme]
-> Cypher: "Die Matrix? Ja..."
-> Neo: "Und du siehst sie dir nur codiert an?"
-> Cypher: "Man gewöhnt sich dran. Ich seh den Code gar nicht mehr, ich seh nur noch Blonde, Brünette, Rothaarige..."
-
-**TODO:** Vielleicht so? Irgendwie als Bild?
-
-> Lena: "Ist das..." [deutet auf die mittleren drei Bildschirme]
-> Kirstin: "Die Datenbank? Ja..."
-> Lena: "Und du siehst sie dir nur codiert an?"
-> Kirstin: "Man gewöhnt sich dran. Ich seh den Code gar nicht mehr, ich seh nur noch Busse, Bahnen..."
+_(Screenshot unserer Datenbank in `phpmyadmin`)_
 
 Es braucht also mehr, um einen Überblick über die Daten und ihre Qualität zu bekommen. Was liegt da näher als eine grafische Darstellung? Für getaktete Verkehrsmitel haben sich hier [Bildfahrpläne](https://de.wikipedia.org/wiki/Bildfahrplan) bewährt, eine Spezialform des Weg-Zeit-Diagramms. Im Ergebnis zeigt sich dann anschaulich, wie gut die Qualität der Daten ist.
 
 Auch schon auf dem Weg dorthin wird die Datenqualität sichtbar - jedoch nicht die inhaltliche, sondern die strukturelle. Wie viel Aufwand muss man noch treiben, wie viel Programmlogik bemühen, um aus den gesammelten Datenmengen die besagten Bildfahrpläne abzuleiten? Das Auswertungswerkzeug zu programmieren, war also nicht nur eine weitere Fingerübung in Rust, sondern auch ein guter Einstieg in den Umgang mit unseren Daten und ihrer Struktur.
 
-**TODO:** Auf diesen Artikel verweisen: https://toddwschneider.com/posts/nyc-subway-data-analysis/
-
 Hier erstmal ein Ergebnis:
 
-![Bildfahrplan der Linie 2 in Bremen](../assets/Bildfahrplan_Bremen_6_a.png)
+![Bildfahrplan der Linie 2 in Bremen](/assets/Bildfahrplan_Bremen_6_a.png)
 
 Zu sehen ist Straßenbahn-Linie 6 aus Bremen. Am unteren Rand sind Haltepunkte angegeben - nicht etwa alle Haltepunkte der Linie, sondern nur jene einer bestimmten, kurzen Linienvariante zwischen Flughafen Süd und Hauptbahnhof. Diese Variante ist schön übersichtlich, da es davon nur eine einzige Fahr gibt (nämlich die um kurz nach fünf Uhr morgens).
 
-Im Diagramm eingetragen sind die Sollzeiten laut Fahrplan (schwarz) sowie die Ist-Zeiten (farbig) der Fahrten, und zwar für alle bisher aufgezeichneten Tage. Grün sind dabei die Fahrten, die an Werktagen aufgezeichnet wurden, und rot die an Sonntagen. (Theoretisch gibt es auch gelbe Linien für Samstagsfahrten, aber die bekommen wir nur selten zu sehen - warum auch immer.)
+Im Diagramm eingetragen sind die Sollzeiten laut Fahrplan (schwarz) sowie die Ist-Zeiten (farbig) der Fahrten, und zwar für alle bisher aufgezeichneten Tage. Grün sind dabei die Fahrten, die an Werktagen aufgezeichnet wurden, und rot die an Sonntagen. _(Theoretisch gibt es auch gelbe Linien für Samstagsfahrten, aber die bekommen wir nur selten zu sehen - warum auch immer.)_
 
-Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Univerität Nord verkehren. Einige befahren nur (zusammenhängedezusammenhängende) Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagram (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
+Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Univerität Nord verkehren. Einige befahren nur (zusammenhängende) Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagram (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
 
-![Bildfahrplan der Linie 2 in Bremen](../assets/Bildfahrplan_Bremen_6_b.png)
+![Bildfahrplan der Linie 2 in Bremen](/assets/Bildfahrplan_Bremen_6_b.png)
 
 Was war alles nötig, um zu dieser Darstellung zu gelangen?
 
@@ -136,23 +127,53 @@ Was war alles nötig, um zu dieser Darstellung zu gelangen?
 
 Als Liste betrachtet, sieht das alles naheliegend und einfach aus. Zwischendurch haben wir aber auch Um- und Irrwege gemacht, so z.B. der Versuch, aus allen Linienvarianten eine Art "Master-Abfolge" zu finden, in der jede Variante gut darstellbar ist: Gleich unsere erste, quasi zufällig bestimmte Testlinie - [der Bus 340 in Oldenburg](https://web.archive.org/web/20200419225955/https://www.weser-ems-bus.de/weseremsbus/view/mdb/kursbuch/mdb_302664_6340_allg_20191215.pdf) - lieferte ein Beispiel für eine Linie, die sich eben nicht linear darstellen lässt.  Stattdessen ergibt sich dieses Diagram mit Verzweigungen und sogar Kreisen:
 
-![Haltestellenabfolge der Linie 340 in Oldeburg](../assets/haltestellen_03.png)
+![Haltestellenabfolge der Linie 340 in Oldeburg](/assets/haltestellen_03_ausschnitt.png)
 
-Erinnerungen an den [Busverkehr in Wernigerode](https://web.archive.org/web/20200419230244/http://pdf.hvb-harz.de/downloads/stadt_wr/wr_tag.pdf) wurden wach, und damit die Erkenntnis: Manche Buslinien lassen sich nicht in ein einzelnes Diagramm stopfen.
+
+_([Hier ein Link zur vollständigen Grafik](/assets/haltestellen_03.png), die ungefähr so lang ist wie der gesamte Blog-Post.)_
+
+Auch erinnerungen an den [Busverkehr in Wernigerode](https://web.archive.org/web/20200419230244/http://pdf.hvb-harz.de/downloads/stadt_wr/wr_tag.pdf) wurden wach, und damit die Erkenntnis: Manche Buslinien lassen sich nicht in ein einzelnes Diagramm stopfen.
 
 ## Qualität unserer Daten
 Die oben genannte Vermutung hat sich bestätigt - nämlich dass die Daten, die es überhaupt in unsere Datenbank geschafft haben, im Wesentlichen von guter Qualität sind.
 
 Die Echtzeitdaten haben grob die gleiche Form wie die Daten aus dem Fahrplan, und gleichzeitig gibt es praktisch keine Daten, die ganz unrealistisch 100% Pünktlichkeit anzeigen.
 
-Auf manchen Linien sind die Daten allerdings eher dünn und lückenhaft.
+Auf manchen Linien sind die Daten allerdings eher dünn und lückenhaft:
 
-**TODO:** Beispielbild mit viel Fahrplan- und wenig Echtzeitdaten einfügen
+![Linie RE30](/assets/enno.png)
 
-Und an einigen Orten - also kurzen Abschnitten bestimmter Linien - treten sehr oft unplausible Datenpunkte auf, etwa dass ein Bus die ganze Zeit 8-12 Minuten verspätet fährt, dann für zwei Halte fast pünktlich ist, und danach wieder mit 8-12 Minuten Verspätung weiter fährt. Interessanterweise ist die Verspätung dort weder `0` noch `null`. Diese Datenpunkte herauszufiltern, wird uns noch etwas Arbeit bereiten.
+_(Zuglinie RE 30)_
 
-**TODO:** Kleine Ausschnitte von Fahrplänen finden, wo die genannten Phänomene auftreten
 
-Die grafische Darstellung erlaubt aber auch nochmal einen anderen Blickwinkel auf die Quantität unserer Daten. Auf einmal scheinen 50 Millionen Datensätze gar nicht mehr _so_ viel, und auf gar keinen Fall _zu_ viel. Für kaum eine Linie ergibt sich ein dichtes Bündel aus sich überlagernden Linien, und bei den meisten ist jede einzelne Fahrt mit bloßem Auge gut ersichtlich. Von statistischer Signifikanz sind wir da noch weit entfernt.
+Und an einigen Orten - also kurzen Abschnitten bestimmter Linien - treten sehr oft unplausible Datenpunkte auf, etwa dass ein Bus die ganze Zeit ca. 15 Minuten verspätet fährt, dann für zwei Halte fast pünktlich ist, und danach wieder mit ca. 15 Minuten Verspätung weiter fährt. Interessanterweise ist die Verspätung dort nicht `null`, und ob sie `0` ist, müssen wir nochmal prüfen. Diese Datenpunkte herauszufiltern, wird uns vermutlich noch etwas Arbeit bereiten.
+
+![Oldenburg Linie 340](/assets/oldenburg_340.png)
+
+_(Buslinie 340 in Oldenburg)_
+
+Aber auch Ausreißer in die andere Richtung kommen vor:
+
+![Oldenburg Linie 440](/assets/oldenburg_440.png)
+
+_(Buslinie 440 in Oldenburg)_
+
+<br/><br/><br/>
+
+## Fazit und Ausblick
+
+Die grafische Darstellung zeigt uns nicht nur die _Qualität_ unser Daten (und die ist doch eigentlich ganz gut. Wir mussten erstaunlich lange Suchen, um überhaupt ein paar Beispiele offensichtlicher Fehler zu finden).
+
+**Die Daten bildlich zu sehen erlaubt uns einen anderen Blickwinkel auf die _Quantität_ unserer Daten.** Auf einmal scheinen 50 Millionen Datensätze gar nicht mehr _so_ viel, und auf gar keinen Fall _zu_ viel. Für kaum eine Linie ergibt sich ein dichtes Bündel aus sich überlagernden Linien, und bei vielen ist jede einzelne Fahrt mit bloßem Auge gut ersichtlich. Statistisch signifikante Ergebnisse werden wir damit erstmal nur für sehr wenige Linien erreichen.
 
 Können wir einfach abwarten, bis genug Daten angekommen sind? Oder müssen wir mal näher ergründen, warum wir für manche Linien nur eine Handvoll aufgezeichneter Fahrten haben, wenn doch die technische Ausstattung offensichtlich vorhanden ist? Oder doch noch weitere Datenquellen anzapfen, bei denen dichtere Daten geliefert werden? Wir werden sehen…
+
+<br/><br/><br/>
+
+---
+
+## Leseempfehlungen
+Bei unseren Recherchen sind wir auf die folgenden Artikel gestoßen, die sehr inspirierend sind:
+
+ * ["Using Countdown Clock Data to Understand the New York City Subway"](https://toddwschneider.com/posts/nyc-subway-data-analysis/) von Todd W. Schneider. Darin werden am Beispiel der New Yorker U-Bahn Abschätzungen zu Wartezeiten gemacht. Da diese U-Bahn nach keinem festen Takt fährt, ist das aber nur eingeschränkt mit unserer Arbeit vergleichbar.
+ * ["How 2 M.T.A. Decisions Pushed the Subway Into Crisis"](https://www.nytimes.com/interactive/2018/05/09/nyregion/subway-crisis-mta-decisions-signals-rules.html) enthält wunderbare, interaktive Erklärungen zu Verspätungen und wie diese sich auf nachfolgende Fahrzeuge auswirken. Die sich dynamisch verändernden Bildfahrpläne sind ein absolute Highlight!
