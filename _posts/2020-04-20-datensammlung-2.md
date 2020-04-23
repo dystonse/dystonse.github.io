@@ -22,7 +22,7 @@ Unser erster Post [Echtzeit-Daten - Probleme und Lösungen](/opendata/2020/03/13
 
 Nun, wir haben durchgängig weiter alle zwei Minuten Daten gesammelt, und haben dabei insgesamt etwa 12 Minuten Downtime gehabt, die praktisch komplett auf kurzfristige Ausfälle bei den Datenanbietern zurück gehen. Unsere Prozesse haben sich in der Zeit gewandelt, und ein großer Teil des letzten Monats ist in eben diese Umstellungen geflossen.
 
-Außerdem haben wir damit begonnen, die gesammelten Daten zu analysieren. Dazu weiter unten mehr…
+Außerdem haben wir damit begonnen, die gesammelten Daten zu analysieren. Dazu weiter unten mehr.
 
 ### Docker
 Klar, man _muss_ nicht alles mit Docker machen, nur weil es geht. Aber es ist schon echt praktisch, vor allem wenn eh schon Docker-Kenntnisse im Team vorhanden sind. Dass wir in [dystonse-docker](https://github.com/dystonse/dystonse-docker) einen Stack aus `mysql`, `phpmyadmin`, unserem (namenlosen) Datensammelskript und `dystonse-gtfs-data` haben, die wir mal eben auf jedem unserer Rechner hochfahren können, hat uns viel Ärger gespart und den reibungslosen Umzug auf die "neue" Hardware ziemlich trivial gemacht.
