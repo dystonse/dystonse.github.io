@@ -109,11 +109,11 @@ Hier erstmal ein Ergebnis:
 
 ![Bildfahrplan der Linie 2 in Bremen](/assets/Bildfahrplan_Bremen_6_a.png)
 
-Zu sehen ist Straßenbahn-Linie 6 aus Bremen. Am unteren Rand sind Haltepunkte angegeben - nicht etwa alle Haltepunkte der Linie, sondern nur jene einer bestimmten, kurzen Linienvariante zwischen Flughafen Süd und Hauptbahnhof. Diese Variante ist schön übersichtlich, da es davon nur eine einzige Fahr gibt (nämlich die um kurz nach fünf Uhr morgens).
+Zu sehen ist Straßenbahn-Linie 6 aus Bremen. Am unteren Rand sind Haltepunkte angegeben - nicht etwa alle Haltepunkte der Linie, sondern nur jene einer bestimmten, kurzen Linienvariante zwischen Flughafen Süd und Hauptbahnhof. Diese Variante ist schön übersichtlich, da es davon nur eine einzige Fahrt gibt (nämlich die um kurz nach fünf Uhr morgens).
 
 Im Diagramm eingetragen sind die Sollzeiten laut Fahrplan (schwarz) sowie die Ist-Zeiten (farbig) der Fahrten, und zwar für alle bisher aufgezeichneten Tage. Grün sind dabei die Fahrten, die an Werktagen aufgezeichnet wurden, und rot die an Sonntagen. _(Theoretisch gibt es auch gelbe Linien für Samstagsfahrten, aber die bekommen wir nur selten zu sehen - warum auch immer.)_
 
-Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Univerität Nord verkehren. Einige befahren nur (zusammenhängende) Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagramm (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
+Auf der selben Linie 6 gibt es noch weitere Linienvarianten, die andere bzw. mehr Haltepunkte anfahren. Wir kombinieren davon so viele wie möglich in einer gemeinsamen Grafik. In der nachfolgenden sind z.B. sieben Varianten vereint, die in verschiedenen Fahrtrichtungen zwischen Flughafen Süd und Universität Nord verkehren. Einige befahren nur (zusammenhängende) Teilstrecken davon, d.h. ihre Linien erstrecken sich nicht von ganz links nach ganz rechts im Diagramm (zu sehen vor allem zwischen 5:00 Uhr und 6:30 Uhr).
 
 ![Bildfahrplan der Linie 2 in Bremen](/assets/Bildfahrplan_Bremen_6_b.png)
 
@@ -133,7 +133,7 @@ Als Liste betrachtet, sieht das alles naheliegend und einfach aus. Zwischendurch
 
 _([Hier ein Link zur vollständigen Grafik](/assets/haltestellen_03.png), die ungefähr so lang ist wie der gesamte Blog-Post.)_
 
-Auch erinnerungen an den [Busverkehr in Wernigerode](https://web.archive.org/web/20200419230244/http://pdf.hvb-harz.de/downloads/stadt_wr/wr_tag.pdf) wurden wach, und damit die Erkenntnis: Manche Buslinien lassen sich nicht in ein einzelnes Diagramm stopfen.
+Auch Erinnerungen an den [Busverkehr in Wernigerode](https://web.archive.org/web/20200419230244/http://pdf.hvb-harz.de/downloads/stadt_wr/wr_tag.pdf) wurden wach, und damit die Erkenntnis: Manche Buslinien lassen sich nicht in ein einzelnes Diagramm stopfen.
 
 ## Qualität unserer Daten
 Die oben genannte Vermutung hat sich bestätigt - nämlich dass die Daten, die es überhaupt in unsere Datenbank geschafft haben, im Wesentlichen von guter Qualität sind.
@@ -184,4 +184,4 @@ Sämtliche Bildfahrpläne, die wir bisher generiert haben (bisher etwa 600 Grafi
 Bei unseren Recherchen sind wir auf die folgenden Artikel gestoßen, die sehr inspirierend sind:
 
  * ["Using Countdown Clock Data to Understand the New York City Subway"](https://toddwschneider.com/posts/nyc-subway-data-analysis/) von Todd W. Schneider. Darin werden am Beispiel der New Yorker U-Bahn Abschätzungen zu Wartezeiten gemacht. Da diese U-Bahn nach keinem festen Takt fährt, ist das aber nur eingeschränkt mit unserer Arbeit vergleichbar.
- * ["How 2 M.T.A. Decisions Pushed the Subway Into Crisis"](https://www.nytimes.com/interactive/2018/05/09/nyregion/subway-crisis-mta-decisions-signals-rules.html) enthält wunderbare, interaktive Erklärungen zu Verspätungen und wie diese sich auf nachfolgende Fahrzeuge auswirken. Die sich dynamisch verändernden Bildfahrpläne sind ein absolute Highlight!
+ * ["How 2 M.T.A. Decisions Pushed the Subway Into Crisis"](https://www.nytimes.com/interactive/2018/05/09/nyregion/subway-crisis-mta-decisions-signals-rules.html) enthält wunderbare, interaktive Erklärungen zu Verspätungen und wie diese sich auf nachfolgende Fahrzeuge auswirken. Die sich dynamisch verändernden Bildfahrpläne sind ein absolutes Highlight!
