@@ -106,7 +106,7 @@ Weniger erwartet hatten wir die folgenden Erkenntnisse:
 
 Bus Linie 21 in Bremen, Verspätung an der Haltestelle *Horn*: Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind.
 
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=8.867897987365724%2C53.09648992973711%2C8.87175500392914%2C53.09798452567355&amp;layer=mapnik&amp;marker=53.09723723419548%2C8.86982649564743" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=53.09724&amp;mlon=8.86983#map=19/53.09724/8.86983">View Larger Map</a></small>
+<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=8.867897987365724%2C53.09648992973711%2C8.87175500392914%2C53.09798452567355&amp;layer=mapnik&amp;marker=53.09723723419548%2C8.86982649564743" style="border: 1px solid black"></iframe>
 
 Im Kartenausschnitt ist die Ampel markiert, die vermutlich für die Stufen im obigen Diagramm verantwortlich ist.
 
