@@ -80,7 +80,7 @@ Wir haben daher ein rekursives Verfahren entwickelt, das zunächst alle Daten al
 
 **HIER EVTL. GRAFIK EINFÜGEN**
 
-Eine weitere Verfeinerung unseres Ansatzes besteht darin, dass wir nicht mehr alle Datenpunkte einer Klasse stumpf zusammen werfen (also etwa alle Fahrten mit einer Anfangsverspätung zwischen 20s und 300s gleich behandeln), sondern gewichtet aufsummieren. Im gegebenen Beispiel würde eine Fahrt mit 40s Anfsangsverspätung sowohl mit sehr hoher Gewichtung in die Kurve für 20s eingehen, und nur mit einer sehr geringen Gewichtung für jede mit 300s. (Konkret geht jede Fahrt in 1 oder 2 Ergebniskurven ein, wobei die beiden Gewichte sich stets zu 1 aufaddieren, d.h. jede Fahrt geht gleichermaßen in die Gesamtanalyse ein).
+Eine weitere Verfeinerung unseres Ansatzes besteht darin, dass wir nicht mehr alle Datenpunkte einer Klasse stumpf zusammen werfen (also etwa alle Fahrten mit einer Anfangsverspätung zwischen 20s und 300s gleich behandeln), sondern gewichtet aufsummieren. Im gegebenen Beispiel würde eine Fahrt mit 40s Anfangsverspätung mit sehr hoher Gewichtung in die Kurve für 20s eingehen, und nur mit einer sehr geringen Gewichtung in jene für 300s. (Konkret geht jede Fahrt in 1 oder 2 Ergebniskurven ein, wobei die beiden Gewichte sich stets zu 1 aufaddieren, d.h. jede Fahrt geht gleichermaßen in die Gesamtanalyse ein).
 
 **HIER EVTL. GRAFIK EINFÜGEN**
 
