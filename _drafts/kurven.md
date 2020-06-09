@@ -52,7 +52,7 @@ Hier ist eine Gegenüberstellung der beiden Darstellungsweisen für die selben D
 
 ![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Histogramm](/assets/kurven/curve_18_to_38_na.svg)
 
-Im Histogramm ist auf die Schelle kaum etwas zu erkennen, da die Kurven sich oft kreuzen. Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken:
+Im Histogramm ist auf die Schnelle kaum etwas zu erkennen und der Wert auf der y-Achse hat keine Aussagekraft. Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken:
 
 ![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_18_to_38.svg)
 
