@@ -50,11 +50,11 @@ Wir verwenden für Dystonse eine artverwandte Darstellung, nämlich die [Summenh
 
 Hier ist eine Gegenüberstellung der beiden Darstellungsweisen für die selben Daten:
 
-![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Histogramm](/assets/kurven/curve_18_to_38_na.svg)
+![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Histogramm](/assets/kurven/curve_20_to_45_na.svg)
 
 Im Histogramm ist auf die Schnelle kaum etwas zu erkennen und der Wert auf der y-Achse hat keine Aussagekraft. Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken:
 
-![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_18_to_38.svg)
+![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_20_to_45.svg)
 
 Im weiteren Verlauf dieses Textes, sowie auch in später folgenden Blogposts, verwenden wir nur noch aufsummierte Häufigkeiten.
 
@@ -102,7 +102,7 @@ Weniger erwartet hatten wir die folgenden Erkenntnisse:
  * Es gibt einige Ausreißer mit Verspätungen in der Größenordnung von -3600 oder +3600 Sekuden, also einer ganzen Stunde. Für unsere ersten Auswertungen haben wir nicht nur diese ausgeschlossen, sondern alle jenseits von 300 Sekunden, also 5 Minuten, in beide Richtungen. Natürlich sind Verspätungen im Rahmen von 10 bis 20 Minuten alltäglich und praxisrelevant und werden später wieder in unsere Analysen einfließen. Bei der Betrachtung des Kernbereichs waren diese aber schon viel störender, als wir zunächst angenommen haben.
  * Manchmal finden sich in den Kurven interessante Muster und Unregelmäßigkeiten, die dennoch plausibel sein können. Im Folgenden Beispiel finden sich einige "Stufen" der Breite 90s in den Kurven. Da liegt die Vermutung nahe, dass sich kurz vor der Haltestelle eine Ampel befindet, an der ein Bus warten muss, bevor er den Halt erreicht. Wir haben das auf der Straßenkarte geprüft, und tatsächlich muss der Bus dort an einer Ampel warten, direkt bevor er an der Haltestelle hält. Ob die Ampeln dort wirklich einen 90-Sekunden-Zyklus haben, konnten wir aus der Ferne jedoch nicht heraus finden.
 
-**HIER GRAFIK EINFÜGEN: Bremer Bus 21 von Haltestelle 0 nach Horn (Horner Kirche)**
+![Verspätung der Buslinie 21 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_4_to_6.svg)
 
 Bus Linie 21 in Bremen, Verspätung an der Haltestelle *Horn*: Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind.
 
