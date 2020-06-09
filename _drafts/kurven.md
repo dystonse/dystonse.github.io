@@ -17,11 +17,11 @@ Aber Moment - bereits in unserem [vorletzen Post](/opendata/2020/03/13/datensamm
 ## Klassische Prognosen
 Zunächst muss man mal betrachten, was die Verkehrsbetriebe unter _Prognosen_ verstehen. Für ein bestimmtes Fahrzeug wird vorhergesagt, wann es an einer bestimmten Haltestelle ankommen oder abfahren wird. Dabei wird die planmäßige Zeit um eine Anzahl von Sekunden vor- oder zurückverlegt. Das Ergebnis ist also ein Zeitpunkt.
 
-Dieser Zeitpunkt wird meist mit "sekundengenau" angegeben - wobei der Sekundenanteil bei unseren gesammelten Daten überproportional oft durch 6 oder gar durch 12 teilbar ist, was auf irgendeine Form von Rundung hinweist und bei uns zunächst für einige Verwirrung gesorgt hat...
+Dieser Zeitpunkt wird meist mit "sekundengenau" angegeben - wobei der Sekundenanteil bei unseren gesammelten Daten überproportional oft durch 6 oder gar durch 12 teilbar ist, was auf irgendeine Form von Rundung hinweist und bei uns zunächst für einige Verwirrung gesorgt hat... wer uns auf Twitter folgt, hat das vielleicht schon mitbekommen:
 
-<blockquote class="twitter-tweet"><p lang="de" dir="ltr">Bisher wissen wir nichts darüber, wie diese Prognosen entstehen. In den Werten, die dabei heraus kommen, finden sich aber einige Auffälligkeiten.<br><br>Es gibt z.B. &quot;magic numbers&quot;, also bestimmte Anzahlen von Sekunden, die besonders oft oder selten vorkommen: <a href="https://t.co/OjnHNyIkuC">https://t.co/OjnHNyIkuC</a></p>&mdash; Dystonse (@dystonse) <a href="https://twitter.com/dystonse/status/1254806815981920256?ref_src=twsrc%5Etfw">April 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![Screenshot eines Tweets, in dem wir uns über die Häufung der Zahl 12 wundern.](/assets/kurven/tweet_1254806815981920256.png)](https://twitter.com/dystonse/status/1254806815981920256)
 
-<blockquote class="twitter-tweet"><p lang="de" dir="ltr">Frauen, die auf Zahlen starren…<br><br>…und denen schon (!) nach wenigen Monaten auffällt, dass von den gesammelten Verspätungsdaten höchstens 28% sekundengenau sind, und der Rest auf die nächsten 6 oder gar 12 Sekunden gerundet wurde. <a href="https://t.co/ElB2UBmnq5">pic.twitter.com/ElB2UBmnq5</a></p>&mdash; Dystonse (@dystonse) <a href="https://twitter.com/dystonse/status/1268606241892425728?ref_src=twsrc%5Etfw">June 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+[![Screenshot eines Tweets, in dem wir die Vermutung beschreiben, dass die Zahlen schon gerundet sind.](/assets/kurven/tweet_1268606241892425728.png)](https://twitter.com/dystonse/status/1268606241892425728)
 
 Egal, wie stark oder schwach gerundet diese Zahlen sind, es handelt sich um jeweils eine einzige, quasi _alternativlose_ Prognose - so als könnte man mit Sicherheit sagen, wie viel Verspätung ein Verkehrsmittel in Zukunft haben wird. Dabei ist die Existenz von Verspätungen doch selbst schon Beweis dafür, dass ÖPNV nicht deterministisch einem Plan folgt. Realistisch betrachtet müsste jede Prognose natürlich mit irgendeiner Form von Unsicherheit behaftet sein, aber in den Daten ist diese nicht zu finden.
 
@@ -50,16 +50,16 @@ Wir verwenden für Dystonse eine artverwandte Darstellung, nämlich die [Summenh
 
 Hier ist eine Gegenüberstellung der beiden Darstellungsweisen für die selben Daten:
 
-**HIER GRAFIK EINFÜGEN**
+![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Histogramm](/assets/kurven/curve_18_to_38_na.svg)
 
-Blub
+Im Histogramm ist auf die Schelle kaum etwas zu erkennen, da die Kurven sich oft kreuzen. Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken:
 
-**HIER GRAFIK EINFÜGEN**
+![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_18_to_38.svg)
 
 Im weiteren Verlauf dieses Textes, sowie auch in später folgenden Blogposts, verwenden wir nur noch aufsummierte Häufigkeiten.
 
 ## Verarbeitung, Vereinfachung und Speicherung
-Um diese Kurven effizient und vielseitig einsetzen zu können, haben wir das Rust-Paket [dystonse-curves][(](https://github.com/dystonse/dystonse-curves)) angelegt. Damit können wir Summenhäufigkeiten in verschiedene Datenstrukturen verpacken, die sich über ein einheitliches Interface ansprechen lassen, das die wichtigsten Operationen darauf bereitstellt. Das Herzstück für die Speicherung ist die `IrregularDynamicCurve`, die eine Kurve anhand von geordneten XY-Paaren darstellt. Da alle Kurven monoton steigend sind, können Anfragen sowohl nach X- als auch nach Y-Werten effizient per binärer Suche erfolgen. Und da die Punkte ungleichmäßig verteilt sein können, und veränderbar sind, können wir diese Kurven reduzieren, indem wir Punkte entfernen, die sich auf die Gesamtform nur unwesentlich auswirken.
+Um diese Kurven effizient und vielseitig einsetzen zu können, haben wir das Rust-Paket [dystonse-curves](https://github.com/dystonse/dystonse-curves) angelegt. Damit können wir Summenhäufigkeiten in verschiedene Datenstrukturen verpacken, die sich über ein einheitliches Interface ansprechen lassen, das die wichtigsten Operationen darauf bereitstellt. Das Herzstück für die Speicherung ist die `IrregularDynamicCurve`, die eine Kurve anhand von geordneten XY-Paaren darstellt. Da alle Kurven monoton steigend sind, können Anfragen sowohl nach X- als auch nach Y-Werten effizient per binärer Suche erfolgen. Und da die Punkte ungleichmäßig verteilt sein können, und veränderbar sind, können wir diese Kurven reduzieren, indem wir Punkte entfernen, die sich auf die Gesamtform nur unwesentlich auswirken.
 
 Um diese Reduktion zu erreichen, verwenden wir den [Ramer-Douglas-Peucker-Algorithmus](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm), der vor allem in der Computergrafik und Geoinformatik populär ist. In der Praxis können wir damit unsere Kurven, die anfangs aus 25 bis 1200 Punkten bestehen, meist auf 5 bis 12 Punkte reduzieren. Außerdem genügt uns theoretisch jeweils ein Byte zur Speicherung einer Koordinate, denn unsere Daten sind niemals so genau, dass sie unbrauchbar würden, wenn sie sich um 1/256 verändern.
 
