@@ -6,7 +6,7 @@ date:   2020-06-09 15:26:34 +0100
 excerpt_separator: <!--more-->
 ---
 
-Seit Monaten sammeln wir Verspätungsdaten: aktuell knapp 7 Millionen Datenpunkte, vor allem aus dem Verkehrsverbund Bremen Niedersachsen. Das ist natürlich kein Selbstzweck.
+Seit Monaten sammeln wir Verspätungsdaten: aktuell ca. 9 Millionen Datenpunkte, vor allem aus dem Verkehrsverbund Bremen Niedersachsen. Das ist natürlich kein Selbstzweck.
 
 Aus den vergangenen Verspätungsdaten möchten wir Statistiken erstellen, und daraus Prognosen für die nahe Zukunft. Und damit letztlich unserer Routensuche die bestmöglichen Ergebnisse liefern.
 
@@ -64,7 +64,7 @@ _(Bilder anklicken, um sie zu vergrößern)_
 
 Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken, denn die Kurven kreuzen sich prinzipbedingt kaum. Allerdings ist die Darstellung für viele Menschen auch ungewohnter und nicht auf den ersten Blick verständlich.
 
-Nach etwas Ein- bzw. Umgewöhnung sind hier wichtige, aussagekräftige Werte direkt ablesbar, wie z.B. "Wie viel Prozenz der Fahrten sind höchstens 60s verspätet" oder "Welche Verspätung wird nur in 5% der Fahrten überschritten?". Das ist nicht nur eine Vereinfachung für den Menschen, der mit bloßem Augen einen Wert aus einer Grafik abliest. Auch für den Computer, der später genau diese Fragen beantworten muss, ist es effizienter, einen Wert auf der Kurve zu bestimmen, als immer wieder das Integral über einen Teil der Kurve zu bilden. Letztlich lassen sich die Summenkurven für uns besser komprimieren als das equivalente Histogramm.
+Nach etwas Ein- bzw. Umgewöhnung sind hier wichtige, aussagekräftige Werte direkt ablesbar, wie z.B. "Wie viel Prozent der Fahrten sind höchstens 60s verspätet" oder "Welche Verspätung wird nur in 5% der Fahrten überschritten?". Das ist nicht nur eine Vereinfachung für den Menschen, der mit bloßem Augen einen Wert aus einer Grafik abliest. Auch für den Computer, der später genau diese Fragen beantworten muss, ist es effizienter, einen Wert auf der Kurve zu bestimmen, als immer wieder das Integral über einen Teil der Kurve zu bilden. Letztlich lassen sich die Summenkurven für uns besser komprimieren als das äquivalente Histogramm.
 
 Die Vorteile dieser Darstellung bzw. Speicherung überwiegen also deutlich - im weiteren Verlauf dieses Textes, sowie auch in später folgenden Blogposts, verwenden wir daher nur noch aufsummierte Häufigkeiten.
 
@@ -88,7 +88,7 @@ Im folgenden Beispiel gibt es 402 solcher Fahrten. Die folgende Grafik enthält 
 
 <a href="/assets/kurven/curve_0_to_5_explain_0.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_0.svg"></a>
 
-Nun wollen wir aber nicht nur wissen, wie Verspätungen am Ziel allgemein verteilt sind, sondern wie sie für eine bestimmte, bekannte Anfanfsverspätung verteilt wären.
+Nun wollen wir aber nicht nur wissen, wie Verspätungen am Ziel allgemein verteilt sind, sondern wie sie für eine bestimmte, bekannte Anfangsverspätung verteilt wären.
 
 ## Klassifizierung der Datenpunkte
 
@@ -100,7 +100,7 @@ Die Aufteilung  ist aber nicht trivial. Teilt man die Datenpunkte gleichmäßig 
 
 Wenn wir stattdessen gleich "breite" Klassen wählen (z.B. je 10 Sekunden, also von -70s bis -60s, von -60s bis -50s, usw.) so sind die Klassen sehr unterschiedlich stark gefüllt. Oft liegen eine einstellige Anzahl von Datenpunkten oder sogar gar keine Punkte in den Extremen, dafür hunderte Punkte in der Klasse um 0s herum. _(Hierzu gibt es keine Grafik.)_
 
-Wir haben daher ein rekursives Verfahren entwickelt, das zunächst alle Daten als eine Klasse ansieht und prüft, ob und wie diese in zwei Unterklassen eingeteilt werden kann. Wenn dies geschieht, wird für jede der Unterklassen die gleiche Prüfung und ggf. Teilung wiederholt. Dabei muss jede neue Klasse sowohl eine Mindesmenge an Datenpunkten enthalten, als auch eine Mindestbreite an Anfangsverspätungen abdecken. Für die gegebene Verteilung von Anfangsverspätung erhalten wir diese Aufteilung:
+Wir haben daher ein rekursives Verfahren entwickelt, das zunächst alle Daten als eine Klasse ansieht und prüft, ob und wie diese in zwei Unterklassen eingeteilt werden kann. Wenn dies geschieht, wird für jede der Unterklassen die gleiche Prüfung und ggf. Teilung wiederholt. Dabei muss jede neue Klasse sowohl eine Mindestmenge an Datenpunkten enthalten, als auch eine Mindestbreite an Anfangsverspätungen abdecken. Für die gegebene Verteilung von Anfangsverspätung erhalten wir diese Aufteilung:
 
 <a href="/assets/kurven/curve_0_to_5_explain_2.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_2.svg"></a>
 
@@ -121,9 +121,9 @@ Viele unserer Beobachtungen haben wir anhand der Straßenbahnlinie 4 in Bremen d
 
 Jede Linie hat mehrere Varianten - im Fall der Linie 4 sind das 11 Varianten, was ein völlig typischer Wert ist. Und für jede Variante erzeugen wir eine Grafik für jedes Haltestellenpaar, z.B. für eine Linienvariante mit 36 Haltestellen 161 Grafiken mit je ca. 2 bis 10 Ergebniskurven. So kommen _sehr schnell_ zehntausende Grafiken zusammen. _Wie schnell?_ Im Schnitt können wir alle 68ms eine neue generieren, und nutzen dabei derzeit nur ein Viertel unserer CPU-Kerne.
 
-Wir haben einige Stunden damit verbracht, diese nach Fehlern, Auffälligkeiten und Kuriositäten zu durchsuchen. Um aber einen besseren Überblick über unsere Datenqualität zu erlangen, waren auch Übersichtsgrafiken wie die folgenden sehr wertvoll. _(Es handelt sich um zwei der view Grafiken, die schon zu Beginn des Textes ganz klein als Teaser-Bilder herhalten mussten.)_
+Wir haben einige Stunden damit verbracht, diese nach Fehlern, Auffälligkeiten und Kuriositäten zu durchsuchen. Um aber einen besseren Überblick über unsere Datenqualität zu erlangen, waren auch Übersichtsgrafiken wie die folgenden sehr wertvoll. _(Es handelt sich um zwei der vier Grafiken, die schon zu Beginn des Textes ganz klein als Teaser-Bilder herhalten mussten.)_
 
-So zeigt sich hier, dass die Tram 4 vorallem in der Mitte der Strecke dazu neigt, Verspätungen von 1-2 Minuten zu haben (blau-gründliche Kurven), und dann gegen Ende (dunkekrote Kurven) auch gerne mal bis zu 2 Minuten zu früh abfährt:
+So zeigt sich hier, dass die Tram 4 vorallem in der Mitte der Strecke dazu neigt, Verspätungen von 1-2 Minuten zu haben (blau-grünliche Kurven), und dann gegen Ende (dunkelrote Kurven) auch gerne mal bis zu 2 Minuten zu früh abfährt:
 
 <a href="/assets/kurven/all_stops.svg"><img title="Verteilung von Verspätungen für alle Halte der Linie 4 gegenüber gestellt" src="/assets/kurven/all_stops.svg"></a>
 
@@ -148,7 +148,7 @@ Weniger erwartet hatten wir die folgenden Erkenntnisse:
 
 <a href="/assets/kurven/curve_4_to_6.svg"><img title="Verspätung der Buslinie 21 in Bremen, Darstellung als Summenhäufigkeit" src="/assets/kurven/curve_4_to_6.svg"></a>
 
-Bus Linie 21 in Bremen, Verspätung an der Haltestelle *Horn*: Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind. Der Bus kommt von Norden und hält dann südlich der Kreuzung am Bussteig.
+*(Bus Linie 21 in Bremen, Verspätung an der Haltestelle "Horn": Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind. Der Bus kommt von Norden und hält dann südlich der Kreuzung am Bussteig.)*
 
 <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=8.867897987365724%2C53.09648992973711%2C8.87175500392914%2C53.09798452567355&amp;layer=mapnik&amp;marker=53.09723723419548%2C8.86982649564743" style="border: 1px solid black"></iframe>
 
