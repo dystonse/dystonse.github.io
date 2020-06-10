@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Verspätungskurven"
+title:  "Um die Kurve gedacht: Wie wir Millionen von Verspätungsdaten übersichtlich aufbereiten"
 categories: analysis
-date:   2020-06-09 15:26:34 +0100
+date:   2020-06-10 19:00:00 +0100
 excerpt_separator: <!--more-->
 ---
 
@@ -117,9 +117,9 @@ Für unsere sieben Klassengrenzen ergeben sich damit sieben Ergebniskurven, die 
 ## Überblick über riesige Datenmengen
 Wir haben bis jetzt 9.094.120 Datenpunkte aufgezeichnet.
 
-Viele unserer Beobachtungen haben wir anhand der Straßenbahnlinie 4 in Bremen durchgeführt. Der Grund dafür war ursprünglich, dass unsere Freundin und Mitbewohnerin Claudia die Linie in ihrer Jugend oft benutzt hat, und die Beispiele, die wir ihr gezeigt haben, damit besonders nachvollziehbar waren. Erst später haben wir gemerkt, dass dies auch zufällig die Linie mit der besten Datenlage ist, nämlich bisher 220.365 Punkte.
+Viele unserer Beobachtungen haben wir anhand der Straßenbahnlinie 4 in Bremen durchgeführt. Zuerst war das eher eine zufällige Auswahl, da unsere Mitbewohnerin uns nach Beispielen dieser Linie fragte, die sie aus ihrer Jugend kennt. Erst später haben wir gemerkt, dass dies tatsächlich eine der Linien mit der besten Datenlage ist: aktuell haben wir davon 220.365 Datenpunkte.
 
-Jede Linie hat mehrere Varianten - im Fall der Linie 4 sind das 11 Varianten, was ein völlig typischer Wert ist. Und für jede Variante erzeugen wir eine Grafik für jedes Haltestellenpaar, z.B. für eine Linienvariante mit 36 Haltestellen 161 Grafiken mit je ca. 2 bis 10 Ergebniskurven. So kommen _sehr schnell_ zehntausende Grafiken zusammen. _Wie schnell?_ Im Schnitt können wir alle 68ms eine neue generieren, und nutzen dabei derzeit nur ein Viertel unserer CPU-Kerne.
+Jede Linie hat mehrere Varianten - im Fall der Linie 4 sind das 11 Varianten, was ein völlig typischer Wert ist. Und für jede Variante erzeugen wir eine Grafik für jedes Haltestellenpaar, das sind z.B. für eine Linienvariante mit 36 Haltestellen dann 161 Grafiken mit je ca. 2 bis 10 Ergebniskurven. So kommen _sehr schnell_ zehntausende Grafiken zusammen. _Wie schnell?_ Im Schnitt können wir alle 68ms eine neue generieren, und nutzen dabei derzeit nur ein Viertel unserer CPU-Kerne.
 
 Wir haben einige Stunden damit verbracht, diese nach Fehlern, Auffälligkeiten und Kuriositäten zu durchsuchen. Um aber einen besseren Überblick über unsere Datenqualität zu erlangen, waren auch Übersichtsgrafiken wie die folgenden sehr wertvoll. _(Es handelt sich um zwei der vier Grafiken, die schon zu Beginn des Textes ganz klein als Teaser-Bilder herhalten mussten.)_
 
@@ -148,11 +148,11 @@ Weniger erwartet hatten wir die folgenden Erkenntnisse:
 
 <a href="/assets/kurven/curve_4_to_6.svg"><img title="Verspätung der Buslinie 21 in Bremen, Darstellung als Summenhäufigkeit" src="/assets/kurven/curve_4_to_6.svg"></a>
 
-*(Bus Linie 21 in Bremen, Verspätung an der Haltestelle "Horn": Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind. Der Bus kommt von Norden und hält dann südlich der Kreuzung am Bussteig.)*
+_(Bus Linie 21 in Bremen, Verspätung an der Haltestelle "Horn": Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind. Der Bus kommt von Norden und hält dann südlich der Kreuzung am Bussteig.)_
 
 <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=8.867897987365724%2C53.09648992973711%2C8.87175500392914%2C53.09798452567355&amp;layer=mapnik&amp;marker=53.09723723419548%2C8.86982649564743" style="border: 1px solid black"></iframe>
 
-Im Kartenausschnitt ist die Ampel markiert, die vermutlich für die Stufen im obigen Diagramm verantwortlich ist.
+_(Im Kartenausschnitt ist die Ampel markiert, die vermutlich für die Stufen im obigen Diagramm verantwortlich ist.)_
 
 ## Rundung
 Schon im April sind uns Ungereimtheiten in den Daten aufgefallen, und wer uns auf Twitter folgt, hat das vielleicht schon mitbekommen:
