@@ -10,20 +10,22 @@ Seit Monaten sammeln wir Verspätungsdaten: aktuell knapp 7 Millionen Datenpunkt
 
 Aus den vergangenen Verspätungsdaten möchten wir Statistiken erstellen, und daraus Prognosen für die nahe Zukunft. Und damit letztlich unserer Routensuche die bestmöglichen Ergebnisse liefern.
 
-Aber Moment - bereits in unserem [vorletzen Post](/opendata/2020/03/13/datensammlung.html) schrieben wir doch, dass wir von den Verkehrsbetrieben bereits Prognosen bekommen. Warum denn so viel Aufwand für eigene Prognosen?
+Jetzt haben wir erste statistische Analysen und ein paar bunte Bilder dazu. Was sieht man darin, wie sind sie entstanden, und wofür sind sie gut?
 
+<a href="/assets/kurven/all_stops.svg"><img title="Verteilung von Verspätungen für alle Halte der Linie 4 gegenüber gestellt" src="/assets/kurven/all_stops.svg" width="22%"></a>
+<a href="/assets/kurven/all_stops_by_delay.svg"><img title="Maxiamle Verspätung für bestimmte Quantile, über den Fahrtverlauf von Linie 4" src="/assets/kurven/all_stops_by_delay.svg" width="22%"></a>
+<a href="/assets/kurven/all_stops_by_percentile.svg"><img title="Anteil der Fahrten, die bestimmte Verspätungen nicht überschreiten, über den Fahrtverlauf von Linie 4" src="/assets/kurven/all_stops_by_percentile.svg" width="22%"></a>
+<a href="/assets/kurven/curve_4_to_6.svg"><img title="Abhängigkeit der Verspätungsverteilung am 6. Halt von der vorherigen Verspätung am 4. Halt" src="/assets/kurven/curve_4_to_6.svg" width="22%"></a>
+
+_(Bilder anklicken, um sie zu vergrößern. Hovern für eine Kurzbeschreibung.)_
 <!--more-->
 
+Bereits in unserem [vorletzen Post](/opendata/2020/03/13/datensammlung.html) schrieben wir, dass wir von den Verkehrsbetrieben "nur" Prognosen bekommen. Die haben wir zunächst auf Echtzeitdaten herunter gebrochen, gesammelt, und nun machen wir daraus wieder eigene Prognosen. Wozu so viel Aufwand?
+
 ## Klassische Prognosen
-Zunächst muss man mal betrachten, was die Verkehrsbetriebe unter _Prognosen_ verstehen. Für ein bestimmtes Fahrzeug wird vorhergesagt, wann es an einer bestimmten Haltestelle ankommen oder abfahren wird. Dabei wird die planmäßige Zeit um eine Anzahl von Sekunden vor- oder zurückverlegt. Das Ergebnis ist also ein Zeitpunkt.
+Zunächst muss man mal betrachten, was die Verkehrsbetriebe unter _Prognosen_ verstehen. Für ein bestimmtes Fahrzeug wird vorhergesagt, wann es an einer bestimmten Haltestelle ankommen oder abfahren wird. Dabei wird die planmäßige Zeit um eine Anzahl von Sekunden vor- oder zurückverlegt. Das Ergebnis ist also ein Zeitpunkt. Für jedes Fahrzeug erhalten wir minütlich Prognosen für seine Ankunft an den nächsten 5 bis 10 Haltestellen.
 
-Dieser Zeitpunkt wird meist mit "sekundengenau" angegeben - wobei der Sekundenanteil bei unseren gesammelten Daten überproportional oft durch 6 oder gar durch 12 teilbar ist, was auf irgendeine Form von Rundung hinweist und bei uns zunächst für einige Verwirrung gesorgt hat... wer uns auf Twitter folgt, hat das vielleicht schon mitbekommen:
-
-[![Screenshot eines Tweets, in dem wir uns über die Häufung der Zahl 12 wundern.](/assets/kurven/tweet_1254806815981920256.png)](https://twitter.com/dystonse/status/1254806815981920256)
-
-[![Screenshot eines Tweets, in dem wir die Vermutung beschreiben, dass die Zahlen schon gerundet sind.](/assets/kurven/tweet_1268606241892425728.png)](https://twitter.com/dystonse/status/1268606241892425728)
-
-Egal, wie stark oder schwach gerundet diese Zahlen sind, es handelt sich um jeweils eine einzige, quasi _alternativlose_ Prognose - so als könnte man mit Sicherheit sagen, wie viel Verspätung ein Verkehrsmittel in Zukunft haben wird. Dabei ist die Existenz von Verspätungen doch selbst schon Beweis dafür, dass ÖPNV nicht deterministisch einem Plan folgt. Realistisch betrachtet müsste jede Prognose natürlich mit irgendeiner Form von Unsicherheit behaftet sein, aber in den Daten ist diese nicht zu finden.
+Der prognostizierte Zeitpunkt wird meist mit "sekundengenau" angegeben - wobei es auffällige Häufungen bestimmter Werte gibt, die am Ende des Artikels nochmal betrachtet werden. So oder so handelt sich um jeweils eine einzige, quasi _alternativlose_ Prognose - so als könnte man mit Sicherheit sagen, wie viel Verspätung ein Verkehrsmittel in Zukunft haben wird. Dabei ist die Existenz von Verspätungen doch selbst schon Beweis dafür, dass ÖPNV nicht deterministisch einem Plan folgt. Zudem wird jede Prognose ja minütlich durch eine - ggf. unterschiedliche - neue Prognose ersetzt. Realistisch betrachtet müsste jede Prognose natürlich mit irgendeiner Form von Unsicherheit behaftet sein, aber in den Daten ist diese nicht zu finden.
 
 Im quasi-Standard GTFS-Realtime (den in Deutschland längst nicht alle Verkehrsbetriebe unterstützen) ist sogar ein Datenfeld vorgesehen, um Unsicherheiten von Prognosen auszudrücken - [dessen statistische Bedeutung aber explizit undefiniert ist](https://developers.google.com/transit/gtfs-realtime/guides/trip-updates#uncertainty) und das weltweit [kaum ein Datenanbieter nutzt](https://github.com/google/transit/pull/111#issuecomment-464783871). Also haben wir unsere eigene Defition für Unsicherheit geschaffen.
 
@@ -48,43 +50,86 @@ Wir verwenden für Dystonse eine artverwandte Darstellung, nämlich die [Summenh
  * Die Kurve der Summenhäufigkeit lässt sich effizienter komprimieren, bzw. zwangsläufig auftretende Fehler durch die Datenreduktion wirken sich kaum auf das effektive Ergebnis aus.
  * Die Darstellung der Summenhäufigkeiten ist übersichtlicher, da die Kurven sich weniger oft kreuzen.
 
-Hier ist eine Gegenüberstellung der beiden Darstellungsweisen für die selben Daten:
+Hier ist eine Gegenüberstellung der beiden Darstellungsweisen, zunächst ähnlich einem Histogramm:
 
-![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Histogramm](/assets/kurven/curve_20_to_45_na.svg)
+<a href="/assets/kurven/curve_20_to_45_na.svg">![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Histogramm](/assets/kurven/curve_20_to_45_na.svg)</a>
 
-Im Histogramm ist auf die Schnelle kaum etwas zu erkennen und der Wert auf der y-Achse hat keine Aussagekraft. Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken:
+_(Bilder anklicken, um sie zu vergrößern)_
 
-![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_20_to_45.svg)
+Im Histogramm ist auf die Schnelle kaum etwas zu erkennen und der Wert auf der y-Achse hat für sich genommen keine Aussagekraft. Die selben Daten in aufsummierter Darstellung:
 
-Im weiteren Verlauf dieses Textes, sowie auch in später folgenden Blogposts, verwenden wir nur noch aufsummierte Häufigkeiten.
+<a href="/assets/kurven/curve_20_to_45.svg">![Verspätung der Straßenbahn Linie 4 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_20_to_45.svg)</a>
+
+_(Bilder anklicken, um sie zu vergrößern)_
+
+Als Summenhäufigkeit dargestellt, sind die gleichen Daten deutlich leichter zu überblicken, denn die Kurven kreuzen sich prinzipbedingt kaum. Allerdings ist die Darstellung für viele Menschen auch ungewohnter und nicht auf den ersten Blick verständlich.
+
+Nach etwas Ein- bzw. Umgewöhnung sind hier wichtige, aussagekräftige Werte direkt ablesbar, wie z.B. "Wie viel Prozenz der Fahrten sind höchstens 60s verspätet" oder "Welche Verspätung wird nur in 5% der Fahrten überschritten?". Das ist nicht nur eine Vereinfachung für den Menschen, der mit bloßem Augen einen Wert aus einer Grafik abliest. Auch für den Computer, der später genau diese Fragen beantworten muss, ist es effizienter, einen Wert auf der Kurve zu bestimmen, als immer wieder das Integral über einen Teil der Kurve zu bilden. Letztlich lassen sich die Summenkurven für uns besser komprimieren als das equivalente Histogramm.
+
+Die Vorteile dieser Darstellung bzw. Speicherung überwiegen also deutlich - im weiteren Verlauf dieses Textes, sowie auch in später folgenden Blogposts, verwenden wir daher nur noch aufsummierte Häufigkeiten.
 
 ## Verarbeitung, Vereinfachung und Speicherung
 Um diese Kurven effizient und vielseitig einsetzen zu können, haben wir das Rust-Paket [dystonse-curves](https://github.com/dystonse/dystonse-curves) angelegt. Damit können wir Summenhäufigkeiten in verschiedene Datenstrukturen verpacken, die sich über ein einheitliches Interface ansprechen lassen, das die wichtigsten Operationen darauf bereitstellt. Das Herzstück für die Speicherung ist die `IrregularDynamicCurve`, die eine Kurve anhand von geordneten XY-Paaren darstellt. Da alle Kurven monoton steigend sind, können Anfragen sowohl nach X- als auch nach Y-Werten effizient per binärer Suche erfolgen. Und da die Punkte ungleichmäßig verteilt sein können, und veränderbar sind, können wir diese Kurven reduzieren, indem wir Punkte entfernen, die sich auf die Gesamtform nur unwesentlich auswirken.
 
 Um diese Reduktion zu erreichen, verwenden wir den [Ramer-Douglas-Peucker-Algorithmus](https://en.wikipedia.org/wiki/Ramer%E2%80%93Douglas%E2%80%93Peucker_algorithm), der vor allem in der Computergrafik und Geoinformatik populär ist. In der Praxis können wir damit unsere Kurven, die anfangs aus 25 bis 1200 Punkten bestehen, meist auf 5 bis 12 Punkte reduzieren. Außerdem genügt uns theoretisch jeweils ein Byte zur Speicherung einer Koordinate, denn unsere Daten sind niemals so genau, dass sie unbrauchbar würden, wenn sie sich um 1/256 verändern.
 
-**HIER EVTL. GRAFIK EINFÜGEN**
+<a href="/assets/kurven/simplify/curve_0_to_4_full.svg"><img title="Kurven mit vollen Details, ohne numerische Rundung." src="/assets/kurven/simplify/curve_0_to_4_full.svg" width="30%"></a>
+<a href="/assets/kurven/simplify/curve_0_to_4_normal.svg"><img title="Kurven auf 12s gerundet und leicht vereinfacht." src="/assets/kurven/simplify/curve_0_to_4_normal.svg" width="30%"></a>
+<a href="/assets/kurven/simplify/curve_0_to_4_oversimplified.svg"><img title="Kurven auf 12s gerundet und stark vereinfacht." src="/assets/kurven/simplify/curve_0_to_4_oversimplified.svg" width="30%"></a>
 
-Auf unserem Server herrscht noch keine Speicherknappheit, doch werden wir später einmal derartige Verteilungskurven an Mobilgeräte senden müssen, die sich außerdem oft in Bereichen mit schlechtem Mobilfunkempfang befinden. Eine Reduktion der Daten ist also besonders wichtig.
+_(Bilder anklicken, um sie zu vergrößern)_
+
+Auf unserem Server herrscht noch keine Speicherknappheit, doch werden wir später einmal derartige Verteilungskurven an Mobilgeräte senden müssen, die sich außerdem oft in Bereichen mit schlechtem Mobilfunkempfang befinden. Eine Reduktion der Daten ist also besonders wichtig. Binär kodiert können wir eine komplette Wahrscheinlichkeitsverteilung in ca. 20 Byte verpacken - eine einzelne Fließkommazahl in JSON-typischer Darstellung mit Schlüssel und Wert hat etwa den selben Umfang.
 
 ## Anwendung auf unsere Problemstellung
-Im ersten Schritt unserer Analyse betrachten wir für einen Linienverlauf jedes Paar aus Start- und Zielhaltestelle, und untersuchen den Zusammenhang zwischen der Verspätung am Start und am Ziel. Dazu suchen wir in unseren Aufzeichnungen Datensätze für die beiden Haltestellen und darin Paare von Datensätzen, die sich auf die selbe Fahrt beziehen.
+Im ersten Schritt unserer Analyse betrachten wir für einen Linienverlauf jedes Paar aus Start- und Zielhaltestelle, und untersuchen den Zusammenhang zwischen der Verspätung am Start und am Ziel. Dazu suchen wir in unseren Aufzeichnungen von Fahrten, bei denen wir für beide Haltestellen Verspätungswerte haben.
 
-Daraus können wir bereits zwei Verteilungen der Verspätungen erstellen, nämlich für Start und Ziel. In unseren Aufzeichnungen sind beide Werte bekannt, Wenn wir später Prognosen erstellen, ist die Verspätung um Start bekannt, und die (Verteilung der) Verspätung am Ziel wird gesucht. Um den Zusammenhang der beiden Größen zu bestimmen, teilen wir unsere Datenpunkte in Klassen verschiedener Start-Verspätungen ein.
+Im folgenden Beispiel gibt es 402 solcher Fahrten. Die folgende Grafik enthält für Start und Ziel jeweils die Verteilung der Verspätungen, und für 35 zufällige der 402 Wertepaare haben wir den den Punkt für die Anfsangsverspätung und die Endverspätung mit einer Strecke verbunden.
 
-Die Aufteilung der Klassen ist aber nicht trivial:
- * Wenn wir gleich "breite" Klassen wählen (z.B. je 10 Sekunden, also von -300s bis -290s, von -290s bis -280s, usw.) so sind die Klassen sehr unterschiedlich stark gefüllt (oft eine einstellige Anzahl von Datenpunkten oder sogar gar keine Punkte in den Extremen, dafür hunderte Punkte in der Klasse um 0s herum).
- * Wenn wir gleich "mächtige" Klassen wählen (z.B. 100 Datenpunkte je Klasse), so erhalten wir sehr breite Klassen in den Extremen (z.B. werden alle Verspätungen von 20s bis 300s zusammen geworfen) während wir bei den fast-pünktlichen Fahrten überspezifisch trennen (so als würden sich Fahren mit 2s Anfangsverspätung signifikant anders entwickeln als solche mit 3s).
+<a href="/assets/kurven/curve_0_to_5_explain_0.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_0.svg"></a>
 
-Wir haben daher ein rekursives Verfahren entwickelt, das zunächst alle Daten als eine Klasse ansieht und prüft, ob und wie diese in zwei Unterklassen eingeteilt werden kann. Wenn dies geschieht, wird für jede der Unterklassen die gleiche Prüfung und ggf. Teilung wiederholt. Dazu ermitteln wird einseits anhand der Breite, andererseits anhand der Mächtigkeit Ober- und Untergrenzen für eine mögliche Teilung, und nur wenn ein Teilungspunkt existiert, der alle vier Grenzen einhält, wird dieser verwendet.
+Nun wollen wir aber nicht nur wissen, wie Verspätungen am Ziel allgemein verteilt sind, sondern wie sie für eine bestimmte, bekannte Anfanfsverspätung verteilt wären.
 
-**HIER EVTL. GRAFIK EINFÜGEN**
+## Klassifizierung der Datenpunkte
 
-Eine weitere Verfeinerung unseres Ansatzes besteht darin, dass wir nicht mehr alle Datenpunkte einer Klasse stumpf zusammen werfen (also etwa alle Fahrten mit einer Anfangsverspätung zwischen 20s und 300s gleich behandeln), sondern gewichtet aufsummieren. Im gegebenen Beispiel würde eine Fahrt mit 40s Anfangsverspätung mit sehr hoher Gewichtung in die Kurve für 20s eingehen, und nur mit einer sehr geringen Gewichtung in jene für 300s. (Konkret geht jede Fahrt in 1 oder 2 Ergebniskurven ein, wobei die beiden Gewichte sich stets zu 1 aufaddieren, d.h. jede Fahrt geht gleichermaßen in die Gesamtanalyse ein).
+Um den Zusammenhang der beiden Größen zu bestimmen, teilen wir unsere Datenpunkte in Klassen verschiedener Start-Verspätungen ein, denn wir müssen stets eine Menge von Einzelbeobachtungen zusammen fassen, um eine (näherungsweise) Verteilung zu ermitteln.
 
-**HIER EVTL. GRAFIK EINFÜGEN**
+Die Aufteilung  ist aber nicht trivial. Teilt man die Datenpunkte gleichmäßig nach Anzahl der Datenpunkte ein, so decken diese Klassen sehr unterschiedliche Spannen von Anfangsverspätungen ab. Im Folgenden Bild wurden die 402 Datenpunkte in Klassen zu je 50 bzw. 51 Punkten eingeteilt, wobei die vorletze Klasse Verspätungen von 36s bis 48s abdeckt, die letzte hingegen alle Daten von 48s bis 432s zusammen wirft. Die Aufteilung ist also an manchen Stellen (zu) fein, an anderen zu grob.
 
-Daraus ergibt sich auch, dass für jedes Haltestellenpaar eine andere Anzahl an Klassen, und somit eine andere Anzahl an Kurven entstehen kann, stets so, wie es den vorhandenen Daten angemessen ist.
+<a href="/assets/kurven/curve_0_to_5_explain_1.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_1.svg"></a>
+
+Wenn wir stattdessen gleich "breite" Klassen wählen (z.B. je 10 Sekunden, also von -70s bis -60s, von -60s bis -50s, usw.) so sind die Klassen sehr unterschiedlich stark gefüllt. Oft liegen eine einstellige Anzahl von Datenpunkten oder sogar gar keine Punkte in den Extremen, dafür hunderte Punkte in der Klasse um 0s herum. _(Hierzu gibt es keine Grafik.)_
+
+Wir haben daher ein rekursives Verfahren entwickelt, das zunächst alle Daten als eine Klasse ansieht und prüft, ob und wie diese in zwei Unterklassen eingeteilt werden kann. Wenn dies geschieht, wird für jede der Unterklassen die gleiche Prüfung und ggf. Teilung wiederholt. Dabei muss jede neue Klasse sowohl eine Mindesmenge an Datenpunkten enthalten, als auch eine Mindestbreite an Anfangsverspätungen abdecken. Für die gegebene Verteilung von Anfangsverspätung erhalten wir diese Aufteilung:
+
+<a href="/assets/kurven/curve_0_to_5_explain_2.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_2.svg"></a>
+
+Eine weitere Verfeinerung unseres Ansatzes besteht darin, dass wir nicht mehr alle Datenpunkte einer Klasse stumpf zusammen werfen (also etwa alle Fahrten mit einer Anfangsverspätung zwischen 135s und 432s gleich behandeln), sondern gewichtet aufsummieren. Im gegebenen Beispiel würden wir also eine Kurve für alle Fahrten erstellen, die "ungefähr 135s" verspätet beginnen, und eine andere Kurve für alle Fahrten, die "ungefähr 432s" verspätet sind.
+
+Eine Fahrt mit 170s Anfangsverspätung (in der nächsten Grafik grün hervorgehoben) würde mit sehr hoher Gewichtung in die erste Kurve eingehen, und nur mit einer sehr geringen Gewichtung in die zweite. Dabei bestimmt die Anfangsverspätung, _wie sehr_ der Datensatz in die jeweilige Summe eingeht, aber die Endverspätung, _was_ aufsummiert wird, und jeder Datensatz geht in ein oder zwei Summenkurven ein:
+
+<a href="/assets/kurven/curve_0_to_5_explain_3.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_3.svg"></a>
+
+Für unsere sieben Klassengrenzen ergeben sich damit sieben Ergebniskurven, die den Zusammenhang zwischen Anfangs- und Endverspätung viel genauer wiedergeben können, als es eine einzelne Verteilungskurve könnte. Die Zahl in Klammern ist dabei ein Indiz für die Menge der Datenpunkte, die aufsummiert wurden, so besteht die 432s-Kurve aus (mehr als 14) Datenpunkten mit einem Gesamtgewicht von 14.05. 
+
+<a href="/assets/kurven/curve_0_to_5_explain_4.svg"><img title="" src="/assets/kurven/curve_0_to_5_explain_4.svg"></a>
+
+## Überblick über riesige Datenmengen
+Wir haben bis jetzt 9.094.120 Datenpunkte aufgezeichnet.
+
+Viele unserer Beobachtungen haben wir anhand der Straßenbahnlinie 4 in Bremen durchgeführt. Der Grund dafür war ursprünglich, dass unsere Freundin und Mitbewohnerin Claudia die Linie in ihrer Jugend oft benutzt hat, und die Beispiele, die wir ihr gezeigt haben, damit besonders nachvollziehbar waren. Erst später haben wir gemerkt, dass dies auch zufällig die Linie mit der besten Datenlage ist, nämlich bisher 220.365 Punkte.
+
+Jede Linie hat mehrere Varianten - im Fall der Linie 4 sind das 11 Varianten, was ein völlig typischer Wert ist. Und für jede Variante erzeugen wir eine Grafik für jedes Haltestellenpaar, z.B. für eine Linienvariante mit 36 Haltestellen 161 Grafiken mit je ca. 2 bis 10 Ergebniskurven. So kommen _sehr schnell_ zehntausende Grafiken zusammen. _Wie schnell?_ Im Schnitt können wir alle 68ms eine neue generieren, und nutzen dabei derzeit nur ein Viertel unserer CPU-Kerne.
+
+Wir haben einige Stunden damit verbracht, diese nach Fehlern, Auffälligkeiten und Kuriositäten zu durchsuchen. Um aber einen besseren Überblick über unsere Datenqualität zu erlangen, waren auch Übersichtsgrafiken wie die folgenden sehr wertvoll. _(Es handelt sich um zwei der view Grafiken, die schon zu Beginn des Textes ganz klein als Teaser-Bilder herhalten mussten.)_
+
+So zeigt sich hier, dass die Tram 4 vorallem in der Mitte der Strecke dazu neigt, Verspätungen von 1-2 Minuten zu haben (blau-gründliche Kurven), und dann gegen Ende (dunkekrote Kurven) auch gerne mal bis zu 2 Minuten zu früh abfährt:
+
+<a href="/assets/kurven/all_stops.svg"><img title="Verteilung von Verspätungen für alle Halte der Linie 4 gegenüber gestellt" src="/assets/kurven/all_stops.svg"></a>
+
+Die gleichen Folgerungen lassen sich auch dieser Ansicht ableiten:
+
+<a href="/assets/kurven/all_stops_by_percentile.svg"><img title="Anteil der Fahrten, die bestimmte Verspätungen nicht überschreiten, über den Fahrtverlauf von Linie 4" src="/assets/kurven/all_stops_by_percentile.svg"></a>
 
 ## Erkenntnisse
 Die allererste Feststellung: die Kurven aus unseren gesammelten Daten sehen tatsächlich etwa so aus wie das, was wir uns in den Monaten zuvor vorgestellt haben, und was sich in unseren Bleistiftskizzen vielfach wieder findet.
@@ -97,23 +142,41 @@ Und es bestätigen sich weitere Vermutungen und offensichtliche Zusammenhänge:
  * Manche Linienabschnitte fügen tendenziell mehr Verspätung hinzu, andere erlauben eher, Verspätungen wieder auszugleichen
 
 Weniger erwartet hatten wir die folgenden Erkenntnisse:
- * Ein Großteil der Daten wurde vom Anbieter auf ganze Vielfache von 6 oder gar 12 Sekunden gerundet, aber es gibt stets auch Daten, die "krumme" Werte enthalten. Durch 12 Teilbare Werte kamen dabei überproportional oft vor, also viel öfter, als sie bei einer Rundung auf den nächsten 6er sowieso auftreten würden. Vielfache von 24 sind hingegen nicht auffällig oft vorgekommen. Die Rundung hat zu sichtbaren Verzerrungen unserer Grafiken geführt, die oft die eigentliche Essenz der Information überdeckt haben. Da wir nicht davon ausgehen, dass Prognosen genauer als 12s aufgelöst sein müssen, bzw. dass eine höhere Auflösung praxisrelevant wäre, runden wir nun _alle_ Daten vor der Verarbeitung auf 12 Sekunden.
  * Je nach Haltestelle schwankt die Verfügbarkeit und Qualität von Echtzeitdaten enorm, selbst wenn diese eigentlich von gleich vielen Fahrzeugen passiert werden. Es scheint, als würden manche Haltestellen bzw. Streckenzüge über 2-4 Haltestellen hinweg in einer Art "Funkloch" liegen.
- * Es gibt einige Ausreißer mit Verspätungen in der Größenordnung von -3600 oder +3600 Sekuden, also einer ganzen Stunde. Für unsere ersten Auswertungen haben wir nicht nur diese ausgeschlossen, sondern alle jenseits von 300 Sekunden, also 5 Minuten, in beide Richtungen. Natürlich sind Verspätungen im Rahmen von 10 bis 20 Minuten alltäglich und praxisrelevant und werden später wieder in unsere Analysen einfließen. Bei der Betrachtung des Kernbereichs waren diese aber schon viel störender, als wir zunächst angenommen haben.
- * Manchmal finden sich in den Kurven interessante Muster und Unregelmäßigkeiten, die dennoch plausibel sein können. Im Folgenden Beispiel finden sich einige "Stufen" der Breite 90s in den Kurven. Da liegt die Vermutung nahe, dass sich kurz vor der Haltestelle eine Ampel befindet, an der ein Bus warten muss, bevor er den Halt erreicht. Wir haben das auf der Straßenkarte geprüft, und tatsächlich muss der Bus dort an einer Ampel warten, direkt bevor er an der Haltestelle hält. Ob die Ampeln dort wirklich einen 90-Sekunden-Zyklus haben, konnten wir aus der Ferne jedoch nicht heraus finden.
+ * Es gibt einige Ausreißer mit Verspätungen in der Größenordnung von -3600 oder +3600 Sekuden, also einer ganzen Stunde. Für unsere Auswertungen schließen wir derzeit alle Abweichungen von mehr als 3000 Sekunden (also 50 Minuten) komplett aus. Zudem schneiden wir die Darstellung der Diagramme bei 450 Sekunden ab, um den interessanten Kernbereich besser sichtbar zu machen.
+ * Manchmal finden sich in den Kurven interessante Muster und Unregelmäßigkeiten, die dennoch plausibel sein können. Im folgenden Beispiel finden sich einige Stufen / Schultern / Sattelpunkte im Abstand von 90s in den Kurven. Da liegt die Vermutung nahe, dass sich kurz vor der Haltestelle eine Ampel befindet, an der ein Bus warten muss, bevor er den Halt erreicht. Wir haben das auf der Straßenkarte geprüft, und tatsächlich muss der Bus dort an einer Ampel warten, direkt bevor er an der Haltestelle hält. Ob die Ampeln dort wirklich einen 90-Sekunden-Zyklus haben, konnten wir aus der Ferne jedoch nicht heraus finden.
 
-![Verspätung der Buslinie 21 in Bremen, Darstellung als Summenhäufigkeit](/assets/kurven/curve_4_to_6.svg)
+<a href="/assets/kurven/curve_4_to_6.svg"><img title="Verspätung der Buslinie 21 in Bremen, Darstellung als Summenhäufigkeit" src="/assets/kurven/curve_4_to_6.svg"></a>
 
-Bus Linie 21 in Bremen, Verspätung an der Haltestelle *Horn*: Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind.
+Bus Linie 21 in Bremen, Verspätung an der Haltestelle *Horn*: Hier sind einige auffällige Stufen erkennbar, die jeweils ca. 90 Sekunden breit sind. Der Bus kommt von Norden und hält dann südlich der Kreuzung am Bussteig.
 
 <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=8.867897987365724%2C53.09648992973711%2C8.87175500392914%2C53.09798452567355&amp;layer=mapnik&amp;marker=53.09723723419548%2C8.86982649564743" style="border: 1px solid black"></iframe>
 
 Im Kartenausschnitt ist die Ampel markiert, die vermutlich für die Stufen im obigen Diagramm verantwortlich ist.
 
+## Rundung
+Schon im April sind uns Ungereimtheiten in den Daten aufgefallen, und wer uns auf Twitter folgt, hat das vielleicht schon mitbekommen:
+
+[![Screenshot eines Tweets, in dem wir uns über die Häufung der Zahl 12 wundern.](/assets/kurven/tweet_1254806815981920256.png)](https://twitter.com/dystonse/status/1254806815981920256)
+
+<!-- [![Screenshot eines Tweets, in dem wir die Vermutung beschreiben, dass die Zahlen schon gerundet sind.](/assets/kurven/tweet_1268606241892425728.png)](https://twitter.com/dystonse/status/1268606241892425728) -->
+
+Ein Großteil der Daten wurde also vom Anbieter auf ganze Vielfache von 6 oder gar 12 Sekunden gerundet, aber es gibt stets auch Daten, die "krumme" Werte enthalten. Hier die Verteilung der Verspätungen modulo 60:
+
+<a href="/assets/kurven/modulo.png"><img title="Verteilung der Verspätungen modulo 60" src="/assets/kurven/modulo.png"></a>
+
+Die Rundung hat zu sichtbaren Verzerrungen unserer Grafiken geführt, die oft die eigentliche Essenz der Information überdeckt haben. Da wir nicht davon ausgehen, dass Prognosen genauer als 12s aufgelöst sein müssen, bzw. dass eine höhere Auflösung praxisrelevant wäre, runden wir nun _alle_ Daten vor der Verarbeitung auf 12 Sekunden.
+
 ## Nächste Schritte
 Derzeit können wir diese Kurven nur als Grafiken ausgeben. (Wir nutzen hier SVG, aber PNG, PDF, etc. funktionieren ebenso). Natürlich brauchen wir für die Praxis eine kompakte, effizient maschinenlesbare Form und eine Weise, die Kurven für sämtliche Haltestellenpaare aller Linien abzulegen und wiederzufinden.
 
-Später möchten wir noch weitere Einflussgrößen betrachten und danach getrennte Kurven ermitteln, wie z.B. Wochentag und Uhrzeit.
+Später möchten wir noch weitere Einflussgrößen betrachten und danach getrennte Kurven ermitteln, wie z.B. Wochentag und Uhrzeit. So soll für jede gültige Kombination aus den folgenden Eingabegrößen eine Verteilung ermittelt werden können:
+ * Linie und Linienvariante
+ * Tag
+ * Uhrzeit
+ * Start-Haltestelle (für die eine aktuelle Verpätung bekannt ist)
+ * Wert der aktuellen Verspätung
+ * Ziel-Haltestelle (für die die Verteilung von künftigen Verspätungen gefragt ist)
 
 Und wir brauchen einen Algorithmus (sowie eine Schnittstelle, Infrastruktur, etc.) um daraus tatsächlich Prognosen zu erstellen. Dazu werden wir die aktuelle Verspätung jedes Fahrzeugs nutzen, um die passende(n) Kurve(n) aus unserer Analyse zu laden und mittels Sampling und Interpolation Verteilungen für den weiteren Fahrtverlauf zu prognostizieren.
 
