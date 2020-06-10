@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Hier schreiben Lena und Kirstin über ÖPNV, Open Data, Programmierung und alles
   andere, was bei der Arbeit an dystonse so anfällt. Eine zufällige Zahl: -37
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.dystonse.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dystonse
 github_username:  dystonse
 show_excerpts: true
