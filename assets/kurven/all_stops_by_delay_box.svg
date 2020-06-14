@@ -1,808 +1,3923 @@
-<?xml version="1.0" encoding="utf-8"  standalone="no"?>
-<svg 
- width="1024" height="768"
- viewBox="0 0 1024 768"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
->
-
-<title>Gnuplot</title>
-<desc>Produced by GNUPLOT 5.2 patchlevel 8 </desc>
-
-<g id="gnuplot_canvas">
-
-<rect x="0" y="0" width="1024" height="768" fill="none"/>
-<defs>
-
-	<circle id='gpDot' r='0.5' stroke-width='0.5' stroke='currentColor'/>
-	<path id='gpPt0' stroke-width='0.222' stroke='currentColor' d='M-1,0 h2 M0,-1 v2'/>
-	<path id='gpPt1' stroke-width='0.222' stroke='currentColor' d='M-1,-1 L1,1 M1,-1 L-1,1'/>
-	<path id='gpPt2' stroke-width='0.222' stroke='currentColor' d='M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1'/>
-	<rect id='gpPt3' stroke-width='0.222' stroke='currentColor' x='-1' y='-1' width='2' height='2'/>
-	<rect id='gpPt4' stroke-width='0.222' stroke='currentColor' fill='currentColor' x='-1' y='-1' width='2' height='2'/>
-	<circle id='gpPt5' stroke-width='0.222' stroke='currentColor' cx='0' cy='0' r='1'/>
-	<use xlink:href='#gpPt5' id='gpPt6' fill='currentColor' stroke='none'/>
-	<path id='gpPt7' stroke-width='0.222' stroke='currentColor' d='M0,-1.33 L-1.33,0.67 L1.33,0.67 z'/>
-	<use xlink:href='#gpPt7' id='gpPt8' fill='currentColor' stroke='none'/>
-	<use xlink:href='#gpPt7' id='gpPt9' stroke='currentColor' transform='rotate(180)'/>
-	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
-	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
-	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
-	<path id='gpPt13' stroke-width='0.222' stroke='currentColor' d='M0,1.330 L1.265,0.411 L0.782,-1.067 L-0.782,-1.076 L-1.265,0.411 z'/>
-	<use xlink:href='#gpPt13' id='gpPt14' fill='currentColor' stroke='none'/>
-	<filter id='textbox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
-	  <feFlood flood-color='white' flood-opacity='1' result='bgnd'/>
-	  <feComposite in='SourceGraphic' in2='bgnd' operator='atop'/>
-	</filter>
-	<filter id='greybox' filterUnits='objectBoundingBox' x='0' y='0' height='1' width='1'>
-	  <feFlood flood-color='lightgrey' flood-opacity='1' result='grey'/>
-	  <feComposite in='SourceGraphic' in2='grey' operator='atop'/>
-	</filter>
-</defs>
-<g fill="none" color="white" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(512.0,21.9)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Bremer Straßenbahn AG - Straßenbahn Linie 4 nach Lilienthal - Verspätung als Box-Plot</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,36.1 L53.9,326.7 L999.0,326.7 L999.0,36.1 L53.9,36.1 Z  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(10.0,181.4) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(526.4,49.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g transform="translate(937.4,312.9)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Perzentile</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-	<g id="gnuplot_plot_1a" ><title>gnuplot_plot_1a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '56.1,267.0 60.5,267.0 60.5,239.0 56.1,239.0 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M56.1,267.0 L60.5,267.0 L60.5,239.0 L56.1,239.0 L56.1,267.0 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M58.3,274.0 L58.3,267.0 M58.3,239.0 L58.3,173.6 M56.1,173.6 L60.5,173.6 M56.1,274.0 L60.5,274.0
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '85.4,267.0 89.8,267.0 89.8,239.0 85.4,239.0 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M85.4,267.0 L89.8,267.0 L89.8,239.0 L85.4,239.0 L85.4,267.0 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M87.6,274.0 L87.6,267.0 M87.6,239.0 L87.6,173.6 M85.4,173.6 L89.8,173.6 M85.4,274.0 L89.8,274.0
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '114.8,253.4 119.2,253.4 119.2,230.8 114.8,230.8 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M114.8,253.4 L119.2,253.4 L119.2,230.8 L114.8,230.8 L114.8,253.4 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M117.0,272.3 L117.0,253.4 M117.0,230.8 L117.0,130.9 M114.8,130.9 L119.2,130.9 M114.8,272.3 L119.2,272.3
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '144.1,248.0 148.5,248.0 148.5,219.7 144.1,219.7 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M144.1,248.0 L148.5,248.0 L148.5,219.7 L144.1,219.7 L144.1,248.0 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M146.3,263.7 L146.3,248.0 M146.3,219.7 L146.3,168.3 M144.1,168.3 L148.5,168.3 M144.1,263.7 L148.5,263.7
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '173.4,239.5 177.8,239.5 177.8,219.3 173.4,219.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M173.4,239.5 L177.8,239.5 L177.8,219.3 L173.4,219.3 L173.4,239.5 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M175.6,260.6 L175.6,239.5 M175.6,219.3 L175.6,117.6 M173.4,117.6 L177.8,117.6 M173.4,260.6 L177.8,260.6
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '202.8,253.4 207.2,253.4 207.2,214.9 202.8,214.9 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M202.8,253.4 L207.2,253.4 L207.2,214.9 L202.8,214.9 L202.8,253.4 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M205.0,254.2 L205.0,253.4 M205.0,214.9 L205.0,138.1 M202.8,138.1 L207.2,138.1 M202.8,254.2 L207.2,254.2
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '232.1,243.7 236.5,243.7 236.5,223.3 232.1,223.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M232.1,243.7 L236.5,243.7 L236.5,223.3 L232.1,223.3 L232.1,243.7 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M234.3,252.1 L234.3,243.7 M234.3,223.3 L234.3,126.4 M232.1,126.4 L236.5,126.4 M232.1,252.1 L236.5,252.1
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '261.5,253.8 265.9,253.8 265.9,224.3 261.5,224.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M261.5,253.8 L265.9,253.8 L265.9,224.3 L261.5,224.3 L261.5,253.8 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M263.7,280.9 L263.7,253.8 M263.7,224.3 L263.7,140.2 M261.5,140.2 L265.9,140.2 M261.5,280.9 L265.9,280.9
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '290.8,250.9 295.2,250.9 295.2,229.3 290.8,229.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M290.8,250.9 L295.2,250.9 L295.2,229.3 L290.8,229.3 L290.8,250.9 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M293.0,254.0 L293.0,250.9 M293.0,229.3 L293.0,142.2 M290.8,142.2 L295.2,142.2 M290.8,254.0 L295.2,254.0
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '320.1,241.2 324.5,241.2 324.5,213.6 320.1,213.6 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M320.1,241.2 L324.5,241.2 L324.5,213.6 L320.1,213.6 L320.1,241.2 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M322.3,252.9 L322.3,241.2 M322.3,213.6 L322.3,121.3 M320.1,121.3 L324.5,121.3 M320.1,252.9 L324.5,252.9
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '349.5,233.5 353.9,233.5 353.9,201.3 349.5,201.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M349.5,233.5 L353.9,233.5 L353.9,201.3 L349.5,201.3 L349.5,233.5 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M351.7,253.4 L351.7,233.5 M351.7,201.3 L351.7,130.6 M349.5,130.6 L353.9,130.6 M349.5,253.4 L353.9,253.4
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '378.8,253.7 383.2,253.7 383.2,212.2 378.8,212.2 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M378.8,253.7 L383.2,253.7 L383.2,212.2 L378.8,212.2 L378.8,253.7 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M381.0,254.6 L381.0,253.7 M381.0,212.2 L381.0,153.7 M378.8,153.7 L383.2,153.7 M378.8,254.6 L383.2,254.6
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '408.1,247.8 412.5,247.8 412.5,204.9 408.1,204.9 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M408.1,247.8 L412.5,247.8 L412.5,204.9 L408.1,204.9 L408.1,247.8 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M410.3,266.9 L410.3,247.8 M410.3,204.9 L410.3,36.1 M408.1,36.1 L412.5,36.1 M408.1,266.9 L412.5,266.9
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '437.5,238.3 441.9,238.3 441.9,192.3 437.5,192.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M437.5,238.3 L441.9,238.3 L441.9,192.3 L437.5,192.3 L437.5,238.3 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M439.7,253.4 L439.7,238.3 M439.7,192.3 L439.7,155.5 M437.5,155.5 L441.9,155.5 M437.5,253.4 L441.9,253.4
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '466.8,249.8 471.2,249.8 471.2,215.5 466.8,215.5 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M466.8,249.8 L471.2,249.8 L471.2,215.5 L466.8,215.5 L466.8,249.8 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M469.0,254.0 L469.0,249.8 M469.0,215.5 L469.0,132.7 M466.8,132.7 L471.2,132.7 M466.8,254.0 L471.2,254.0
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '496.1,248.6 500.5,248.6 500.5,217.5 496.1,217.5 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M496.1,248.6 L500.5,248.6 L500.5,217.5 L496.1,217.5 L496.1,248.6 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M498.3,259.6 L498.3,248.6 M498.3,217.5 L498.3,163.5 M496.1,163.5 L500.5,163.5 M496.1,259.6 L500.5,259.6
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '525.5,253.8 529.9,253.8 529.9,230.3 525.5,230.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M525.5,253.8 L529.9,253.8 L529.9,230.3 L525.5,230.3 L525.5,253.8 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M527.7,255.5 L527.7,253.8 M527.7,230.3 L527.7,157.3 M525.5,157.3 L529.9,157.3 M525.5,255.5 L529.9,255.5
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '554.8,251.7 559.2,251.7 559.2,222.0 554.8,222.0 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M554.8,251.7 L559.2,251.7 L559.2,222.0 L554.8,222.0 L554.8,251.7 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M557.0,276.9 L557.0,251.7 M557.0,222.0 L557.0,142.6 M554.8,142.6 L559.2,142.6 M554.8,276.9 L559.2,276.9
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '584.2,248.1 588.6,248.1 588.6,247.0 584.2,247.0 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M584.2,248.1 L588.6,248.1 L588.6,247.0 L584.2,247.0 L584.2,248.1 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M586.4,278.9 L586.4,248.1 M586.4,247.0 L586.4,187.7 M584.2,187.7 L588.6,187.7 M584.2,278.9 L588.6,278.9
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '613.5,245.2 617.9,245.2 617.9,243.6 613.5,243.6 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M613.5,245.2 L617.9,245.2 L617.9,243.6 L613.5,243.6 L613.5,245.2 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M615.7,255.9 L615.7,245.2 M615.7,243.6 L615.7,180.1 M613.5,180.1 L617.9,180.1 M613.5,255.9 L617.9,255.9
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '642.8,253.8 647.2,253.8 647.2,249.2 642.8,249.2 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M642.8,253.8 L647.2,253.8 L647.2,249.2 L642.8,249.2 L642.8,253.8 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M645.0,281.2 L645.0,253.8 M645.0,249.2 L645.0,146.5 M642.8,146.5 L647.2,146.5 M642.8,281.2 L647.2,281.2
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '672.2,251.1 676.6,251.1 676.6,250.4 672.2,250.4 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M672.2,251.1 L676.6,251.1 L676.6,250.4 L672.2,250.4 L672.2,251.1 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M674.4,295.8 L674.4,251.1 M674.4,250.4 L674.4,185.5 M672.2,185.5 L676.6,185.5 M672.2,295.8 L676.6,295.8
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '701.5,242.9 705.9,242.9 705.9,242.0 701.5,242.0 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M701.5,242.9 L705.9,242.9 L705.9,242.0 L701.5,242.0 L701.5,242.9 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M703.7,277.5 L703.7,242.9 M703.7,242.0 L703.7,199.9 M701.5,199.9 L705.9,199.9 M701.5,277.5 L705.9,277.5
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '730.8,253.9 735.2,253.9 735.2,246.2 730.8,246.2 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M730.8,253.9 L735.2,253.9 L735.2,246.2 L730.8,246.2 L730.8,253.9 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M733.0,295.0 L733.0,253.9 M733.0,246.2 L733.0,186.1 M730.8,186.1 L735.2,186.1 M730.8,295.0 L735.2,295.0
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '760.2,237.6 764.6,237.6 764.6,228.9 760.2,228.9 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M760.2,237.6 L764.6,237.6 L764.6,228.9 L760.2,228.9 L760.2,237.6 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M762.4,287.4 L762.4,237.6 M762.4,228.9 L762.4,165.1 M760.2,165.1 L764.6,165.1 M760.2,287.4 L764.6,287.4
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '789.5,245.5 793.9,245.5 793.9,233.3 789.5,233.3 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M789.5,245.5 L793.9,245.5 L793.9,233.3 L789.5,233.3 L789.5,245.5 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M791.7,299.1 L791.7,245.5 M791.7,233.3 L791.7,133.8 M789.5,133.8 L793.9,133.8 M789.5,299.1 L793.9,299.1
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '818.9,251.7 823.3,251.7 823.3,228.9 818.9,228.9 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M818.9,251.7 L823.3,251.7 L823.3,228.9 L818.9,228.9 L818.9,251.7 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M821.1,265.1 L821.1,251.7 M821.1,228.9 L821.1,185.9 M818.9,185.9 L823.3,185.9 M818.9,265.1 L823.3,265.1
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '848.2,254.0 852.6,254.0 852.6,249.5 848.2,249.5 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M848.2,254.0 L852.6,254.0 L852.6,249.5 L848.2,249.5 L848.2,254.0 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M850.4,317.0 L850.4,254.0 M850.4,249.5 L850.4,174.5 M848.2,174.5 L852.6,174.5 M848.2,317.0 L852.6,317.0
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '877.5,283.1 881.9,283.1 881.9,251.4 877.5,251.4 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M877.5,283.1 L881.9,283.1 L881.9,251.4 L877.5,251.4 L877.5,283.1 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M879.7,324.7 L879.7,283.1 M879.7,251.4 L879.7,201.8 M877.5,201.8 L881.9,201.8 M877.5,324.7 L881.9,324.7
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '906.9,252.6 911.3,252.6 911.3,239.2 906.9,239.2 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M906.9,252.6 L911.3,252.6 L911.3,239.2 L906.9,239.2 L906.9,252.6 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M909.1,306.8 L909.1,252.6 M909.1,239.2 L909.1,175.1 M906.9,175.1 L911.3,175.1 M906.9,306.8 L911.3,306.8
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '936.2,262.2 940.6,262.2 940.6,234.8 936.2,234.8 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M936.2,262.2 L940.6,262.2 L940.6,234.8 L936.2,234.8 L936.2,262.2 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M938.4,315.7 L938.4,262.2 M938.4,234.8 L938.4,197.6 M936.2,197.6 L940.6,197.6 M936.2,315.7 L940.6,315.7
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '965.5,249.6 969.9,249.6 969.9,239.1 965.5,239.1 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M965.5,249.6 L969.9,249.6 L969.9,239.1 L965.5,239.1 L965.5,249.6 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M967.7,302.4 L967.7,249.6 M967.7,239.1 L967.7,199.6 M965.5,199.6 L969.9,199.6 M965.5,302.4 L969.9,302.4
-		 '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb(  0,   0,   0)' fill-opacity = '0.500000' points = '994.9,241.3 999.3,241.3 999.3,220.0 994.9,220.0 '/>
-	</g>
-	<path stroke='rgb(  0,   0,   0)'  d='M994.9,241.3 L999.3,241.3 L999.3,220.0 L994.9,220.0 L994.9,241.3 Z  '/>	<path stroke='rgb(  0,   0,   0)'  d='M997.1,253.4 L997.1,241.3 M997.1,220.0 L997.1,177.1 M994.9,177.1 L999.0,177.1 M994.9,253.4 L999.0,253.4
-		 '/></g>
-	</g>
-	<g id="gnuplot_plot_2a" ><title>gnuplot_plot_2a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt0' transform='translate(58.3,253.9) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(87.6,253.9) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(117.0,245.2) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(146.3,247.8) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(175.6,239.2) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(205.0,239.0) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(234.3,241.6) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(263.7,251.7) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(293.0,250.4) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(322.3,239.3) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(351.7,227.4) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(381.0,237.5) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(410.3,225.5) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(439.7,217.7) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(469.0,247.8) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(498.3,244.9) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(527.7,249.7) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(557.0,239.5) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(586.4,247.5) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(615.7,244.4) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(645.0,253.4) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(674.4,250.7) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(703.7,242.2) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(733.0,253.7) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(762.4,230.3) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(791.7,233.6) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(821.1,230.3) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(850.4,253.6) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(879.7,253.8) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(909.1,241.2) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(938.4,253.6) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(967.7,239.3) scale(4.50)' color='rgb(  0,   0,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(997.1,236.8) scale(4.50)' color='rgb(  0,   0,   0)'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_3a" ><title>gnuplot_plot_3a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(62.5,139.3) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(55.2,317.5) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(54.1,87.4) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(58.5,285.5) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(60.3,172.2) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(57.0,112.1) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(56.3,277.3) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(60.2,315.1) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(54.1,165.4) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(57.1,291.3) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(59.2,274.9) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(55.4,142.7) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(56.9,160.1) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_4a" ><title>gnuplot_plot_4a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(89.2,139.3) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(85.2,317.5) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(90.6,87.4) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(89.7,285.5) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(89.3,172.2) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(86.6,112.1) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(90.3,277.3) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(90.6,315.1) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(92.0,165.4) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(83.8,291.3) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(86.0,274.9) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(86.5,142.7) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(89.0,160.1) scale(1.17)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_5a" ><title>gnuplot_plot_5a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(120.1,127.6) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(119.3,72.9) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(114.3,89.4) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(113.7,272.9) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(120.4,279.2) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(119.6,272.5) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(118.2,284.1) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(114.4,126.2) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_6a" ><title>gnuplot_plot_6a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(141.9,124.7) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(145.6,284.1) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(146.4,131.0) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_7a" ><title>gnuplot_plot_7a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(174.7,116.0) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(177.3,94.2) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(173.6,268.6) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(175.9,269.1) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_8a" ><title>gnuplot_plot_8a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(207.8,130.5) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(206.5,267.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(206.9,123.3) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_9a" ><title>gnuplot_plot_9a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(234.4,121.8) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(232.2,88.9) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(236.4,262.3) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_10a" ><title>gnuplot_plot_10a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(264.3,130.5) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(262.7,122.8) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(264.9,284.6) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(262.9,284.1) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(262.4,284.1) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(260.6,285.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_11a" ><title>gnuplot_plot_11a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(293.8,127.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(289.4,254.5) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_12a" ><title>gnuplot_plot_12a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(322.6,118.9) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(326.2,108.3) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(322.7,254.0) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(318.1,253.6) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_13a" ><title>gnuplot_plot_13a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(352.9,110.2) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(348.8,130.5) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(349.4,289.9) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(349.6,254.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(348.5,254.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(350.4,254.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_14a" ><title>gnuplot_plot_14a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(380.5,130.5) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(378.7,288.0) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(379.3,146.5) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(378.2,115.5) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(383.2,260.8) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_15a" ><title>gnuplot_plot_15a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(408.0,291.3) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_16a" ><title>gnuplot_plot_16a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(444.0,254.0) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(437.4,253.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(436.6,150.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_17a" ><title>gnuplot_plot_17a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(470.9,127.6) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(473.0,254.0) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(468.3,254.0) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(472.9,130.1) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(466.5,254.0) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(465.0,256.0) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(472.2,254.0) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(465.5,254.0) scale(1.89)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_18a" ><title>gnuplot_plot_18a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(497.5,121.8) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(500.7,313.6) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(500.9,160.6) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(496.9,260.8) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(497.0,264.7) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_19a" ><title>gnuplot_plot_19a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(530.9,122.3) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(532.0,146.0) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(528.7,261.3) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(528.4,281.7) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(528.7,280.7) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_20a" ><title>gnuplot_plot_20a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(556.7,135.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(555.6,282.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_21a" ><title>gnuplot_plot_21a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(590.1,124.7) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(590.3,288.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(587.1,180.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_22a" ><title>gnuplot_plot_22a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(615.4,121.8) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(617.4,257.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(617.1,177.5) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_23a" ><title>gnuplot_plot_23a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(646.2,130.5) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(641.3,300.5) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_24a" ><title>gnuplot_plot_24a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(678.2,127.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(670.3,306.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(672.7,183.3) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_25a" ><title>gnuplot_plot_25a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(700.2,118.9) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(704.3,306.4) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(705.4,174.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_26a" ><title>gnuplot_plot_26a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(733.3,161.1) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(737.2,295.2) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(732.7,309.3) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(728.8,297.2) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(735.7,185.8) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_27a" ><title>gnuplot_plot_27a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(763.2,107.3) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(765.6,289.9) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(759.3,300.5) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(763.8,163.0) scale(2.25)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_28a" ><title>gnuplot_plot_28a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(787.7,110.2) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(794.8,300.5) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_29a" ><title>gnuplot_plot_29a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(819.3,107.3) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(824.5,276.8) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(823.1,163.0) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_30a" ><title>gnuplot_plot_30a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(853.1,127.6) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(847.5,149.9) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(853.8,48.7) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(854.0,172.7) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(853.1,317.5) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(852.6,324.3) scale(2.07)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_31a" ><title>gnuplot_plot_31a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(876.4,180.9) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(877.7,196.9) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_32a" ><title>gnuplot_plot_32a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(912.0,118.9) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(905.1,174.6) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_33a" ><title>gnuplot_plot_33a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(941.8,183.3) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(941.7,196.9) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_34a" ><title>gnuplot_plot_34a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(968.7,116.0) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(966.4,171.7) scale(2.43)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-	<g id="gnuplot_plot_35a" ><title>gnuplot_plot_35a</title>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(997.8,118.9) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(999.0,254.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(996.3,321.4) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(996.9,175.6) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(993.3,142.7) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(997.6,254.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(996.0,174.6) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-	<use xlink:href='#gpPt6' transform='translate(997.7,254.0) scale(1.98)' color='rgb( 68,   0,   0)' opacity='0.40'/>
-</g>
-	</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,323.8 L58.4,323.8 M999.0,323.8 L994.5,323.8 M53.9,318.0 L58.4,318.0 M999.0,318.0 L994.5,318.0
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,312.2 L904.2,312.2 M970.6,312.2 L999.0,312.2  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,312.2 L62.9,312.2 M999.0,312.2 L990.0,312.2  '/>	<g transform="translate(45.6,316.1)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >-120</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,306.4 L58.4,306.4 M999.0,306.4 L994.5,306.4 M53.9,300.5 L58.4,300.5 M999.0,300.5 L994.5,300.5
-		M53.9,294.7 L58.4,294.7 M999.0,294.7 L994.5,294.7 M53.9,288.9 L58.4,288.9 M999.0,288.9 L994.5,288.9
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,283.1 L999.0,283.1  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,283.1 L62.9,283.1 M999.0,283.1 L990.0,283.1  '/>	<g transform="translate(45.6,287.0)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" >-60</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,277.3 L58.4,277.3 M999.0,277.3 L994.5,277.3 M53.9,271.5 L58.4,271.5 M999.0,271.5 L994.5,271.5
-		M53.9,265.7 L58.4,265.7 M999.0,265.7 L994.5,265.7 M53.9,259.9 L58.4,259.9 M999.0,259.9 L994.5,259.9
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,254.0 L999.0,254.0  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,254.0 L62.9,254.0 M999.0,254.0 L990.0,254.0  '/>	<g transform="translate(45.6,257.9)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 0</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,248.2 L58.4,248.2 M999.0,248.2 L994.5,248.2 M53.9,242.4 L58.4,242.4 M999.0,242.4 L994.5,242.4
-		M53.9,236.6 L58.4,236.6 M999.0,236.6 L994.5,236.6 M53.9,230.8 L58.4,230.8 M999.0,230.8 L994.5,230.8
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,225.0 L999.0,225.0  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,225.0 L62.9,225.0 M999.0,225.0 L990.0,225.0  '/>	<g transform="translate(45.6,228.9)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 60</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,219.2 L58.4,219.2 M999.0,219.2 L994.5,219.2 M53.9,213.4 L58.4,213.4 M999.0,213.4 L994.5,213.4
-		M53.9,207.6 L58.4,207.6 M999.0,207.6 L994.5,207.6 M53.9,201.7 L58.4,201.7 M999.0,201.7 L994.5,201.7
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,195.9 L999.0,195.9  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,195.9 L62.9,195.9 M999.0,195.9 L990.0,195.9  '/>	<g transform="translate(45.6,199.8)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 120</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,190.1 L58.4,190.1 M999.0,190.1 L994.5,190.1 M53.9,184.3 L58.4,184.3 M999.0,184.3 L994.5,184.3
-		M53.9,178.5 L58.4,178.5 M999.0,178.5 L994.5,178.5 M53.9,172.7 L58.4,172.7 M999.0,172.7 L994.5,172.7
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,166.9 L999.0,166.9  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,166.9 L62.9,166.9 M999.0,166.9 L990.0,166.9  '/>	<g transform="translate(45.6,170.8)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 180</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,161.1 L58.4,161.1 M999.0,161.1 L994.5,161.1 M53.9,155.2 L58.4,155.2 M999.0,155.2 L994.5,155.2
-		M53.9,149.4 L58.4,149.4 M999.0,149.4 L994.5,149.4 M53.9,143.6 L58.4,143.6 M999.0,143.6 L994.5,143.6
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,137.8 L999.0,137.8  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,137.8 L62.9,137.8 M999.0,137.8 L990.0,137.8  '/>	<g transform="translate(45.6,141.7)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 240</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,132.0 L58.4,132.0 M999.0,132.0 L994.5,132.0 M53.9,126.2 L58.4,126.2 M999.0,126.2 L994.5,126.2
-		M53.9,120.4 L58.4,120.4 M999.0,120.4 L994.5,120.4 M53.9,114.6 L58.4,114.6 M999.0,114.6 L994.5,114.6
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,108.7 L999.0,108.7  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,108.7 L62.9,108.7 M999.0,108.7 L990.0,108.7  '/>	<g transform="translate(45.6,112.6)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 300</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,102.9 L58.4,102.9 M999.0,102.9 L994.5,102.9 M53.9,97.1 L58.4,97.1 M999.0,97.1 L994.5,97.1
-		M53.9,91.3 L58.4,91.3 M999.0,91.3 L994.5,91.3 M53.9,85.5 L58.4,85.5 M999.0,85.5 L994.5,85.5
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,79.7 L999.0,79.7  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,79.7 L62.9,79.7 M999.0,79.7 L990.0,79.7  '/>	<g transform="translate(45.6,83.6)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 360</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,73.9 L58.4,73.9 M999.0,73.9 L994.5,73.9 M53.9,68.1 L58.4,68.1 M999.0,68.1 L994.5,68.1
-		M53.9,62.3 L58.4,62.3 M999.0,62.3 L994.5,62.3 M53.9,56.4 L58.4,56.4 M999.0,56.4 L994.5,56.4
-		 '/></g>
-<g fill="none" color="gray" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(170, 170, 170)' stroke-dasharray='2,4' class="gridline"  d='M53.9,50.6 L999.0,50.6  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,50.6 L62.9,50.6 M999.0,50.6 L990.0,50.6  '/>	<g transform="translate(45.6,54.5)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="end">
-		<text><tspan font-family="Arial" > 420</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,44.8 L58.4,44.8 M999.0,44.8 L994.5,44.8 M53.9,39.0 L58.4,39.0 M999.0,39.0 L994.5,39.0
-		M58.3,326.7 L58.3,317.7 M58.3,36.1 L58.3,45.1  '/>	<g transform="translate(54.4,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(358) Bremen Kurt-Huber-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M87.6,326.7 L87.6,317.7 M87.6,36.1 L87.6,45.1  '/>	<g transform="translate(83.7,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(358) Bremen Kurt-Huber-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M117.0,326.7 L117.0,317.7 M117.0,36.1 L117.0,45.1  '/>	<g transform="translate(113.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(176) Bremen Dietrich-Bonhoeffer-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M146.3,326.7 L146.3,317.7 M146.3,36.1 L146.3,45.1  '/>	<g transform="translate(142.4,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(80) Bremen Carl-Goerdeler-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M175.6,326.7 L175.6,317.7 M175.6,36.1 L175.6,45.1  '/>	<g transform="translate(171.7,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(102) Bremen Berliner Freiheit</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M205.0,326.7 L205.0,317.7 M205.0,36.1 L205.0,45.1  '/>	<g transform="translate(201.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(79) Bremen Wilhelm-Leuschner-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M234.3,326.7 L234.3,317.7 M234.3,36.1 L234.3,45.1  '/>	<g transform="translate(230.4,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(67) Bremen Polizeipräsidium</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M263.7,326.7 L263.7,317.7 M263.7,36.1 L263.7,45.1  '/>	<g transform="translate(259.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(145) Bremen Julius-Brecht-Allee</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M293.0,326.7 L293.0,317.7 M293.0,36.1 L293.0,45.1  '/>	<g transform="translate(289.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(80) Bremen Barbarossastraße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M322.3,326.7 L322.3,317.7 M322.3,36.1 L322.3,45.1  '/>	<g transform="translate(318.4,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(86) Bremen Kurfürstenallee</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M351.7,326.7 L351.7,317.7 M351.7,36.1 L351.7,45.1  '/>	<g transform="translate(347.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(122) Bremen Kirchbachstraße (Kleine Kirchbachstr.)</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M381.0,326.7 L381.0,317.7 M381.0,36.1 L381.0,45.1  '/>	<g transform="translate(377.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(117) Bremen Friedhofstraße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M410.3,326.7 L410.3,317.7 M410.3,36.1 L410.3,45.1  '/>	<g transform="translate(406.4,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(62) Bremen Focke-Museum</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M439.7,326.7 L439.7,317.7 M439.7,36.1 L439.7,45.1  '/>	<g transform="translate(435.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(30) Bremen Bürgermeister-Spitta-Allee</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M469.0,326.7 L469.0,317.7 M469.0,36.1 L469.0,45.1  '/>	<g transform="translate(465.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(87) Bremen Horn (Horner Kirche)</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M498.3,326.7 L498.3,317.7 M498.3,36.1 L498.3,45.1  '/>	<g transform="translate(494.4,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(127) Bremen Vorstraße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M527.7,326.7 L527.7,317.7 M527.7,36.1 L527.7,45.1  '/>	<g transform="translate(523.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(152) Bremen Horner Mühle</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M557.0,326.7 L557.0,317.7 M557.0,36.1 L557.0,45.1  '/>	<g transform="translate(553.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(67) Bremen Werner-von-Siemens-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M586.4,326.7 L586.4,317.7 M586.4,36.1 L586.4,45.1  '/>	<g transform="translate(582.5,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(63) Bremen Kopernikusstraße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M615.7,326.7 L615.7,317.7 M615.7,36.1 L615.7,45.1  '/>	<g transform="translate(611.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(64) Bremen Peter-Henlein-Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M645.0,326.7 L645.0,317.7 M645.0,36.1 L645.0,45.1  '/>	<g transform="translate(641.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(68) Bremen Höger Weg</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M674.4,326.7 L674.4,317.7 M674.4,36.1 L674.4,45.1  '/>	<g transform="translate(670.5,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(60) Bremen Am Lehester Deich</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M703.7,326.7 L703.7,317.7 M703.7,36.1 L703.7,45.1  '/>	<g transform="translate(699.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(62) Bremen Daniel-Jacobs-Allee</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M733.0,326.7 L733.0,317.7 M733.0,36.1 L733.0,45.1  '/>	<g transform="translate(729.1,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(123) Bremen Borgfeld</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M762.4,326.7 L762.4,317.7 M762.4,36.1 L762.4,45.1  '/>	<g transform="translate(758.5,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(114) Lilienthal Truperdeich</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M791.7,326.7 L791.7,317.7 M791.7,36.1 L791.7,45.1  '/>	<g transform="translate(787.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(79) Lilienthal Trupe</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M821.1,326.7 L821.1,317.7 M821.1,36.1 L821.1,45.1  '/>	<g transform="translate(817.2,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(67) Lilienthal Feldhäuser Straße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M850.4,326.7 L850.4,317.7 M850.4,36.1 L850.4,45.1  '/>	<g transform="translate(846.5,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(127) Lilienthal Lilienthal-Mitte</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M879.7,326.7 L879.7,317.7 M879.7,36.1 L879.7,45.1  '/>	<g transform="translate(875.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(54) Lilienthal Moorhauser Landstraße</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M909.1,326.7 L909.1,317.7 M909.1,36.1 L909.1,45.1  '/>	<g transform="translate(905.2,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(76) Lilienthal Timkenweg</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M938.4,326.7 L938.4,317.7 M938.4,36.1 L938.4,45.1  '/>	<g transform="translate(934.5,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(49) Lilienthal Schoofmoor</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M967.7,326.7 L967.7,317.7 M967.7,36.1 L967.7,45.1  '/>	<g transform="translate(963.8,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(79) Lilienthal Auf dem Kamp</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M997.1,326.7 L997.1,317.7 M997.1,36.1 L997.1,45.1  '/>	<g transform="translate(993.2,335.0) rotate(90)" stroke="none" fill="rgb(0,0,0)" font-family="Arial" font-size="12.00"  text-anchor="start">
-		<text><tspan font-family="Arial" >(131) Lilienthal Kutscher Behrens</tspan></text>
-	</g>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="rgb(  0,   0,   0)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(  0,   0,   0)'  d='M53.9,36.1 L53.9,326.7 L999.0,326.7 L999.0,36.1 L53.9,36.1 Z  '/></g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1020.0023"
+   height="643.10974"
+   viewBox="0 0 1020.0023 643.10974"
+   version="1.1"
+   id="svg1392"
+   sodipodi:docname="all_stops_by_delay_box.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata1398">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Gnuplot</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1396">
+    <defs
+       id="defs34">
+      <circle
+         r="0.5"
+         id="gpDot"
+         cx="0"
+         cy="0"
+         style="stroke:currentColor;stroke-width:0.5" />
+      <path
+         d="M -1,0 H 1 M 0,-1 v 2"
+         id="gpPt0"
+         inkscape:connector-curvature="0"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <path
+         d="M -1,-1 1,1 M 1,-1 -1,1"
+         id="gpPt1"
+         inkscape:connector-curvature="0"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <path
+         d="M -1,0 H 1 M 0,-1 v 2 m -1,-2 2,2 m -2,0 2,-2"
+         id="gpPt2"
+         inkscape:connector-curvature="0"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <rect
+         height="2"
+         width="2"
+         y="-1"
+         x="-1"
+         id="gpPt3"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <rect
+         height="2"
+         width="2"
+         y="-1"
+         x="-1"
+         id="gpPt4"
+         style="fill:currentColor;stroke:currentColor;stroke-width:0.222" />
+      <circle
+         r="1"
+         cy="0"
+         cx="0"
+         id="gpPt5"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <use
+         id="gpPt6"
+         xlink:href="#gpPt5"
+         style="fill:currentColor;stroke:none"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <path
+         d="m 0,-1.33 -1.33,2 h 2.66 z"
+         id="gpPt7"
+         inkscape:connector-curvature="0"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <use
+         id="gpPt8"
+         xlink:href="#gpPt7"
+         style="fill:currentColor;stroke:none"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         transform="scale(-1)"
+         id="gpPt9"
+         xlink:href="#gpPt7"
+         style="stroke:currentColor"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         id="gpPt10"
+         xlink:href="#gpPt9"
+         style="fill:currentColor;stroke:none"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         transform="rotate(45)"
+         id="gpPt11"
+         xlink:href="#gpPt3"
+         style="stroke:currentColor"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <use
+         id="gpPt12"
+         xlink:href="#gpPt11"
+         style="fill:currentColor;stroke:none"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <path
+         d="M 0,1.33 1.265,0.411 0.782,-1.067 -0.782,-1.076 -1.265,0.411 Z"
+         id="gpPt13"
+         inkscape:connector-curvature="0"
+         style="stroke:currentColor;stroke-width:0.222" />
+      <use
+         id="gpPt14"
+         xlink:href="#gpPt13"
+         style="fill:currentColor;stroke:none"
+         x="0"
+         y="0"
+         width="100%"
+         height="100%" />
+      <filter
+         width="1"
+         height="1"
+         y="0"
+         x="0"
+         filterUnits="objectBoundingBox"
+         id="textbox">
+        <feFlood
+           id="feFlood24"
+           result="bgnd"
+           flood-opacity="1"
+           flood-color="white" />
+        <feComposite
+           id="feComposite26"
+           operator="atop"
+           in2="bgnd"
+           in="SourceGraphic" />
+      </filter>
+      <filter
+         width="1"
+         height="1"
+         y="0"
+         x="0"
+         filterUnits="objectBoundingBox"
+         id="greybox">
+        <feFlood
+           id="feFlood29"
+           result="grey"
+           flood-opacity="1"
+           flood-color="lightgrey" />
+        <feComposite
+           id="feComposite31"
+           operator="atop"
+           in2="grey"
+           in="SourceGraphic" />
+      </filter>
+    </defs>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     id="namedview1394"
+     showgrid="false"
+     fit-margin-top="20"
+     fit-margin-left="20"
+     fit-margin-right="20"
+     fit-margin-bottom="20"
+     inkscape:zoom="0.57226562"
+     inkscape:cx="728.55164"
+     inkscape:cy="211.07457"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1392" />
+  <title
+     id="title2">Gnuplot</title>
+  <desc
+     id="desc4">Produced by GNUPLOT 5.2 patchlevel 8 </desc>
+  <rect
+     style="fill:none"
+     id="rect6"
+     height="768"
+     width="1024"
+     y="6.836328"
+     x="-1.9339844" />
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g44"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g54"
+     transform="translate(-1.9339844,6.8363281)">
+    <g
+       style="font-size:12px;font-family:Arial;text-anchor:middle;fill:#000000;stroke:none"
+       id="g52"
+       font-size="12.00"
+       transform="rotate(-90,95.7,85.7)">
+      <text
+         id="text50" />
+    </g>
+  </g>
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g56"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g62"
+     transform="translate(-1.9339844,6.8363281)">
+    <g
+       style="font-size:12px;font-family:Arial;text-anchor:middle;fill:#000000;stroke:none"
+       id="g60"
+       font-size="12.00"
+       transform="translate(526.4,49)">
+      <text
+         id="text58" />
+    </g>
+  </g>
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g72"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g1377"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     style="color:#000000;fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g1379"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g1381"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     style="color:#000000;fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g1383"
+     transform="translate(-1.9339844,6.8363281)" />
+  <g
+     id="g4149"
+     transform="translate(-1.9339844,6.8363281)">
+    <g
+       id="g42"
+       style="color:#ffffff;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <g
+         transform="translate(512,21.9)"
+         font-size="12.00"
+         id="g40"
+         style="font-size:12px;font-family:Arial;text-anchor:middle;fill:#000000;stroke:none">
+        <text
+           id="text38">
+          <tspan
+             id="tspan36"
+             style="font-family:Arial">Bremer Straßenbahn AG - Straßenbahn Linie 4 nach Lilienthal - Verspätung als Box-Plot</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g48"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="M 53.9,36.1 V 326.7 H 999 V 36.1 Z"
+         id="path46"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g70"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <g
+         transform="translate(937.4,312.9)"
+         font-size="12.00"
+         id="g68"
+         style="font-size:12px;font-family:Arial;text-anchor:middle;fill:#000000;stroke:none">
+        <text
+           id="text66">
+          <tspan
+             id="tspan64"
+             style="font-family:Arial">Perzentile</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_1a">
+      <title
+         id="title74">gnuplot_plot_1a</title>
+      <g
+         id="g340"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <g
+           id="g78"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="56.1,267 60.5,267 60.5,239 56.1,239 "
+             id="polygon76"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 56.1,267 h 4.4 v -28 h -4.4 z"
+           id="path80"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 58.3,274 v -7 m 0,-28 v -65.4 m -2.2,0 h 4.4 M 56.1,274 h 4.4"
+           id="path82"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g86"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="85.4,267 89.8,267 89.8,239 85.4,239 "
+             id="polygon84"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 85.4,267 h 4.4 v -28 h -4.4 z"
+           id="path88"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 87.6,274 v -7 m 0,-28 v -65.4 m -2.2,0 h 4.4 M 85.4,274 h 4.4"
+           id="path90"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g94"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="114.8,253.4 119.2,253.4 119.2,230.8 114.8,230.8 "
+             id="polygon92"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 114.8,253.4 h 4.4 v -22.6 h -4.4 z"
+           id="path96"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 117,272.3 v -18.9 m 0,-22.6 v -99.9 m -2.2,0 h 4.4 m -4.4,141.4 h 4.4"
+           id="path98"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g102"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="144.1,248 148.5,248 148.5,219.7 144.1,219.7 "
+             id="polygon100"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 144.1,248 h 4.4 v -28.3 h -4.4 z"
+           id="path104"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="M 146.3,263.7 V 248 m 0,-28.3 v -51.4 m -2.2,0 h 4.4 m -4.4,95.4 h 4.4"
+           id="path106"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g110"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="173.4,239.5 177.8,239.5 177.8,219.3 173.4,219.3 "
+             id="polygon108"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 173.4,239.5 h 4.4 v -20.2 h -4.4 z"
+           id="path112"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 175.6,260.6 v -21.1 m 0,-20.2 V 117.6 m -2.2,0 h 4.4 m -4.4,143 h 4.4"
+           id="path114"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g118"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="202.8,253.4 207.2,253.4 207.2,214.9 202.8,214.9 "
+             id="polygon116"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 202.8,253.4 h 4.4 v -38.5 h -4.4 z"
+           id="path120"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 205,254.2 v -0.8 m 0,-38.5 v -76.8 m -2.2,0 h 4.4 m -4.4,116.1 h 4.4"
+           id="path122"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g126"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="232.1,243.7 236.5,243.7 236.5,223.3 232.1,223.3 "
+             id="polygon124"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 232.1,243.7 h 4.4 v -20.4 h -4.4 z"
+           id="path128"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 234.3,252.1 v -8.4 m 0,-20.4 v -96.9 m -2.2,0 h 4.4 m -4.4,125.7 h 4.4"
+           id="path130"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g134"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="261.5,253.8 265.9,253.8 265.9,224.3 261.5,224.3 "
+             id="polygon132"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 261.5,253.8 h 4.4 v -29.5 h -4.4 z"
+           id="path136"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 263.7,280.9 v -27.1 m 0,-29.5 v -84.1 m -2.2,0 h 4.4 m -4.4,140.7 h 4.4"
+           id="path138"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g142"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="290.8,250.9 295.2,250.9 295.2,229.3 290.8,229.3 "
+             id="polygon140"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 290.8,250.9 h 4.4 v -21.6 h -4.4 z"
+           id="path144"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 293,254 v -3.1 m 0,-21.6 v -87.1 m -2.2,0 h 4.4 M 290.8,254 h 4.4"
+           id="path146"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g150"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="320.1,241.2 324.5,241.2 324.5,213.6 320.1,213.6 "
+             id="polygon148"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 320.1,241.2 h 4.4 v -27.6 h -4.4 z"
+           id="path152"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 322.3,252.9 v -11.7 m 0,-27.6 v -92.3 m -2.2,0 h 4.4 m -4.4,131.6 h 4.4"
+           id="path154"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g158"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="349.5,233.5 353.9,233.5 353.9,201.3 349.5,201.3 "
+             id="polygon156"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 349.5,233.5 h 4.4 v -32.2 h -4.4 z"
+           id="path160"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 351.7,253.4 v -19.9 m 0,-32.2 v -70.7 m -2.2,0 h 4.4 m -4.4,122.8 h 4.4"
+           id="path162"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g166"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="378.8,253.7 383.2,253.7 383.2,212.2 378.8,212.2 "
+             id="polygon164"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 378.8,253.7 h 4.4 v -41.5 h -4.4 z"
+           id="path168"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 381,254.6 v -0.9 m 0,-41.5 v -58.5 m -2.2,0 h 4.4 m -4.4,100.9 h 4.4"
+           id="path170"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g174"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="408.1,247.8 412.5,247.8 412.5,204.9 408.1,204.9 "
+             id="polygon172"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 408.1,247.8 h 4.4 v -42.9 h -4.4 z"
+           id="path176"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 410.3,266.9 v -19.1 m 0,-42.9 V 36.1 m -2.2,0 h 4.4 m -4.4,230.8 h 4.4"
+           id="path178"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g182"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="437.5,238.3 441.9,238.3 441.9,192.3 437.5,192.3 "
+             id="polygon180"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 437.5,238.3 h 4.4 v -46 h -4.4 z"
+           id="path184"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 439.7,253.4 v -15.1 m 0,-46 v -36.8 m -2.2,0 h 4.4 m -4.4,97.9 h 4.4"
+           id="path186"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g190"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="466.8,249.8 471.2,249.8 471.2,215.5 466.8,215.5 "
+             id="polygon188"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 466.8,249.8 h 4.4 v -34.3 h -4.4 z"
+           id="path192"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 469,254 v -4.2 m 0,-34.3 v -82.8 m -2.2,0 h 4.4 M 466.8,254 h 4.4"
+           id="path194"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g198"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="496.1,248.6 500.5,248.6 500.5,217.5 496.1,217.5 "
+             id="polygon196"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 496.1,248.6 h 4.4 v -31.1 h -4.4 z"
+           id="path200"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 498.3,259.6 v -11 m 0,-31.1 v -54 m -2.2,0 h 4.4 m -4.4,96.1 h 4.4"
+           id="path202"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g206"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="525.5,253.8 529.9,253.8 529.9,230.3 525.5,230.3 "
+             id="polygon204"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 525.5,253.8 h 4.4 v -23.5 h -4.4 z"
+           id="path208"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 527.7,255.5 v -1.7 m 0,-23.5 v -73 m -2.2,0 h 4.4 m -4.4,98.2 h 4.4"
+           id="path210"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g214"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="554.8,251.7 559.2,251.7 559.2,222 554.8,222 "
+             id="polygon212"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 554.8,251.7 h 4.4 V 222 h -4.4 z"
+           id="path216"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 557,276.9 v -25.2 m 0,-29.7 v -79.4 m -2.2,0 h 4.4 m -4.4,134.3 h 4.4"
+           id="path218"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g222"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="584.2,248.1 588.6,248.1 588.6,247 584.2,247 "
+             id="polygon220"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 584.2,248.1 h 4.4 V 247 h -4.4 z"
+           id="path224"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 586.4,278.9 v -30.8 m 0,-1.1 v -59.3 m -2.2,0 h 4.4 m -4.4,91.2 h 4.4"
+           id="path226"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g230"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="613.5,245.2 617.9,245.2 617.9,243.6 613.5,243.6 "
+             id="polygon228"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 613.5,245.2 h 4.4 v -1.6 h -4.4 z"
+           id="path232"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 615.7,255.9 v -10.7 m 0,-1.6 v -63.5 m -2.2,0 h 4.4 m -4.4,75.8 h 4.4"
+           id="path234"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g238"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="642.8,253.8 647.2,253.8 647.2,249.2 642.8,249.2 "
+             id="polygon236"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 642.8,253.8 h 4.4 v -4.6 h -4.4 z"
+           id="path240"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 645,281.2 v -27.4 m 0,-4.6 V 146.5 m -2.2,0 h 4.4 m -4.4,134.7 h 4.4"
+           id="path242"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g246"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="672.2,251.1 676.6,251.1 676.6,250.4 672.2,250.4 "
+             id="polygon244"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 672.2,251.1 h 4.4 v -0.7 h -4.4 z"
+           id="path248"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 674.4,295.8 v -44.7 m 0,-0.7 v -64.9 m -2.2,0 h 4.4 m -4.4,110.3 h 4.4"
+           id="path250"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g254"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="701.5,242.9 705.9,242.9 705.9,242 701.5,242 "
+             id="polygon252"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 701.5,242.9 h 4.4 V 242 h -4.4 z"
+           id="path256"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 703.7,277.5 v -34.6 m 0,-0.9 v -42.1 m -2.2,0 h 4.4 m -4.4,77.6 h 4.4"
+           id="path258"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g262"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="730.8,253.9 735.2,253.9 735.2,246.2 730.8,246.2 "
+             id="polygon260"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 730.8,253.9 h 4.4 v -7.7 h -4.4 z"
+           id="path264"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 733,295 v -41.1 m 0,-7.7 v -60.1 m -2.2,0 h 4.4 M 730.8,295 h 4.4"
+           id="path266"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g270"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="760.2,237.6 764.6,237.6 764.6,228.9 760.2,228.9 "
+             id="polygon268"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 760.2,237.6 h 4.4 v -8.7 h -4.4 z"
+           id="path272"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 762.4,287.4 v -49.8 m 0,-8.7 v -63.8 m -2.2,0 h 4.4 m -4.4,122.3 h 4.4"
+           id="path274"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g278"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="789.5,245.5 793.9,245.5 793.9,233.3 789.5,233.3 "
+             id="polygon276"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 789.5,245.5 h 4.4 v -12.2 h -4.4 z"
+           id="path280"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 791.7,299.1 v -53.6 m 0,-12.2 v -99.5 m -2.2,0 h 4.4 m -4.4,165.3 h 4.4"
+           id="path282"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g286"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="818.9,251.7 823.3,251.7 823.3,228.9 818.9,228.9 "
+             id="polygon284"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 818.9,251.7 h 4.4 v -22.8 h -4.4 z"
+           id="path288"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 821.1,265.1 v -13.4 m 0,-22.8 v -43 m -2.2,0 h 4.4 m -4.4,79.2 h 4.4"
+           id="path290"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g294"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="848.2,254 852.6,254 852.6,249.5 848.2,249.5 "
+             id="polygon292"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 848.2,254 h 4.4 v -4.5 h -4.4 z"
+           id="path296"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 850.4,317 v -63 m 0,-4.5 v -75 m -2.2,0 h 4.4 M 848.2,317 h 4.4"
+           id="path298"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g302"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="877.5,283.1 881.9,283.1 881.9,251.4 877.5,251.4 "
+             id="polygon300"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 877.5,283.1 h 4.4 v -31.7 h -4.4 z"
+           id="path304"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 879.7,324.7 v -41.6 m 0,-31.7 v -49.6 m -2.2,0 h 4.4 m -4.4,122.9 h 4.4"
+           id="path306"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g310"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="906.9,252.6 911.3,252.6 911.3,239.2 906.9,239.2 "
+             id="polygon308"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 906.9,252.6 h 4.4 v -13.4 h -4.4 z"
+           id="path312"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 909.1,306.8 v -54.2 m 0,-13.4 v -64.1 m -2.2,0 h 4.4 m -4.4,131.7 h 4.4"
+           id="path314"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g318"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="936.2,262.2 940.6,262.2 940.6,234.8 936.2,234.8 "
+             id="polygon316"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 936.2,262.2 h 4.4 v -27.4 h -4.4 z"
+           id="path320"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 938.4,315.7 v -53.5 m 0,-27.4 v -37.2 m -2.2,0 h 4.4 m -4.4,118.1 h 4.4"
+           id="path322"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g326"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="965.5,249.6 969.9,249.6 969.9,239.1 965.5,239.1 "
+             id="polygon324"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 965.5,249.6 h 4.4 v -10.5 h -4.4 z"
+           id="path328"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 967.7,302.4 v -52.8 m 0,-10.5 v -39.5 m -2.2,0 h 4.4 m -4.4,102.8 h 4.4"
+           id="path330"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <g
+           id="g334"
+           style="stroke:none;shape-rendering:crispEdges">
+          <polygon
+             points="994.9,241.3 999.3,241.3 999.3,220 994.9,220 "
+             id="polygon332"
+             style="fill:#000000;fill-opacity:0.5" />
+        </g>
+        <path
+           d="m 994.9,241.3 h 4.4 V 220 h -4.4 z"
+           id="path336"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+        <path
+           d="m 997.1,253.4 v -12.1 m 0,-21.3 v -42.9 m -2.2,0 h 4.1 m -4.1,76.3 h 4.1"
+           id="path338"
+           inkscape:connector-curvature="0"
+           style="stroke:#000000" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_2a">
+      <title
+         id="title343">gnuplot_plot_2a</title>
+      <g
+         id="g411"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,58.3,253.9)"
+           id="use345"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,87.6,253.9)"
+           id="use347"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,117,245.2)"
+           id="use349"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,146.3,247.8)"
+           id="use351"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,175.6,239.2)"
+           id="use353"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,205,239)"
+           id="use355"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,234.3,241.6)"
+           id="use357"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,263.7,251.7)"
+           id="use359"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,293,250.4)"
+           id="use361"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,322.3,239.3)"
+           id="use363"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,351.7,227.4)"
+           id="use365"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,381,237.5)"
+           id="use367"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,410.3,225.5)"
+           id="use369"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,439.7,217.7)"
+           id="use371"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,469,247.8)"
+           id="use373"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,498.3,244.9)"
+           id="use375"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,527.7,249.7)"
+           id="use377"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,557,239.5)"
+           id="use379"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,586.4,247.5)"
+           id="use381"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,615.7,244.4)"
+           id="use383"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,645,253.4)"
+           id="use385"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,674.4,250.7)"
+           id="use387"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,703.7,242.2)"
+           id="use389"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,733,253.7)"
+           id="use391"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,762.4,230.3)"
+           id="use393"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,791.7,233.6)"
+           id="use395"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,821.1,230.3)"
+           id="use397"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,850.4,253.6)"
+           id="use399"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,879.7,253.8)"
+           id="use401"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,909.1,241.2)"
+           id="use403"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,938.4,253.6)"
+           id="use405"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,967.7,239.3)"
+           id="use407"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt0"
+           transform="matrix(4.5,0,0,4.5,997.1,236.8)"
+           id="use409"
+           style="color:#000000"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_3a">
+      <title
+         id="title414">gnuplot_plot_3a</title>
+      <g
+         id="g442"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,62.5,139.3)"
+           id="use416"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,55.2,317.5)"
+           id="use418"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,54.1,87.4)"
+           id="use420"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,58.5,285.5)"
+           id="use422"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,60.3,172.2)"
+           id="use424"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,57,112.1)"
+           id="use426"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,56.3,277.3)"
+           id="use428"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,60.2,315.1)"
+           id="use430"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,54.1,165.4)"
+           id="use432"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,57.1,291.3)"
+           id="use434"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,59.2,274.9)"
+           id="use436"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,55.4,142.7)"
+           id="use438"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,56.9,160.1)"
+           id="use440"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_4a">
+      <title
+         id="title445">gnuplot_plot_4a</title>
+      <g
+         id="g473"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,89.2,139.3)"
+           id="use447"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,85.2,317.5)"
+           id="use449"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,90.6,87.4)"
+           id="use451"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,89.7,285.5)"
+           id="use453"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,89.3,172.2)"
+           id="use455"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,86.6,112.1)"
+           id="use457"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,90.3,277.3)"
+           id="use459"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,90.6,315.1)"
+           id="use461"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,92,165.4)"
+           id="use463"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,83.8,291.3)"
+           id="use465"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,86,274.9)"
+           id="use467"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,86.5,142.7)"
+           id="use469"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.17,0,0,1.17,89,160.1)"
+           id="use471"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_5a">
+      <title
+         id="title476">gnuplot_plot_5a</title>
+      <g
+         id="g494"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,120.1,127.6)"
+           id="use478"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,119.3,72.9)"
+           id="use480"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,114.3,89.4)"
+           id="use482"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,113.7,272.9)"
+           id="use484"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,120.4,279.2)"
+           id="use486"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,119.6,272.5)"
+           id="use488"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,118.2,284.1)"
+           id="use490"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,114.4,126.2)"
+           id="use492"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_6a">
+      <title
+         id="title497">gnuplot_plot_6a</title>
+      <g
+         id="g505"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,141.9,124.7)"
+           id="use499"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,145.6,284.1)"
+           id="use501"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,146.4,131)"
+           id="use503"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_7a">
+      <title
+         id="title508">gnuplot_plot_7a</title>
+      <g
+         id="g518"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,174.7,116)"
+           id="use510"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,177.3,94.2)"
+           id="use512"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,173.6,268.6)"
+           id="use514"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,175.9,269.1)"
+           id="use516"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_8a">
+      <title
+         id="title521">gnuplot_plot_8a</title>
+      <g
+         id="g529"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,207.8,130.5)"
+           id="use523"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,206.5,267.6)"
+           id="use525"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,206.9,123.3)"
+           id="use527"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_9a">
+      <title
+         id="title532">gnuplot_plot_9a</title>
+      <g
+         id="g540"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,234.4,121.8)"
+           id="use534"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,232.2,88.9)"
+           id="use536"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,236.4,262.3)"
+           id="use538"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_10a">
+      <title
+         id="title543">gnuplot_plot_10a</title>
+      <g
+         id="g557"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,264.3,130.5)"
+           id="use545"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,262.7,122.8)"
+           id="use547"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,264.9,284.6)"
+           id="use549"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,262.9,284.1)"
+           id="use551"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,262.4,284.1)"
+           id="use553"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,260.6,285)"
+           id="use555"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_11a">
+      <title
+         id="title560">gnuplot_plot_11a</title>
+      <g
+         id="g566"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,293.8,127.6)"
+           id="use562"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,289.4,254.5)"
+           id="use564"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_12a">
+      <title
+         id="title569">gnuplot_plot_12a</title>
+      <g
+         id="g579"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,322.6,118.9)"
+           id="use571"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,326.2,108.3)"
+           id="use573"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,322.7,254)"
+           id="use575"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,318.1,253.6)"
+           id="use577"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_13a">
+      <title
+         id="title582">gnuplot_plot_13a</title>
+      <g
+         id="g596"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,352.9,110.2)"
+           id="use584"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,348.8,130.5)"
+           id="use586"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,349.4,289.9)"
+           id="use588"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,349.6,254)"
+           id="use590"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,348.5,254)"
+           id="use592"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,350.4,254)"
+           id="use594"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_14a">
+      <title
+         id="title599">gnuplot_plot_14a</title>
+      <g
+         id="g611"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,380.5,130.5)"
+           id="use601"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,378.7,288)"
+           id="use603"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,379.3,146.5)"
+           id="use605"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,378.2,115.5)"
+           id="use607"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,383.2,260.8)"
+           id="use609"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_15a">
+      <title
+         id="title614">gnuplot_plot_15a</title>
+      <g
+         id="g618"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,408,291.3)"
+           id="use616"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_16a">
+      <title
+         id="title621">gnuplot_plot_16a</title>
+      <g
+         id="g629"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,444,254)"
+           id="use623"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,437.4,253.6)"
+           id="use625"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,436.6,150.4)"
+           id="use627"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_17a">
+      <title
+         id="title632">gnuplot_plot_17a</title>
+      <g
+         id="g650"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,470.9,127.6)"
+           id="use634"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,473,254)"
+           id="use636"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,468.3,254)"
+           id="use638"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,472.9,130.1)"
+           id="use640"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,466.5,254)"
+           id="use642"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,465,256)"
+           id="use644"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,472.2,254)"
+           id="use646"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.89,0,0,1.89,465.5,254)"
+           id="use648"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_18a">
+      <title
+         id="title653">gnuplot_plot_18a</title>
+      <g
+         id="g665"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,497.5,121.8)"
+           id="use655"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,500.7,313.6)"
+           id="use657"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,500.9,160.6)"
+           id="use659"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,496.9,260.8)"
+           id="use661"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,497,264.7)"
+           id="use663"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_19a">
+      <title
+         id="title668">gnuplot_plot_19a</title>
+      <g
+         id="g680"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,530.9,122.3)"
+           id="use670"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,532,146)"
+           id="use672"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,528.7,261.3)"
+           id="use674"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,528.4,281.7)"
+           id="use676"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,528.7,280.7)"
+           id="use678"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_20a">
+      <title
+         id="title683">gnuplot_plot_20a</title>
+      <g
+         id="g689"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,556.7,135.4)"
+           id="use685"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,555.6,282.6)"
+           id="use687"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_21a">
+      <title
+         id="title692">gnuplot_plot_21a</title>
+      <g
+         id="g700"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,590.1,124.7)"
+           id="use694"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,590.3,288.4)"
+           id="use696"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,587.1,180.4)"
+           id="use698"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_22a">
+      <title
+         id="title703">gnuplot_plot_22a</title>
+      <g
+         id="g711"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,615.4,121.8)"
+           id="use705"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,617.4,257.4)"
+           id="use707"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,617.1,177.5)"
+           id="use709"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_23a">
+      <title
+         id="title714">gnuplot_plot_23a</title>
+      <g
+         id="g720"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,646.2,130.5)"
+           id="use716"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,641.3,300.5)"
+           id="use718"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_24a">
+      <title
+         id="title723">gnuplot_plot_24a</title>
+      <g
+         id="g731"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,678.2,127.6)"
+           id="use725"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,670.3,306.4)"
+           id="use727"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,672.7,183.3)"
+           id="use729"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_25a">
+      <title
+         id="title734">gnuplot_plot_25a</title>
+      <g
+         id="g742"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,700.2,118.9)"
+           id="use736"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,704.3,306.4)"
+           id="use738"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,705.4,174.6)"
+           id="use740"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_26a">
+      <title
+         id="title745">gnuplot_plot_26a</title>
+      <g
+         id="g757"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,733.3,161.1)"
+           id="use747"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,737.2,295.2)"
+           id="use749"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,732.7,309.3)"
+           id="use751"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,728.8,297.2)"
+           id="use753"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,735.7,185.8)"
+           id="use755"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_27a">
+      <title
+         id="title760">gnuplot_plot_27a</title>
+      <g
+         id="g770"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,763.2,107.3)"
+           id="use762"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,765.6,289.9)"
+           id="use764"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,759.3,300.5)"
+           id="use766"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.25,0,0,2.25,763.8,163)"
+           id="use768"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_28a">
+      <title
+         id="title773">gnuplot_plot_28a</title>
+      <g
+         id="g779"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,787.7,110.2)"
+           id="use775"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,794.8,300.5)"
+           id="use777"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_29a">
+      <title
+         id="title782">gnuplot_plot_29a</title>
+      <g
+         id="g790"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,819.3,107.3)"
+           id="use784"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,824.5,276.8)"
+           id="use786"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,823.1,163)"
+           id="use788"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_30a">
+      <title
+         id="title793">gnuplot_plot_30a</title>
+      <g
+         id="g807"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,853.1,127.6)"
+           id="use795"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,847.5,149.9)"
+           id="use797"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,853.8,48.7)"
+           id="use799"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,854,172.7)"
+           id="use801"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,853.1,317.5)"
+           id="use803"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.07,0,0,2.07,852.6,324.3)"
+           id="use805"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_31a">
+      <title
+         id="title810">gnuplot_plot_31a</title>
+      <g
+         id="g816"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,876.4,180.9)"
+           id="use812"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,877.7,196.9)"
+           id="use814"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_32a">
+      <title
+         id="title819">gnuplot_plot_32a</title>
+      <g
+         id="g825"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,912,118.9)"
+           id="use821"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,905.1,174.6)"
+           id="use823"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_33a">
+      <title
+         id="title828">gnuplot_plot_33a</title>
+      <g
+         id="g834"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,941.8,183.3)"
+           id="use830"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,941.7,196.9)"
+           id="use832"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_34a">
+      <title
+         id="title837">gnuplot_plot_34a</title>
+      <g
+         id="g843"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,968.7,116)"
+           id="use839"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(2.43,0,0,2.43,966.4,171.7)"
+           id="use841"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="gnuplot_plot_35a">
+      <title
+         id="title846">gnuplot_plot_35a</title>
+      <g
+         id="g864"
+         style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,997.8,118.9)"
+           id="use848"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,999,254)"
+           id="use850"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,996.3,321.4)"
+           id="use852"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,996.9,175.6)"
+           id="use854"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,993.3,142.7)"
+           id="use856"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,997.6,254)"
+           id="use858"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,996,174.6)"
+           id="use860"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+        <use
+           xlink:href="#gpPt6"
+           transform="matrix(1.98,0,0,1.98,997.7,254)"
+           id="use862"
+           style="color:#440000;opacity:0.4"
+           x="0"
+           y="0"
+           width="100%"
+           height="100%" />
+      </g>
+    </g>
+    <g
+       id="g869"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,323.8 h 4.5 m 940.6,0 h -4.5 M 53.9,318 h 4.5 m 940.6,0 h -4.5"
+         id="path867"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g873"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="m 53.9,312.2 h 850.3 m 66.4,0 H 999"
+         id="path871"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g883"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,312.2 h 9 m 936.1,0 h -9"
+         id="path875"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,316.1)"
+         font-size="12.00"
+         id="g881"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text879">
+          <tspan
+             id="tspan877"
+             style="font-family:Arial">-120</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g887"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,306.4 h 4.5 m 940.6,0 h -4.5 M 53.9,300.5 h 4.5 m 940.6,0 h -4.5 M 53.9,294.7 h 4.5 m 940.6,0 h -4.5 M 53.9,288.9 h 4.5 m 940.6,0 h -4.5"
+         id="path885"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g891"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,283.1 H 999"
+         id="path889"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g901"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,283.1 h 9 m 936.1,0 h -9"
+         id="path893"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,287)"
+         font-size="12.00"
+         id="g899"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text897">
+          <tspan
+             id="tspan895"
+             style="font-family:Arial">-60</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g905"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,277.3 h 4.5 m 940.6,0 h -4.5 M 53.9,271.5 h 4.5 m 940.6,0 h -4.5 M 53.9,265.7 h 4.5 m 940.6,0 h -4.5 M 53.9,259.9 h 4.5 m 940.6,0 h -4.5"
+         id="path903"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g909"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,254 H 999"
+         id="path907"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g919"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,254 h 9 m 936.1,0 h -9"
+         id="path911"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,257.9)"
+         font-size="12.00"
+         id="g917"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text915">
+          <tspan
+             id="tspan913"
+             style="font-family:Arial">0</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g923"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,248.2 h 4.5 m 940.6,0 h -4.5 M 53.9,242.4 h 4.5 m 940.6,0 h -4.5 M 53.9,236.6 h 4.5 m 940.6,0 h -4.5 M 53.9,230.8 h 4.5 m 940.6,0 h -4.5"
+         id="path921"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g927"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,225 H 999"
+         id="path925"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g937"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,225 h 9 m 936.1,0 h -9"
+         id="path929"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,228.9)"
+         font-size="12.00"
+         id="g935"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text933">
+          <tspan
+             id="tspan931"
+             style="font-family:Arial">60</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g941"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,219.2 h 4.5 m 940.6,0 h -4.5 M 53.9,213.4 h 4.5 m 940.6,0 h -4.5 M 53.9,207.6 h 4.5 m 940.6,0 h -4.5 M 53.9,201.7 h 4.5 m 940.6,0 h -4.5"
+         id="path939"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g945"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,195.9 H 999"
+         id="path943"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g955"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,195.9 h 9 m 936.1,0 h -9"
+         id="path947"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,199.8)"
+         font-size="12.00"
+         id="g953"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text951">
+          <tspan
+             id="tspan949"
+             style="font-family:Arial">120</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g959"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,190.1 h 4.5 m 940.6,0 h -4.5 M 53.9,184.3 h 4.5 m 940.6,0 h -4.5 M 53.9,178.5 h 4.5 m 940.6,0 h -4.5 M 53.9,172.7 h 4.5 m 940.6,0 h -4.5"
+         id="path957"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g963"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,166.9 H 999"
+         id="path961"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g973"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,166.9 h 9 m 936.1,0 h -9"
+         id="path965"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,170.8)"
+         font-size="12.00"
+         id="g971"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text969">
+          <tspan
+             id="tspan967"
+             style="font-family:Arial">180</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g977"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,161.1 h 4.5 m 940.6,0 h -4.5 M 53.9,155.2 h 4.5 m 940.6,0 h -4.5 M 53.9,149.4 h 4.5 m 940.6,0 h -4.5 M 53.9,143.6 h 4.5 m 940.6,0 h -4.5"
+         id="path975"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g981"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,137.8 H 999"
+         id="path979"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g991"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,137.8 h 9 m 936.1,0 h -9"
+         id="path983"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,141.7)"
+         font-size="12.00"
+         id="g989"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text987">
+          <tspan
+             id="tspan985"
+             style="font-family:Arial">240</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g995"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,132 h 4.5 m 940.6,0 h -4.5 M 53.9,126.2 h 4.5 m 940.6,0 h -4.5 M 53.9,120.4 h 4.5 m 940.6,0 h -4.5 M 53.9,114.6 h 4.5 m 940.6,0 h -4.5"
+         id="path993"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g999"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,108.7 H 999"
+         id="path997"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g1009"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,108.7 h 9 m 936.1,0 h -9"
+         id="path1001"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,112.6)"
+         font-size="12.00"
+         id="g1007"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text1005">
+          <tspan
+             id="tspan1003"
+             style="font-family:Arial">300</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1013"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,102.9 h 4.5 m 940.6,0 h -4.5 M 53.9,97.1 h 4.5 m 940.6,0 h -4.5 M 53.9,91.3 h 4.5 m 940.6,0 h -4.5 M 53.9,85.5 h 4.5 m 940.6,0 h -4.5"
+         id="path1011"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g1017"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,79.7 H 999"
+         id="path1015"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g1027"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,79.7 h 9 m 936.1,0 h -9"
+         id="path1019"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,83.6)"
+         font-size="12.00"
+         id="g1025"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text1023">
+          <tspan
+             id="tspan1021"
+             style="font-family:Arial">360</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1031"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,73.9 h 4.5 m 940.6,0 h -4.5 M 53.9,68.1 h 4.5 m 940.6,0 h -4.5 M 53.9,62.3 h 4.5 m 940.6,0 h -4.5 M 53.9,56.4 h 4.5 m 940.6,0 h -4.5"
+         id="path1029"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+    <g
+       id="g1035"
+       style="color:#808080;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         class="gridline"
+         d="M 53.9,50.6 H 999"
+         id="path1033"
+         inkscape:connector-curvature="0"
+         style="stroke:#aaaaaa;stroke-dasharray:2, 4" />
+    </g>
+    <g
+       id="g1045"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,50.6 h 9 m 936.1,0 h -9"
+         id="path1037"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="translate(45.6,54.5)"
+         font-size="12.00"
+         id="g1043"
+         style="font-size:12px;font-family:Arial;text-anchor:end;fill:#000000;stroke:none">
+        <text
+           id="text1041">
+          <tspan
+             id="tspan1039"
+             style="font-family:Arial">420</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1055"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 53.9,44.8 h 4.5 m 940.6,0 h -4.5 M 53.9,39 h 4.5 M 999,39 h -4.5 M 58.3,326.7 v -9 m 0,-281.6 v 9"
+         id="path1047"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-140.3,194.7)"
+         font-size="12.00"
+         id="g1053"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1051">
+          <tspan
+             id="tspan1049"
+             style="font-family:Arial">(358) Bremen Kurt-Huber-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1065"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 87.6,326.7 v -9 m 0,-281.6 v 9"
+         id="path1057"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-125.65,209.35)"
+         font-size="12.00"
+         id="g1063"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1061">
+          <tspan
+             id="tspan1059"
+             style="font-family:Arial">(358) Bremen Kurt-Huber-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1075"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 117,326.7 v -9 m 0,-281.6 v 9"
+         id="path1067"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-110.95,224.05)"
+         font-size="12.00"
+         id="g1073"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1071">
+          <tspan
+             id="tspan1069"
+             style="font-family:Arial">(176) Bremen Dietrich-Bonhoeffer-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1085"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 146.3,326.7 v -9 m 0,-281.6 v 9"
+         id="path1077"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-96.3,238.7)"
+         font-size="12.00"
+         id="g1083"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1081">
+          <tspan
+             id="tspan1079"
+             style="font-family:Arial">(80) Bremen Carl-Goerdeler-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1095"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 175.6,326.7 v -9 m 0,-281.6 v 9"
+         id="path1087"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-81.65,253.35)"
+         font-size="12.00"
+         id="g1093"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1091">
+          <tspan
+             id="tspan1089"
+             style="font-family:Arial">(102) Bremen Berliner Freiheit</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1105"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 205,326.7 v -9 m 0,-281.6 v 9"
+         id="path1097"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-66.95,268.05)"
+         font-size="12.00"
+         id="g1103"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1101">
+          <tspan
+             id="tspan1099"
+             style="font-family:Arial">(79) Bremen Wilhelm-Leuschner-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1115"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 234.3,326.7 v -9 m 0,-281.6 v 9"
+         id="path1107"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-52.3,282.7)"
+         font-size="12.00"
+         id="g1113"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1111">
+          <tspan
+             id="tspan1109"
+             style="font-family:Arial">(67) Bremen Polizeipräsidium</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1125"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 263.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1117"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-37.6,297.4)"
+         font-size="12.00"
+         id="g1123"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1121">
+          <tspan
+             id="tspan1119"
+             style="font-family:Arial">(145) Bremen Julius-Brecht-Allee</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1135"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 293,326.7 v -9 m 0,-281.6 v 9"
+         id="path1127"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-22.95,312.05)"
+         font-size="12.00"
+         id="g1133"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1131">
+          <tspan
+             id="tspan1129"
+             style="font-family:Arial">(80) Bremen Barbarossastraße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1145"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 322.3,326.7 v -9 m 0,-281.6 v 9"
+         id="path1137"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,-8.3,326.7)"
+         font-size="12.00"
+         id="g1143"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1141">
+          <tspan
+             id="tspan1139"
+             style="font-family:Arial">(86) Bremen Kurfürstenallee</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1155"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 351.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1147"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,6.4,341.4)"
+         font-size="12.00"
+         id="g1153"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1151">
+          <tspan
+             id="tspan1149"
+             style="font-family:Arial">(122) Bremen Kirchbachstraße (Kleine Kirchbachstr.)</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1165"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 381,326.7 v -9 m 0,-281.6 v 9"
+         id="path1157"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,21.05,356.05)"
+         font-size="12.00"
+         id="g1163"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1161">
+          <tspan
+             id="tspan1159"
+             style="font-family:Arial">(117) Bremen Friedhofstraße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1175"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 410.3,326.7 v -9 m 0,-281.6 v 9"
+         id="path1167"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,35.7,370.7)"
+         font-size="12.00"
+         id="g1173"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1171">
+          <tspan
+             id="tspan1169"
+             style="font-family:Arial">(62) Bremen Focke-Museum</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1185"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 439.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1177"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,50.4,385.4)"
+         font-size="12.00"
+         id="g1183"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1181">
+          <tspan
+             id="tspan1179"
+             style="font-family:Arial">(30) Bremen Bürgermeister-Spitta-Allee</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1195"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 469,326.7 v -9 m 0,-281.6 v 9"
+         id="path1187"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,65.05,400.05)"
+         font-size="12.00"
+         id="g1193"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1191">
+          <tspan
+             id="tspan1189"
+             style="font-family:Arial">(87) Bremen Horn (Horner Kirche)</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1205"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 498.3,326.7 v -9 m 0,-281.6 v 9"
+         id="path1197"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,79.7,414.7)"
+         font-size="12.00"
+         id="g1203"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1201">
+          <tspan
+             id="tspan1199"
+             style="font-family:Arial">(127) Bremen Vorstraße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1215"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 527.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1207"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,94.4,429.4)"
+         font-size="12.00"
+         id="g1213"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1211">
+          <tspan
+             id="tspan1209"
+             style="font-family:Arial">(152) Bremen Horner Mühle</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1225"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 557,326.7 v -9 m 0,-281.6 v 9"
+         id="path1217"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,109.05,444.05)"
+         font-size="12.00"
+         id="g1223"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1221">
+          <tspan
+             id="tspan1219"
+             style="font-family:Arial">(67) Bremen Werner-von-Siemens-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1235"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 586.4,326.7 v -9 m 0,-281.6 v 9"
+         id="path1227"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,123.75,458.75)"
+         font-size="12.00"
+         id="g1233"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1231">
+          <tspan
+             id="tspan1229"
+             style="font-family:Arial">(63) Bremen Kopernikusstraße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1245"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 615.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1237"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,138.4,473.4)"
+         font-size="12.00"
+         id="g1243"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1241">
+          <tspan
+             id="tspan1239"
+             style="font-family:Arial">(64) Bremen Peter-Henlein-Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1255"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 645,326.7 v -9 m 0,-281.6 v 9"
+         id="path1247"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,153.05,488.05)"
+         font-size="12.00"
+         id="g1253"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1251">
+          <tspan
+             id="tspan1249"
+             style="font-family:Arial">(68) Bremen Höger Weg</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1265"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 674.4,326.7 v -9 m 0,-281.6 v 9"
+         id="path1257"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,167.75,502.75)"
+         font-size="12.00"
+         id="g1263"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1261">
+          <tspan
+             id="tspan1259"
+             style="font-family:Arial">(60) Bremen Am Lehester Deich</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1275"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 703.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1267"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,182.4,517.4)"
+         font-size="12.00"
+         id="g1273"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1271">
+          <tspan
+             id="tspan1269"
+             style="font-family:Arial">(62) Bremen Daniel-Jacobs-Allee</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1285"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 733,326.7 v -9 m 0,-281.6 v 9"
+         id="path1277"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,197.05,532.05)"
+         font-size="12.00"
+         id="g1283"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1281">
+          <tspan
+             id="tspan1279"
+             style="font-family:Arial">(123) Bremen Borgfeld</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1295"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 762.4,326.7 v -9 m 0,-281.6 v 9"
+         id="path1287"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,211.75,546.75)"
+         font-size="12.00"
+         id="g1293"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1291">
+          <tspan
+             id="tspan1289"
+             style="font-family:Arial">(114) Lilienthal Truperdeich</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1305"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 791.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1297"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,226.4,561.4)"
+         font-size="12.00"
+         id="g1303"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1301">
+          <tspan
+             id="tspan1299"
+             style="font-family:Arial">(79) Lilienthal Trupe</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1315"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 821.1,326.7 v -9 m 0,-281.6 v 9"
+         id="path1307"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,241.1,576.1)"
+         font-size="12.00"
+         id="g1313"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1311">
+          <tspan
+             id="tspan1309"
+             style="font-family:Arial">(67) Lilienthal Feldhäuser Straße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1325"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 850.4,326.7 v -9 m 0,-281.6 v 9"
+         id="path1317"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,255.75,590.75)"
+         font-size="12.00"
+         id="g1323"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1321">
+          <tspan
+             id="tspan1319"
+             style="font-family:Arial">(127) Lilienthal Lilienthal-Mitte</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1335"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 879.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1327"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,270.4,605.4)"
+         font-size="12.00"
+         id="g1333"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1331">
+          <tspan
+             id="tspan1329"
+             style="font-family:Arial">(54) Lilienthal Moorhauser Landstraße</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1345"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 909.1,326.7 v -9 m 0,-281.6 v 9"
+         id="path1337"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,285.1,620.1)"
+         font-size="12.00"
+         id="g1343"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1341">
+          <tspan
+             id="tspan1339"
+             style="font-family:Arial">(76) Lilienthal Timkenweg</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1355"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 938.4,326.7 v -9 m 0,-281.6 v 9"
+         id="path1347"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,299.75,634.75)"
+         font-size="12.00"
+         id="g1353"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1351">
+          <tspan
+             id="tspan1349"
+             style="font-family:Arial">(49) Lilienthal Schoofmoor</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1365"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 967.7,326.7 v -9 m 0,-281.6 v 9"
+         id="path1357"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,314.4,649.4)"
+         font-size="12.00"
+         id="g1363"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1361">
+          <tspan
+             id="tspan1359"
+             style="font-family:Arial">(79) Lilienthal Auf dem Kamp</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1375"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="m 997.1,326.7 v -9 m 0,-281.6 v 9"
+         id="path1367"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <g
+         transform="rotate(90,329.1,664.1)"
+         font-size="12.00"
+         id="g1373"
+         style="font-size:12px;font-family:Arial;text-anchor:start;fill:#000000;stroke:none">
+        <text
+           id="text1371">
+          <tspan
+             id="tspan1369"
+             style="font-family:Arial">(131) Lilienthal Kutscher Behrens</tspan>
+        </text>
+      </g>
+    </g>
+    <g
+       id="g1387"
+       style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter">
+      <path
+         d="M 53.9,36.1 V 326.7 H 999 V 36.1 Z"
+         id="path1385"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+    </g>
+  </g>
+  <g
+     style="color:#000000;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter"
+     id="g1389"
+     transform="translate(-1.9339844,6.8363281)" />
 </svg>
-
