@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Dystonse - Projektvorstellung zur Demo Week"
+categories: demoweek
+excerpt_separator: <!--more-->
+---
+
 # Dystonse - Wir steigern das Vertrauen in den ÖPNV
 
 ## Wer kennt es nicht?
@@ -7,6 +14,8 @@ _Du stehst an der Haltestelle und fragst dich, wann die Straßenbahn endlich kom
 Eine nervige Situation, die im Moment noch ziemlich oft vorkommt. Und wenn du mal in einer anderen Stadt unterwegs bist, dann hast dort du noch nichtmal mehr dieses Gefühl dafür, welche Linien meistens pünktlich sind und welche nicht. Mit etwas Glück zeigt dir dort ein Abfahrtsmonitor die aktuellen Verspätungen, aber das sagt dir auch nichts darüber, wie diese sich während der Fahrt wohl entwickeln werden, und wie wahrscheinlich es ist, dass du deinen Umstieg schaffst.
 
 Da wäre es doch gut, eine Software-Lösung zu haben, die dir diese Zweifel abnimmt!
+
+<!--more-->
 
 So ging es uns auch selbst oft - und deswegen haben wir Dystonse entwickelt. Im Gegensatz zu klassischen ÖPNV-Routensuchen und -Abfahrtsmonitoren ist die Abfahrtszeit bei uns nicht nur *eine* Zeit – sondern eine Verteilung von Wahrscheinlichkeiten. 
 
@@ -85,6 +94,10 @@ Dabei definieren [Konfigurationsdateien](https://github.com/dystonse/dystonse-do
 
 Wir haben nun schon fast ein halbes Jahr Förderzeit hinter uns, in der wir sowohl ungeplante Schwierigkeiten als auch überraschende Erfolge erlebt und vor allem viel gelernt und eine große Community gefunden haben.
 
-So haben z.B. die Vorbereitung der Datensammlung, das Einrichten der Datenbank, und die ersten Analysen viel länger gebraucht, als wir vermutet hatten. Dazu kam dann noch, dass während der ersten Phase des "Lockdowns" wegen der Covid19-Pandemie plötzlich viele Verkehrsmittel ausgefallen sind 
+So haben z.B. die Vorbereitung der Datensammlung, das Einrichten der Datenbank, und die ersten Analysen viel länger gebraucht, als wir vermutet hatten.
 
+Dazu kam dann noch, dass während der ersten Phase des "Lockdowns" wegen der Covid19-Pandemie plötzlich viele Verkehrsmittel ausgefallen sind und auch etwas später die Menschen aus Sicherheitsgründen kaum noch öffentliche Verkehrsmittel benutzt haben. Für eine neue ÖPNV-Software also ein ziemlich ungünstiger Zeitunkt - daher haben wir nicht wie zuerst gelant schon früh User-Befragungen o.ä. durchgeführt, sondern uns zuerst auf den Backend-Stack konzentriert. Und uns dabei manchmal zu lange mit Details aufgehalten.
 
+Aber die Pandemie geht ja hoffentlich bald vorbei, und eine möglichst angenehme Nutzung des ÖPNV wird noch lange gebraucht, um Mobilität in Zeiten des Klimawandels zu ermöglichen. Also bleiben wir dran und entwickeln die geplante Routensuche ggf. auch nach dem Ende der Förderung noch weiter.
+
+Dabei unterstützt uns eine Community verschiedener Menschen und Organisationen, die sich ebenfalls dafür einsetzen, dass öffentliche Infrastruktur auch mit offenen Daten betrieben wird. Beim VBN ist unser Projekt 
