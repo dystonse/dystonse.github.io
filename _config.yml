@@ -32,6 +32,19 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Add public drafts following this guide: https://www.bsn.design/2017/01/12/public-drafts-with.html
+collections:
+  drafts:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: drafts
+    values:
+      layout: draft
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
