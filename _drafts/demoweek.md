@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 
 ## Wer kennt es nicht?
 
-_Du stehst an der Haltestelle und fragst dich, wann die Straßenbahn endlich kommt. Laut Fahrplan sollte sie schon längst da sein, aber sie ist noch nicht zu sehen. So langsam wirst du nervös - falls sie jetzt noch mehr als 3 Minuten braucht, dann würdest du lieber den Bus nehmen, den du am Bussteig nebenan schon einfahren siehst. Wobei... der braucht halt eigentlich eh immer länger, du müsstest unterwegs umsteigen, und der Umstieg ist dann auch oft ziemlich knapp. Also doch lieber weiter auf die Straßenbahn warten?_
+_Du stehst an der Haltestelle und fragst dich, wann die Straßenbahn endlich kommt. Laut Fahrplan sollte sie schon längst da sein, aber sie ist noch nicht zu sehen. So langsam wirst du nervös - falls sie jetzt noch mehr als drei Minuten braucht, dann würdest du lieber den Bus nehmen, den du am Bussteig nebenan schon einfahren siehst. Wobei... der braucht halt eigentlich eh immer länger, du müsstest unterwegs umsteigen, und der Umstieg ist dann auch oft ziemlich knapp. Also doch lieber weiter auf die Straßenbahn warten?_
 
 Eine nervige Situation, die im Moment noch ziemlich oft vorkommt. Und wenn du mal in einer anderen Stadt unterwegs bist, dann hast dort du noch nichtmal mehr dieses Gefühl dafür, welche Linien meistens pünktlich sind und welche nicht. Mit etwas Glück zeigt dir dort ein Abfahrtsmonitor die aktuellen Verspätungen, aber das sagt dir auch nichts darüber, wie diese sich während der Fahrt wohl entwickeln werden, und wie wahrscheinlich es ist, dass du deinen Umstieg schaffst.
 
@@ -17,34 +17,37 @@ Da wäre es doch gut, eine Software-Lösung zu haben, die dir diese Zweifel abni
 
 <!--more-->
 
-So ging es uns auch selbst oft - und deswegen haben wir Dystonse entwickelt. Im Gegensatz zu klassischen ÖPNV-Routensuchen und -Abfahrtsmonitoren ist die Abfahrtszeit bei uns nicht nur *eine* Zeit – sondern eine Verteilung von Wahrscheinlichkeiten. 
+So ging es uns auch selbst oft - und deswegen haben wir Dystonse entwickelt. Im Gegensatz zu klassischen ÖPNV-Routensuchen und -Abfahrtsmonitoren ist die Abfahrtszeit bei uns nicht nur **eine** Zeit – sondern eine Verteilung von Wahrscheinlichkeiten. 
 
-Diese Verteilung kannst du jetzt schon in unserem *erweiterten Abfahrtsmonitor* sehen. Er zeigt dir nicht nur die Abfahrten an deiner Start-Haltestelle an, sondern mit einem Klick auch den weiteren Verlauf der Linie und wie sich ihre Pünktlichkeit voraussichtlich entwickeln wird. Damit kannst du selbst deine Route zusammenstellen und dabei sehen, wie wahrscheinlich diese Umstiege sind.
+Diese Verteilung kannst du jetzt schon in unserem **erweiterten Abfahrtsmonitor** sehen. Er zeigt dir nicht nur die Abfahrten an deiner Start-Haltestelle an, sondern mit einem Klick auch den weiteren Verlauf der Linie und wie sich ihre Pünktlichkeit voraussichtlich entwickeln wird. Damit kannst du selbst deine Route zusammenstellen und dabei sehen, wie wahrscheinlich diese Umstiege sind.
 
-HIER SCREENSHOTS EINFÜGEN
+<a href="/assets/demoweek/abfahrten.png"><img title="Screenshot 1" src="/assets/demoweek/abfahrten.png" width="45%"></a>
+<a href="/assets/demoweek/halte.png"><img title="Screenshot 2" src="/assets/demoweek/halte.png" width="45%"></a>
 
 Letztendlich soll die Routensuche natürlich auch automatisch passieren, so dass du dich im Liniennetz nicht auskennen musst, um eine Route zu finden. In [unserem ersten Prototypen von 2019](https://dystonse.org/route) kannst du schon sehen, wie das mal ungefähr aussehen soll. Jenen Prototyp haben wir damals innerhalb weniger Tage entwickelt, und entsprechend unvollständig und fehlerhaft ist er auch. Außerdem sind die Daten, auf denen das Verspätungsmodell dort basiert, eine sehr starke Vereinfachung, die in der Realität nicht sehr nützlich ist.
 
 Das [ursprüngliche Ziel unserer Förderung](https://prototypefund.de/project/dystonse-wahrscheinlichkeitsbasierte-oepnv-routensuche/) ist, diese Routensuche komplett neu zu schreiben. Damit sind wir noch nicht fertig. Die wichtigste Neuheit von Dystonse - das Rechnen mit Wahrscheinlichkeitsverteilungen anstatt fester Zeiten, kommt aber auch im erweiterten Abfahrtsmonitor schon zum Einsatz. Und auch unser neues, umfassendes Verspätungsmodell wird bereits für den Monitor verwendet, sowie die gesamte Infrastruktur, die unsichtbar dahinter steht (siehe unten).
 
-Hier kannst du den erweiterten Abfahrtsmonitor für den *Verkehrsverbund Bremen/Niedersachsen* gleich ausprobieren:
+Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen/Niedersachsen** gleich ausprobieren:
 
-HIER MONITOR EINBETTEN ODER VERLINKEN
+{% raw %}
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="http://[2a02:8108:8240:7329:ca2a:14ff:fe2a:e7e]:3000/"></iframe>
+{% endraw %}
 
 ## Erweiterter Abfahrtsmonitor vs automatische Routensuche
 
-Unser Ziel ist es, alle wichtigen Infos in einer Anwendung zusammen zu bringen: Die Umsteigemöglichkeiten im *Liniennetz*, die Abfahrtszeiten laut *Fahrplan*, die *aktuellen Echtzeit-Daten* von einzelnen Fahrzeugen, und eben diese Intuition, die man als Mensch nur durch viel Erfahrung entwickeln kann - wir nennen das "*Verspätungsmodell*". Also das Wissen darüber, welche Linien dazu neigen, besonders pünktlich oder unpünktlich zu sein, wo sie ihre Verspätung wieder aufholen, etc...
+Unser Ziel ist es, alle wichtigen Infos in einer Anwendung zusammen zu bringen: Die Umsteigemöglichkeiten im **Liniennetz**, die Abfahrtszeiten laut **Fahrplan**, die **aktuellen Echtzeit-Daten** von einzelnen Fahrzeugen, und eben diese Intuition, die man als Mensch nur durch viel Erfahrung entwickeln kann - wir nennen das **Verspätungsmodell**. Also das Wissen darüber, welche Linien dazu neigen, besonders pünktlich oder unpünktlich zu sein, wo sie ihre Verspätung wieder aufholen, etc...
 
 Klassische Routensuchen und Abfahrtsmonitore berücksichtigen diese Infos teilweise gar nicht oder nur eingeschränkt. Unser erweiterter Abfahrtsmonitor verwendet alles davon - nur die Auswahl, welcher Umstieg nun der bessere ist, musst du hier im Gegensatz zur Routensuche noch selbst treffen. Mit der Visualierung der Wahrscheinlichkeiten geben wir dir dazu möglichst viel Info an die Hand, um diese Entscheidung besser fundiert zu treffen.
 
 Hier nochmal eine kleine Übersicht, welche Software-Lösungen welche dieser Daten nutzen:
 
-|                           | Liniennetz | Fahrplanzeiten | aktuelle Echtzeitdaten | Verspätungsmodell |
-|---------------------------|------------|----------------|------------------------|-------------------|
-| Klassischer Monitor       | Nein       | Ja             | Ja                     | Teilweise         |
-| Dystonse Monitor          | Teilweise  | Ja             | Ja                     | Ja                |
-| Klassische Routensuche    | Ja         | Ja             | Teilweise              | Teilweise         |
-| Dystonse Routensuche      | Ja         | Ja             | Ja                     | Ja                |
+|                            | Linien&shy;netz | Fahr&shy;plan&shy;zeiten | aktu&shy;elle Echt&shy;zeit&shy;daten | Ver&shy;spät&shy;ungs&shy;modell |
+|----------------------------|--------------|----------------|------------------------|-------------------|
+| **Klassischer Monitor**    | ❌ Nein      | ✅Ja           | ✅Ja                   | 🔸Teilweise      |
+| **Dystonse Monitor**       | 🔸 Teilweise | ✅Ja           | ✅Ja                   | ✅Ja             |
+| **Klassische Routensuche** | ✅ Ja        | ✅Ja           | 🔸Teilweise            | 🔸Teilweise      |
+| **Dystonse Routensuche**   | ✅Ja         | ✅Ja           | ✅Ja                   | ✅Ja             |
 
 ## Was alles dahinter steckt - der Dystonse-Software-Stack
 
@@ -80,9 +83,9 @@ Diese werden dann z.B. vom Abfahrtsmonitor (und später von der Routensuche) dir
 
 Im Prinzip ist die Berechnung dieser Prognosen ein eigener `predict`-Schritt in der Datenverarbeitung, wie er im nachfolgenden Diagramm auch zu sehen ist. In Wirklichkeit finden diese Berechnungen bei uns schon im `import`-Schritt statt, so dass jede Echtzeit-Datei nur einmal verarbeitet wird.
 
-DIAGRAMM
+<a href="/assets/demoweek/stack.svg"><img title="Überisicht über unseren Software-Stack" src="/assets/demoweek/stack.svg"></a>
 
-Bei `collect` handelt es sich nur um ein paar Shell-Skripte. Die Komponenten `import`, `analyse`, `predict` und auch `monitor` sind in der Sprache Rust geschrieben und sind Module innerhalb unseres Universalwerkzeugs [`dystonse-gtfs-data`](https://github.com/dystonse/dystonse-gtfs-data). Sie haben also alle die selbe Codebasis, aber laufen als eigenständige Prozesse. Außerdem muss eine MySQL-Datenbank laufen, auf welche die anderen Komponenten zugreifen, und ein gemeinsam genutztes Verzeichnis für die Dateiablage vorhanden sein. Zusammen mit PhpMyAdmin, das wir zur Pflege der Datenbank verwenden, erreicht der Software-Stack also schon einiges an Komplexität.
+Bei `collect` handelt es sich nur um ein paar Shell-Skripte. Die Komponenten `import`, `analyse`, `predict` und auch `monitor` sind in der Sprache Rust geschrieben und sind Module innerhalb unseres Universalwerkzeugs `dystonse-gtfs-data` ([zum Code](https://github.com/dystonse/dystonse-gtfs-data)). Sie haben also alle die selbe Codebasis, aber laufen als eigenständige Prozesse. Außerdem muss eine MySQL-Datenbank laufen, auf welche die anderen Komponenten zugreifen, und ein gemeinsam genutztes Verzeichnis für die Dateiablage vorhanden sein. Zusammen mit PhpMyAdmin, das wir zur Pflege der Datenbank verwenden, erreicht der Software-Stack also schon einiges an Komplexität.
 
 ### Automatisierung und einfache Installation
 
@@ -96,8 +99,13 @@ Wir haben nun schon fast ein halbes Jahr Förderzeit hinter uns, in der wir sowo
 
 So haben z.B. die Vorbereitung der Datensammlung, das Einrichten der Datenbank, und die ersten Analysen viel länger gebraucht, als wir vermutet hatten.
 
-Dazu kam dann noch, dass während der ersten Phase des "Lockdowns" wegen der Covid19-Pandemie plötzlich viele Verkehrsmittel ausgefallen sind und auch etwas später die Menschen aus Sicherheitsgründen kaum noch öffentliche Verkehrsmittel benutzt haben. Für eine neue ÖPNV-Software also ein ziemlich ungünstiger Zeitunkt - daher haben wir nicht wie zuerst gelant schon früh User-Befragungen o.ä. durchgeführt, sondern uns zuerst auf den Backend-Stack konzentriert. Und uns dabei manchmal zu lange mit Details aufgehalten.
+Dazu kam dann noch, dass während der ersten Phase des "Lockdowns" wegen der Covid19-Pandemie plötzlich viele Verkehrsmittel ausgefallen sind und auch etwas später die Menschen aus Sicherheitsgründen kaum noch öffentliche Verkehrsmittel benutzt haben. Für eine neue ÖPNV-Software also ein ziemlich ungünstiger Zeitpunkt - daher haben wir nicht wie vorher gelant schon früh User-Befragungen o.ä. durchgeführt, sondern uns zuerst auf den Backend-Stack konzentriert. Und uns dabei manchmal zu lange mit Details aufgehalten.
+
+Als dann dank der Pandemie auch noch das Konzept für die abschließende Präsentation von einer Veranstaltung vor Ort in ein Online-Event umgewandelt werden musste, wofür alles ein paar Wochen früher fertig sein muss, war die Zeit plötzlich noch knapper.
+Mit Hilfe eines geförderten Coachings haben wir dann ein neues Konzept für die Präsentation erarbeitet - deshalb zeigen wir heute unsere Arbeit und die wichtigen Konzepte von Dystonse anhand des erweiterten Abfahrtsmonitors, und können die automatische Routensuche unabhängig von dieser Demo-Anwendung weiter entwickeln.
 
 Aber die Pandemie geht ja hoffentlich bald vorbei, und eine möglichst angenehme Nutzung des ÖPNV wird noch lange gebraucht, um Mobilität in Zeiten des Klimawandels zu ermöglichen. Also bleiben wir dran und entwickeln die geplante Routensuche ggf. auch nach dem Ende der Förderung noch weiter.
 
-Dabei unterstützt uns eine Community verschiedener Menschen und Organisationen, die sich ebenfalls dafür einsetzen, dass öffentliche Infrastruktur auch mit offenen Daten betrieben wird. Beim VBN ist unser Projekt 
+Dabei unterstützt uns eine Community verschiedener Menschen und Organisationen, die sich ebenfalls dafür einsetzen, dass öffentliche Infrastruktur auch mit offenen Daten betrieben wird. Beim VBN ist unser Projekt schon sehr positiv empfangen worden, und wir hoffen, dass sich auch andere Verkehrsverbünde daran ein Vorbild nehmen, so dass wir irgendwann Abfahrtsmonitore und Routensuche für ganz Deutschland anbieten können.
+
+Wenn ihr wissen wollt, wie es mit Dystonse weiter geht, schaut gerne auf [unserem Blog](https://blog.dystonse.org) vorbei - dort wird es demnächst noch viele spannende Artikel geben.
