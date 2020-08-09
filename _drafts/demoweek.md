@@ -29,7 +29,7 @@ Das [ursprüngliche Ziel unserer Förderung](https://prototypefund.de/project/dy
 Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen/Niedersachsen** gleich ausprobieren:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="https://dystonse.org/monitor/embed"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="https://monitor.dystonse.org/embed"></iframe>
 {% endraw %}
 
 ## Erweiterter Abfahrtsmonitor vs automatische Routensuche
