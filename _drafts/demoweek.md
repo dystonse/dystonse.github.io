@@ -7,8 +7,6 @@ excerpt_separator: <!--more-->
 
 # Dystonse - Wir steigern das Vertrauen in den ÖPNV
 
-## Wer kennt es nicht?
-
 _Du stehst an der Haltestelle und fragst dich, wann die Straßenbahn endlich kommt. Laut Fahrplan sollte sie schon längst da sein, aber sie ist noch nicht zu sehen. So langsam wirst du nervös - falls sie jetzt noch mehr als drei Minuten braucht, dann würdest du lieber den Bus nehmen, den du am Bussteig nebenan schon einfahren siehst. Wobei... der braucht halt eigentlich eh immer länger, du müsstest unterwegs umsteigen, und der Umstieg ist dann auch oft ziemlich knapp. Also doch lieber weiter auf die Straßenbahn warten?_
 
 Eine nervige Situation, die im Moment noch ziemlich oft vorkommt. Und wenn du mal in einer anderen Stadt unterwegs bist, dann hast dort du noch nichtmal mehr dieses Gefühl dafür, welche Linien meistens pünktlich sind und welche nicht. Mit etwas Glück zeigt dir dort ein Abfahrtsmonitor die aktuellen Verspätungen, aber das sagt dir auch nichts darüber, wie diese sich während der Fahrt wohl entwickeln werden, und wie wahrscheinlich es ist, dass du deinen Umstieg schaffst.
@@ -31,7 +29,7 @@ Das [ursprüngliche Ziel unserer Förderung](https://prototypefund.de/project/dy
 Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen/Niedersachsen** gleich ausprobieren:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="http://[2a02:8108:8240:7329:ca2a:14ff:fe2a:e7e]:3000/embed"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="https://dystonse.org/monitor/embed"></iframe>
 {% endraw %}
 
 ## Erweiterter Abfahrtsmonitor vs automatische Routensuche
@@ -44,9 +42,9 @@ Hier nochmal eine kleine Übersicht, welche Software-Lösungen welche dieser Dat
 
 |                            | Linien&shy;netz | Fahr&shy;plan&shy;zeiten | aktu&shy;elle Echt&shy;zeit&shy;daten | Ver&shy;spät&shy;ungs&shy;modell |
 |----------------------------|--------------|----------------|------------------------|-------------------|
-| **Klassischer Monitor**    | ❌ Nein      | ✅ Ja          | ✅ Ja                  | 🔸 Teilweise     |
-| **Dystonse Monitor**       | 🔸 Teilweise | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
-| **Klassische Routensuche** | ✅ Ja        | ✅ Ja          | 🔸 Teilweise           | 🔸 Teilweise     |
+| **Klassischer Monitor**    | ❌ Nein      | ✅ Ja          | ✅ Ja                  | 🔸 Teils         |
+| **Dystonse Monitor**       | 🔸 Teils     | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
+| **Klassische Routensuche** | ✅ Ja        | ✅ Ja          | 🔸 Teils               | 🔸 Teils         |
 | **Dystonse Routensuche**   | ✅ Ja        | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
 
 ## Was alles dahinter steckt - der Dystonse-Software-Stack
