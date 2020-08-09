@@ -31,7 +31,7 @@ Das [ursprüngliche Ziel unserer Förderung](https://prototypefund.de/project/dy
 Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen/Niedersachsen** gleich ausprobieren:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="100" src="http://[2a02:8108:8240:7329:ca2a:14ff:fe2a:e7e]:3000/"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="http://[2a02:8108:8240:7329:ca2a:14ff:fe2a:e7e]:3000/embed"></iframe>
 {% endraw %}
 
 ## Erweiterter Abfahrtsmonitor vs automatische Routensuche
@@ -44,10 +44,10 @@ Hier nochmal eine kleine Übersicht, welche Software-Lösungen welche dieser Dat
 
 |                            | Linien&shy;netz | Fahr&shy;plan&shy;zeiten | aktu&shy;elle Echt&shy;zeit&shy;daten | Ver&shy;spät&shy;ungs&shy;modell |
 |----------------------------|--------------|----------------|------------------------|-------------------|
-| **Klassischer Monitor**    | ❌ Nein      | ✅Ja           | ✅Ja                   | 🔸Teilweise      |
-| **Dystonse Monitor**       | 🔸 Teilweise | ✅Ja           | ✅Ja                   | ✅Ja             |
-| **Klassische Routensuche** | ✅ Ja        | ✅Ja           | 🔸Teilweise            | 🔸Teilweise      |
-| **Dystonse Routensuche**   | ✅Ja         | ✅Ja           | ✅Ja                   | ✅Ja             |
+| **Klassischer Monitor**    | ❌ Nein      | ✅ Ja          | ✅ Ja                  | 🔸 Teilweise     |
+| **Dystonse Monitor**       | 🔸 Teilweise | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
+| **Klassische Routensuche** | ✅ Ja        | ✅ Ja          | 🔸 Teilweise           | 🔸 Teilweise     |
+| **Dystonse Routensuche**   | ✅ Ja        | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
 
 ## Was alles dahinter steckt - der Dystonse-Software-Stack
 
@@ -99,7 +99,7 @@ Wir haben nun schon fast ein halbes Jahr Förderzeit hinter uns, in der wir sowo
 
 So haben z.B. die Vorbereitung der Datensammlung, das Einrichten der Datenbank, und die ersten Analysen viel länger gebraucht, als wir vermutet hatten.
 
-Dazu kam dann noch, dass während der ersten Phase des "Lockdowns" wegen der Covid19-Pandemie plötzlich viele Verkehrsmittel ausgefallen sind und auch etwas später die Menschen aus Sicherheitsgründen kaum noch öffentliche Verkehrsmittel benutzt haben. Für eine neue ÖPNV-Software also ein ziemlich ungünstiger Zeitpunkt - daher haben wir nicht wie vorher gelant schon früh User-Befragungen o.ä. durchgeführt, sondern uns zuerst auf den Backend-Stack konzentriert. Und uns dabei manchmal zu lange mit Details aufgehalten.
+Dazu kam dann noch, dass während der ersten Phase des "Lockdowns" wegen der Covid19-Pandemie plötzlich viele Verkehrsmittel ausgefallen sind und auch etwas später die Menschen aus Sicherheitsgründen kaum noch öffentliche Verkehrsmittel benutzt haben. Für eine neue ÖPNV-Software also ein ziemlich ungünstiger Zeitpunkt - daher haben wir nicht wie vorher geplant schon früh User-Befragungen o.ä. durchgeführt, sondern uns zuerst auf den Backend-Stack konzentriert. Und uns dabei manchmal zu lange mit Details aufgehalten.
 
 Als dann dank der Pandemie auch noch das Konzept für die abschließende Präsentation von einer Veranstaltung vor Ort in ein Online-Event umgewandelt werden musste, wofür alles ein paar Wochen früher fertig sein muss, war die Zeit plötzlich noch knapper.
 Mit Hilfe eines geförderten Coachings haben wir dann ein neues Konzept für die Präsentation erarbeitet - deshalb zeigen wir heute unsere Arbeit und die wichtigen Konzepte von Dystonse anhand des erweiterten Abfahrtsmonitors, und können die automatische Routensuche unabhängig von dieser Demo-Anwendung weiter entwickeln.
