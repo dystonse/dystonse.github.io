@@ -22,7 +22,9 @@ Diese Verteilung kannst du jetzt schon in unserem **erweiterten Abfahrtsmonitor*
 <a href="/assets/demoweek/abfahrten.png"><img title="Screenshot 1" src="/assets/demoweek/abfahrten.png" width="45%"></a>
 <a href="/assets/demoweek/halte.png"><img title="Screenshot 2" src="/assets/demoweek/halte.png" width="45%"></a>
 
-Letztendlich soll die Routensuche natürlich auch automatisch passieren, so dass du dich im Liniennetz nicht auskennen musst, um eine Route zu finden. In [unserem ersten Prototypen von 2019](https://dystonse.org/route) kannst du schon sehen, wie das mal ungefähr aussehen soll. Jenen Prototyp haben wir damals innerhalb weniger Tage entwickelt, und entsprechend unvollständig und fehlerhaft ist er auch. Außerdem sind die Daten, auf denen das Verspätungsmodell dort basiert, eine sehr starke Vereinfachung, die in der Realität nicht sehr nützlich ist.
+Letztendlich soll die Routensuche natürlich auch automatisch passieren, so dass du dich im Liniennetz nicht auskennen musst, um eine Route zu finden. In [unserem ersten Prototypen von 2019](https://dystonse.org/route) kannst du schon sehen, wie das mal ungefähr aussehen soll. Jenen Prototyp haben wir damals innerhalb weniger Tage entwickelt, und entsprechend unvollständig und fehlerhaft ist er auch. Außerdem sind die Daten, auf denen das Verspätungsmodell dort basiert, eine extreme Vereinfachung, die in der Realität nicht sehr nützlich ist.
+
+<a href="/assets/demoweek/prototype.jpg"><img title="Screenshot unseres ersten Prototyps von Ende 2019" src="/assets/demoweek/prototype.jpg"></a>
 
 Das [ursprüngliche Ziel unserer Förderung](https://prototypefund.de/project/dystonse-wahrscheinlichkeitsbasierte-oepnv-routensuche/) ist, diese Routensuche komplett neu zu schreiben. Damit sind wir noch nicht fertig. Die wichtigste Neuheit von Dystonse - das Rechnen mit Wahrscheinlichkeitsverteilungen anstatt fester Zeiten, kommt aber auch im erweiterten Abfahrtsmonitor schon zum Einsatz. Und auch unser neues, umfassendes Verspätungsmodell wird bereits für den Monitor verwendet, sowie die gesamte Infrastruktur, die unsichtbar dahinter steht (siehe unten).
 
@@ -55,9 +57,11 @@ Der Abfahrtsmonitor (und später auch die Routensuche) ist zwar der einzige Teil
 
 Wie so ein Verspätungsmodell aussieht, haben wir schonmal ausführlich in unserem Blogpost ["Um die Kurve gedacht"](https://blog.dystonse.org/analysis/2020/06/10/kurven.html) erklärt. Kurz gesagt: die Verteilung der Abfahrts- und Ankunftszeiten wird in Form von Kurven zusammengefasst, in denen jeder Zeit eine Wahrscheinlichkeit zugeordnet ist, wie häufig diese Zeit tatsächlich zutrifft.
 
-Bei den Linien, von denen wir viele Echtzeitdaten aufgezeichnet haben, können wir nicht nur eine Kurve für jede Haltestelle berechnen, sondern auch die Abhängigkeit zwischen verschiedenen Haltestellen und den Einfluss vorheriger Verzögerungen. Also z.B. "wenn dieser Bus an Haltestelle Nr. 3 mit X Sekunden Verspätung abfährt, wie verteilt sich dann die Ankunftszeit an Haltestelle Nr. 7". Im Idealfall ist diese Kurve sogar noch nach der Tageszeit aufgeschlüsselt.
+Bei den Linien, von denen wir viele Echtzeitdaten aufgezeichnet haben, können wir nicht nur eine Kurve für jede Haltestelle berechnen, sondern auch die Abhängigkeit zwischen verschiedenen Haltestellen und den Einfluss vorheriger Verzögerungen. Also z.B. "wenn diese Straßenbahn an Haltestelle Nr. 20 mit 220 Sekunden Verspätung abfährt, wie verteilt sich dann die Ankunftszeit an Haltestelle Nr. 45". Das sieht dann so aus:
 
-Bei den Linien, für die wir weniger Echtzeitdaten gesammelt haben, sind die Kurven dann etwas weniger genau, damit die Daten-Grundlage nicht zu klein ist. Dann wird zum Beispiel die Tageszeit nicht berücksichtigt, oder es werden nicht nur Daten einer bestimmten Straßenbahnlinie genutzt, sondern von allen Straßenbahnen zusammengefasst.
+<a href="/assets/demoweek/curve_20_to_45.svg"><img title="Straßenbahn Linie 4 nach Arsten - Verspätungsentwicklung von #20 'Bremen Bürgermeister-Spitta-Allee' bis #45 'Bremen Kattenturm-Mitte'" src="/assets/demoweek/curve_20_to_45.svg"></a>
+
+Im Idealfall ist diese Kurve sogar noch nach der Tageszeit aufgeschlüsselt. Bei den Linien, für die wir weniger Echtzeitdaten gesammelt haben, sind die Kurven dann etwas weniger genau, damit die Daten-Grundlage nicht zu klein ist. Dann wird zum Beispiel die Tageszeit nicht berücksichtigt, oder es werden nicht nur Daten einer bestimmten Straßenbahnlinie genutzt, sondern von allen Straßenbahnen zusammengefasst.
 
 ### Datensammlung
 
