@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 
 _Du stehst an der Haltestelle und fragst dich, wann die Straßenbahn endlich kommt. Laut Fahrplan sollte sie schon längst da sein, aber sie ist noch nicht zu sehen. So langsam wirst du nervös - falls sie jetzt noch mehr als drei Minuten braucht, dann würdest du lieber den Bus nehmen, den du am Bussteig nebenan schon einfahren siehst. Wobei... der braucht halt eigentlich eh immer länger, du müsstest unterwegs umsteigen, und der Umstieg ist dann auch oft ziemlich knapp. Also doch lieber weiter auf die Straßenbahn warten?_
 
-Eine nervige Situation, die im Moment noch ziemlich oft vorkommt. Und wenn du mal in einer anderen Stadt unterwegs bist, dann hast dort du noch nichtmal mehr dieses Gefühl dafür, welche Linien meistens pünktlich sind und welche nicht. Mit etwas Glück zeigt dir dort ein Abfahrtsmonitor die aktuellen Verspätungen, aber das sagt dir auch nichts darüber, wie diese sich während der Fahrt wohl entwickeln werden, und wie wahrscheinlich es ist, dass du deinen Umstieg schaffst.
+Eine nervige Situation, die im Moment noch ziemlich oft vorkommt. Und wenn du mal in einer anderen Stadt unterwegs bist, dann hast du dort nichtmal dieses Gefühl dafür, welche Linien meistens pünktlich sind und welche nicht. Mit etwas Glück zeigt dir ein Abfahrtsmonitor die aktuellen Verspätungen, aber das sagt dir auch nichts darüber, wie diese sich während der Fahrt wohl entwickeln werden, und wie wahrscheinlich es ist, dass du deinen Umstieg schaffst.
 
 Da wäre es doch gut, eine Software-Lösung zu haben, die dir diese Zweifel abnimmt!
 
@@ -24,7 +24,7 @@ Diese Verteilung kannst du jetzt schon in unserem **erweiterten Abfahrtsmonitor*
 
 Letztendlich soll die Routensuche natürlich auch automatisch passieren, so dass du dich im Liniennetz nicht auskennen musst, um eine Route zu finden. In [unserem ersten Prototypen von 2019](https://dystonse.org/route) kannst du schon sehen, wie das mal ungefähr aussehen soll. Jenen Prototyp haben wir damals innerhalb weniger Tage entwickelt, und entsprechend unvollständig und fehlerhaft ist er auch. Außerdem sind die Daten, auf denen das Verspätungsmodell dort basiert, eine extreme Vereinfachung, die in der Realität nicht sehr nützlich ist.
 
-<a href="/assets/demoweek/prototype.jpg"><img title="Screenshot unseres ersten Prototyps von Ende 2019" src="/assets/demoweek/prototype.jpg"></a>
+<a href="/assets/demoweek/prototype.jpg"><img title="Screenshot unseres ersten Prototyps von Ende 2019" src="/assets/demoweek/prototype.jpg" width="60%"></a>
 
 Das [ursprüngliche Ziel unserer Förderung](https://prototypefund.de/project/dystonse-wahrscheinlichkeitsbasierte-oepnv-routensuche/) ist, diese Routensuche komplett neu zu schreiben. Damit sind wir noch nicht fertig. Die wichtigste Neuheit von Dystonse - das Rechnen mit Wahrscheinlichkeitsverteilungen anstatt fester Zeiten, kommt aber auch im erweiterten Abfahrtsmonitor schon zum Einsatz. Und auch unser neues, umfassendes Verspätungsmodell wird bereits für den Monitor verwendet, sowie die gesamte Infrastruktur, die unsichtbar dahinter steht (siehe unten).
 
@@ -87,7 +87,7 @@ Im Prinzip ist die Berechnung dieser Prognosen ein eigener `predict`-Schritt in 
 
 <a href="/assets/demoweek/stack.svg"><img title="Überisicht über unseren Software-Stack" src="/assets/demoweek/stack.svg"></a>
 
-Bei `collect` handelt es sich nur um ein paar Shell-Skripte. Die Komponenten `import`, `analyse`, `predict` und auch `monitor` sind in der Sprache Rust geschrieben und sind Module innerhalb unseres Universalwerkzeugs `dystonse-gtfs-data` ([zum Code](https://github.com/dystonse/dystonse-gtfs-data)). Sie haben also alle die selbe Codebasis, aber laufen als eigenständige Prozesse. Außerdem muss eine MySQL-Datenbank laufen, auf welche die anderen Komponenten zugreifen, und ein gemeinsam genutztes Verzeichnis für die Dateiablage vorhanden sein. Zusammen mit PhpMyAdmin, das wir zur Pflege der Datenbank verwenden, erreicht der Software-Stack also schon einiges an Komplexität.
+Bei `collect` handelt es sich nur um ein paar Shell-Skripte. Die Komponenten `import`, `analyse`, `predict` und auch `monitor` sind in der Sprache Rust geschrieben und sind Module innerhalb unseres Universalwerkzeugs `dystonse-gtfs-data` ([zum Code](https://github.com/dystonse/dystonse-gtfs-data)). Sie haben also alle die selbe Codebasis, aber laufen als eigenständige Prozesse. Außerdem muss eine [MySQL](https://www.mysql.com/)-Datenbank laufen, auf welche die anderen Komponenten zugreifen, und ein gemeinsam genutztes Verzeichnis für die Dateiablage vorhanden sein. Zusammen mit [phpMyAdmin](https://www.phpmyadmin.net/), das wir zur Pflege der Datenbank verwenden, erreicht der Software-Stack also schon einiges an Komplexität.
 
 ### Automatisierung und einfache Installation
 
