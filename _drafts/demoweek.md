@@ -49,12 +49,16 @@ Letztlich wollen wir alle wichtigen Infos in einer Anwendung zusammen bringen:
 
 Klassische Routensuchen und Abfahrtsmonitore berücksichtigen diese Infos teilweise gar nicht oder nur eingeschränkt:
 
+<div style="overflow-x: scroll;">
+
 |                            | Linien&shy;netz | Fahr&shy;plan&shy;zeiten | aktu&shy;elle Echt&shy;zeit&shy;daten | Ver&shy;spät&shy;ungs&shy;modell |
 |----------------------------|--------------|----------------|------------------------|-------------------|
 | **Klassischer Monitor**    | ❌ Nein      | ✅ Ja          | ✅ Ja                  | 🔸 Teils         |
 | **Dystonse Monitor**       | 🔸 Teils     | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
 | **Klassische Routensuche** | ✅ Ja        | ✅ Ja          | 🔸 Teils               | 🔸 Teils         |
 | **Dystonse Routensuche**   | ✅ Ja        | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
+
+</div>
 
 Unser erweiterter Abfahrtsmonitor verwendet zwar alles davon - aber die Auswahl, welcher Umstieg nun der bessere ist, musst du hier im Gegensatz zur Routensuche noch selbst treffen. Mit der Visualierung der Wahrscheinlichkeiten geben wir dir dazu möglichst viel Info an die Hand, um diese Entscheidung besser fundiert zu treffen.
 
