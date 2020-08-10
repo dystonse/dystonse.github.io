@@ -34,9 +34,9 @@ Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="https://monitor.dystonse.org/embed"></iframe>
 {% endraw %}
 
-<img title="Hinweis darauf, dass das weiter oben kein Bild ist. Das hier ist ein Bild." src="/assets/demoweek/pfeil.png" width="60%" style="float:right">
+<img title="Hinweis darauf, dass das weiter oben kein Bild ist. Das hier ist ein Bild." src="/assets/demoweek/pfeil.png" width="60%" align="right">
 
-<div style="clear:both">_(falls über dieser Zeile keine Suchmaske angezeigt wird, kannst du auch [den Monitor direkt aufrufen](https://monitor.dystonse.org/))_</div>
+_(falls über dieser Zeile keine Suchmaske angezeigt wird, kannst du auch [den Monitor direkt aufrufen](https://monitor.dystonse.org/))_
 
 
 ## Erweiterter Abfahrtsmonitor vs automatische Routensuche
