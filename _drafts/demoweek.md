@@ -50,13 +50,49 @@ Letztlich wollen wir alle wichtigen Infos in einer Anwendung zusammen bringen:
 Klassische Routensuchen und Abfahrtsmonitore berücksichtigen diese Infos teilweise gar nicht oder nur eingeschränkt:
 
 <div style="overflow-x: scroll;">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Linien&shy;netz</th>
+<th>Fahr&shy;plan&shy;zeiten</th>
+<th>aktuelle Echt&shy;zeit&shy;daten</th>
+<th>Verspätungs&shy;modell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><b>Klassischer Monitor</b></td>
+<td style="background-color:#faa;">Nein</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#ffa;">Teils</td>
+</tr>
 
-|                            | Linien&shy;netz | Fahr&shy;plan&shy;zeiten | aktu&shy;elle Echt&shy;zeit&shy;daten | Ver&shy;spät&shy;ungs&shy;modell |
-|----------------------------|--------------|----------------|------------------------|-------------------|
-| **Klassischer Monitor**    | ❌ Nein      | ✅ Ja          | ✅ Ja                  | 🔸 Teils         |
-| **Dystonse Monitor**       | 🔸 Teils     | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
-| **Klassische Routensuche** | ✅ Ja        | ✅ Ja          | 🔸 Teils               | 🔸 Teils         |
-| **Dystonse Routensuche**   | ✅ Ja        | ✅ Ja          | ✅ Ja                  | ✅ Ja            |
+<tr>
+<td><b>Dystonse Monitor</b></td>
+<td style="background-color:#ffa;">Teils</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+</tr>
+
+<tr>
+<td><b>Klassische Routen&shy;suche</b></td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#ffa;">Teils</td>
+<td style="background-color:#ffa;">Teils</td>
+</tr>
+
+<tr>
+<td><b>Dystonse Routen&shy;suche</b></td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#afa;">Ja</td>
+</tr>
+</tbody></table>
 
 </div>
 
