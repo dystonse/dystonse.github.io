@@ -63,34 +63,34 @@ Klassische Routensuchen und Abfahrtsmonitore berücksichtigen diese Infos teilwe
 <tbody>
 <tr>
 <td><b>Klassischer Monitor</b></td>
-<td style="background-color:#faa;">Nein</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#ffa;">Teils</td>
+<td style="background-color:#fdd;">Nein</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#ffd;">Teils</td>
 </tr>
 
 <tr>
 <td><b>Dystonse Monitor</b></td>
-<td style="background-color:#ffa;">Teils</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#ffd;">Teils</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
 </tr>
 
 <tr>
 <td><b>Klassische Routen&shy;suche</b></td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#ffa;">Teils</td>
-<td style="background-color:#ffa;">Teils</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#ffd;">Teils</td>
+<td style="background-color:#ffd;">Teils</td>
 </tr>
 
 <tr>
 <td><b>Dystonse Routen&shy;suche</b></td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
-<td style="background-color:#afa;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
+<td style="background-color:#dfd;">Ja</td>
 </tr>
 </tbody></table>
 
