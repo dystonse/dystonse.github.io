@@ -34,9 +34,17 @@ Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="https://monitor.dystonse.org/embed"></iframe>
 {% endraw %}
 
+<img title="Hinweis darauf, dass das weiter oben kein Bild ist. Das hier ist ein Bild." src="/assets/demoweek/pfeil.png" width="60%" style="float:right">
+
+<div style="clear:both">_(falls über dieser Zeile keine Suchmaske angezeigt wird, kannst du auch [den Monitor direkt aufrufen](https://monitor.dystonse.org/))_</div>
+
 ## Erweiterter Abfahrtsmonitor vs automatische Routensuche
 
-Unser Ziel ist es, alle wichtigen Infos in einer Anwendung zusammen zu bringen: Die Umsteigemöglichkeiten im **Liniennetz**, die Abfahrtszeiten laut **Fahrplan**, die **aktuellen Echtzeit-Daten** von einzelnen Fahrzeugen, und eben diese Intuition, die man als Mensch nur durch viel Erfahrung entwickeln kann - wir nennen das **Verspätungsmodell**. Also das Wissen darüber, welche Linien dazu neigen, besonders pünktlich oder unpünktlich zu sein, wo sie ihre Verspätung wieder aufholen, etc...
+Unser Ziel ist es, alle wichtigen Infos in einer Anwendung zusammen zu bringen: 
+ * Die Umsteigemöglichkeiten im **Liniennetz**
+ * Die Abfahrtszeiten laut **Fahrplan**
+ * Die **aktuellen Echtzeit-Daten** von einzelnen Fahrzeugen
+ * Und eben diese Intuition, die man als Mensch nur durch viel Erfahrung entwickeln kann - wir nennen das **Verspätungsmodell**. Also das Wissen darüber, welche Linien dazu neigen, besonders pünktlich oder unpünktlich zu sein, wo sie ihre Verspätung wieder aufholen, etc...
 
 Klassische Routensuchen und Abfahrtsmonitore berücksichtigen diese Infos teilweise gar nicht oder nur eingeschränkt. Unser erweiterter Abfahrtsmonitor verwendet alles davon - nur die Auswahl, welcher Umstieg nun der bessere ist, musst du hier im Gegensatz zur Routensuche noch selbst treffen. Mit der Visualierung der Wahrscheinlichkeiten geben wir dir dazu möglichst viel Info an die Hand, um diese Entscheidung besser fundiert zu treffen.
 
