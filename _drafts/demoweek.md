@@ -58,7 +58,7 @@ Klassische Routensuchen und Abfahrtsmonitore berücksichtigen diese Infos teilwe
 <th></th>
 <th>Linien&shy;netz</th>
 <th>Fahr&shy;plan&shy;zeiten</th>
-<th>aktuelle Echt&shy;zeit&shy;daten</th>
+<th>Aktuelle Echt&shy;zeit&shy;daten</th>
 <th>Verspätungs&shy;modell</th>
 </tr>
 </thead>
@@ -140,7 +140,7 @@ Diese werden dann z.B. vom Abfahrtsmonitor (und später von der Routensuche) dir
 
 Im Prinzip ist die Berechnung dieser Prognosen ein eigener `predict`-Schritt in der Datenverarbeitung, wie er im nachfolgenden Diagramm auch zu sehen ist. In Wirklichkeit finden diese Berechnungen bei uns schon im `import`-Schritt statt, so dass jede Echtzeit-Datei nur einmal verarbeitet wird.
 
-<a href="/assets/demoweek/stack.svg"><img title="Überisicht über unseren Software-Stack" src="/assets/demoweek/stack.svg"></a>
+<a href="/assets/demoweek/stack.svg"><img title="Übersicht über unseren Software-Stack" src="/assets/demoweek/stack.svg"></a>
 
 Bei `collect` handelt es sich nur um ein paar Shell-Skripte. Die Komponenten `import`, `analyse`, `predict` und auch `monitor` sind in der Sprache Rust geschrieben und sind Module innerhalb unseres Universalwerkzeugs `dystonse-gtfs-data` ([zum Code](https://github.com/dystonse/dystonse-gtfs-data)). Sie haben also alle die selbe Codebasis, aber laufen als eigenständige Prozesse. Außerdem muss eine [MySQL](https://www.mysql.com/)-Datenbank laufen, auf welche die anderen Komponenten zugreifen, und ein gemeinsam genutztes Verzeichnis für die Dateiablage vorhanden sein. Zusammen mit [phpMyAdmin](https://www.phpmyadmin.net/), das wir zur Pflege der Datenbank verwenden, erreicht der Software-Stack also schon einiges an Komplexität.
 
