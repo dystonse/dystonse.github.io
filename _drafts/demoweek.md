@@ -7,21 +7,21 @@ excerpt_separator: <!--more-->
 
 # Wir steigern das Vertrauen in den ÖPNV
 
-> _Du stehst an der Haltestelle und fragst dich, wann die Straßenbahn endlich kommt. Laut Fahrplan sollte sie schon längst da sein, aber sie ist noch nicht zu sehen. So langsam wirst du nervös - falls sie jetzt noch mehr als drei Minuten braucht, dann würdest du lieber den Bus nehmen, den du am Bussteig nebenan schon einfahren siehst. Wobei... der braucht halt eigentlich eh immer länger, du müsstest unterwegs umsteigen, und der Umstieg ist dann auch oft ziemlich knapp. Also doch lieber weiter auf die Straßenbahn warten?_
+> _Wann kommt endlich die Straßenbahn? Laut Fahrplan sollte sie schon längst da sein, aber sie ist noch nicht zu sehen. So langsam wirst du nervös - falls sie jetzt noch mehr als drei Minuten braucht, dann würdest du lieber den Bus nehmen, den du am Bussteig nebenan schon einfahren siehst. Wobei... der braucht halt eigentlich eh immer länger, du müsstest unterwegs umsteigen, und der Umstieg ist dann auch oft ziemlich knapp. Also doch lieber weiter auf die Straßenbahn warten?_
 
 Eine nervige Situation, die im Moment noch ziemlich oft vorkommt. Und wenn du mal in einer anderen Stadt unterwegs bist, dann hast du dort nichtmal dieses Gefühl dafür, welche Linien meistens pünktlich sind und welche nicht. Mit etwas Glück zeigt dir ein Abfahrtsmonitor die aktuellen Verspätungen, aber das sagt dir auch nichts darüber, wie diese sich während der Fahrt wohl entwickeln werden, und wie wahrscheinlich es ist, dass du deinen Umstieg schaffst.
 
-**Da wäre es doch gut, eine Software-Lösung zu haben, die dir diese Zweifel abnimmt!**
+**Warum kann mir nicht einfach eine Software diese Entscheidung abnehmen?**
 
 <!--more-->
 
-So ging es uns auch selbst oft - und deswegen ist die Idee zu Dystonse entstanden. Wir sind davon überzeugt, dass Software für ÖPNV-Routenplanung nicht mit einfachen, absoluten Zeiten arbeiten sollte, sondern mit einer Verteilung von Wahrscheinlichkeiten.
+Uns geht es selbst oft so - und deswegen ist die Idee zu Dystonse entstanden. Wir sind davon überzeugt, dass Software für ÖPNV-Routenplanung nicht mit einfachen, absoluten Zeiten arbeiten sollte, sondern mit einer Verteilung von Wahrscheinlichkeiten.
 
 Unser Ziel - [mit dem wir uns auch beim Prototype Fund beworben haben](https://prototypefund.de/project/dystonse-wahrscheinlichkeitsbasierte-oepnv-routensuche/) - ist eine vollständige Routenauskunft von A nach B, die schon während der Suche Verspätungen, Prognosen und Wahrscheinlichkeiten einbezieht. Bisher gab es das so noch nicht. Dass es prinzipiell möglich wäre, haben wir schon mit [unserem ersten Prototypen von 2019](https://dystonse.org/route) gezeigt, der damals so aussah:
 
 <a href="/assets/demoweek/prototype.jpg"><img title="Screenshot unseres ersten Prototyps von Ende 2019" src="/assets/demoweek/prototype.jpg" width="60%"></a>
 
-Den Prototypen hatten wir damals innerhalb weniger Tage entwickelt, und entsprechend unvollständig und fehlerhaft ist er auch. Außerdem sind die Daten, auf denen das Verspätungsmodell dort basiert, eine extreme Vereinfachung, die in der Realität nicht sehr nützlich ist.
+Den Prototypen haben wir damals innerhalb weniger Tage entwickelt, und entsprechend unvollständig und fehlerhaft ist er auch. Außerdem sind die Daten, auf denen das Verspätungsmodell dort basiert, eine extreme Vereinfachung, die in der Realität nicht sehr nützlich ist.
 
 Um die Routenauskunft diesmal verlässlich, realistisch und effizient umzusetzen, mussten wir nochmal bei Null anfangen und eine Menge Vorarbeit bei der Datensammlung und -Aufbereitung leisten – mehr dazu folgt weiter unten. Die neue Version unserer Routensuche ist daher noch nicht fertig – wohl aber ein Vorgeschmack darauf.
 
@@ -104,7 +104,7 @@ In der Zeit nach der Demo Week entwickeln wir dann die automatische Routensuche 
 
 ## Was alles dahinter "stackt"
 
-Der Abfahrtsmonitor (und später auch die Routensuche) ist zwar der einzige Teil, der für alle Nutzer\*innen sichtbar ist – aber der größte Teil des Dystonse-Software-Stacks bleibt "hinter den Kulissen": Hier werden die Daten gesammelt, die wir für das Verspätungsmodell brauchen, und das Modell wird berechnet.
+Der Abfahrtsmonitor und später die Routensuche sind nur der kleine Teil von Dystonse, der für alle Nutzer\*innen sichtbar ist – der größte Teil des Dystonse-Software-Stacks bleibt "hinter den Kulissen": Hier werden die Daten gesammelt, die wir für das Verspätungsmodell brauchen, und das Modell wird berechnet.
 
 ### Unser zentrales Datenformat: Wahrscheinlichkeits-Kurven
 
@@ -162,7 +162,7 @@ Der ganze Themenbereich "ÖPNV" erscheint in diesen Zeiten generell in einem gan
 
 Aber die Pandemie geht ja hoffentlich bald vorbei, und Vertrauen in den ÖPNV wird noch lange gebraucht, um Mobilität in Zeiten des Klimawandels zu ermöglichen. Also bleiben wir dran und entwickeln die geplante Routensuche auch nach dem Ende der Förderung noch weiter.
 
-Die Umstellung vom DemoDay in Berlin zu DemoWeek im Internet hat gegen Ende auch noch für zusätzliche Zeitknappheit gesorgt. Aber wir sind ja flexibel, und ganz im Sinne des Prototype-Fund-Learnings [„Brauchst du dieses Feature wirklich?“](https://prototypefund.de/12-learnings/) haben wir – mit Hilfe eines geförderten Coachings – ein neues Konzept für die Präsentation in Form des erweiterten Abfahrtsmonitors statt der Routensuche erarbeitet.
+Die Umstellung vom DemoDay in Berlin zur DemoWeek im Internet hat gegen Ende auch noch für zusätzliche Zeitknappheit gesorgt. Aber wir sind ja flexibel, und ganz im Sinne des Prototype-Fund-Learnings [„Brauchst du dieses Feature wirklich?“](https://prototypefund.de/12-learnings/) haben wir – mit Hilfe eines geförderten Coachings – ein neues Konzept für die Präsentation in Form des erweiterten Abfahrtsmonitors statt der Routensuche erarbeitet.
 
 Außerdem haben wir während der Förderzeit eine [aktive Community](https://twitter.com/dystonse/following) gefunden - nicht nur innerhalb der Projekte in Runde 7, sondern auch in der großen "Nerd-Bubble" zu unserem Themengebiet.
 
