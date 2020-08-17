@@ -100,8 +100,8 @@ Die Kürzel bestehen aus zwei Teilen. Der erste Buchstabe gibt an, ob wir aktuel
 Der Zweite Teil des Kürzels gibt an, wie genau die Statistische Auswertung auf diese Fahrt und Haltestelle zugeschnitten ist:
 
 | ------ | ------------------------------------------------------------------------------------------------------------------------ |
-| **S+** | Statistik für diese Wochen-/Tageszeit, diese Linienvariante und diese Haltestelle, Verknüpft mit aktuellen Echtzeitdaten |
-| **S**  | Statistik für diese Linienvariante und diese Haltestelle, Verknüpft mit aktuellen Echtzeitdaten |
+| **S+** | Statistik für diese Wochen-/Tageszeit, diese Linienvariante und diese Haltestelle, verknüpft mit aktuellen Echtzeitdaten |
+| **S**  | Statistik für diese Linienvariante und diese Haltestelle, verknüpft mit aktuellen Echtzeitdaten |
 | **S-** | Statistik für diese Linienvariante und diese Haltestelle |
 | **G+** | Statistik für diese Wochen-/Tageszeit, Verkehrsmittel-Typ und Streckenabschnitt (etwas ungenau) |
 | **G**  | Statistik für diesen Verkehrsmittel-Typ (ungenau) |
@@ -109,6 +109,6 @@ Der Zweite Teil des Kürzels gibt an, wie genau die Statistische Auswertung auf 
 
 Als Tooltip wird dir außerdem eine Zahl angezeigt, die angibt, auf wievielen Aufnahmen die Berechnung basiert. Was diese Zahl genau bedeutet, erklären wir demnächst noch genauer – das ist im Moment noch nicht so wichtig.
 
-## Mehr Info und Hintergrund
+## Mehr Info und Hintergrundwissen
 
 Wenn du es noch genauer wissen willst, dann schau dir gerne den [Dystonse Blog](https://blog.dystonse.org) an. Dort berichten wir von der Entwicklung dieses erweiterten Abfahrtsmonitors und erklären verschiedene Details zu den Verarbeitungsschritten, die hinter den Kulissen ablaufen. 
