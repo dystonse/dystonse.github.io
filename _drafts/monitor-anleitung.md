@@ -91,9 +91,11 @@ An den K체rzeln ganz rechts in jeder Zeile kannst du sehen, was die Grundlage f�
 
 Die K체rzel bestehen aus zwei Teilen. Der erste Buchstabe gibt an, ob wir aktuelle Echtzeitdaten f체r diese Fahrt haben und sie zur Berechnung der Verteilung mit einbeziehen:
 
-**E :** Aktuelle Echtzeitdaten werden genutzt.
-**U :** Wir haben zwar aktuelle Echtzeitdaten, aber noch nicht genug historische Aufzeichnungen zu dieser Linienvariante, um sie damit zu verkn체pfen - deswegen werden die Echtzeitdaten hier noch nicht genutzt.
-**P :** F체r diese Fahrt haben wir keine aktuellen Echtzeitdaten.
+
+| **E** | Aktuelle Echtzeitdaten werden genutzt. |
+| **U** | Wir haben zwar aktuelle Echtzeitdaten, aber noch nicht genug historische Aufzeichnungen zu dieser Linienvariante, um sie damit zu verkn체pfen - deswegen werden die Echtzeitdaten hier noch nicht genutzt. |
+| **P** | F체r diese Fahrt haben wir keine aktuellen Echtzeitdaten. |
+
 
 Der Zweite Teil des K체rzels gibt an, wie genau die Statistische Auswertung auf diese Fahrt und Haltestelle zugeschnitten ist:
 
