@@ -1,6 +1,9 @@
 ---
 layout: post
-title:  "Projektvorstellung zur Demo Week"
+title:  "Dystonse - Wahrscheinlichkeitsbasierte ÖPNV-Routenplanung"
+image: /assets/demoweek/logo.png
+authors: "Lena Schimmel", "Kirstin Rohwer"
+summary: "Der erweiterte Abfahrtsmonitor macht die Wahrscheinlichkeitsverteilung von Ankunfts- und Abfahrtszeiten im ÖPNV sichtbar und berechnet die Chance für erfolgreiche Umstiege."
 categories: demoweek
 excerpt_separator: <!--more-->
 ---
@@ -140,7 +143,7 @@ Diese werden dann z.B. vom Abfahrtsmonitor (und später von der Routensuche) dir
 
 Im Prinzip ist die Berechnung dieser Prognosen ein eigener `predict`-Schritt in der Datenverarbeitung, wie er im nachfolgenden Diagramm auch zu sehen ist. In Wirklichkeit finden diese Berechnungen bei uns schon im `import`-Schritt statt, so dass jede Echtzeit-Datei nur einmal verarbeitet wird.
 
-<a href="/assets/demoweek/stack.svg"><img title="Übersicht über unseren Software-Stack" src="/assets/demoweek/stack.svg"></a>
+<a href="/assets/demoweek/stack_dark_theme.svg"><img title="Übersicht über unseren Software-Stack" src="/assets/demoweek/stack_dark_theme.svg"></a>
 
 Bei `collect` handelt es sich nur um ein paar Shell-Skripte. Die Komponenten `import`, `analyse`, `predict` und auch `monitor` sind in der Sprache Rust geschrieben und sind Module innerhalb unseres Universalwerkzeugs `dystonse-gtfs-data` ([zum Code](https://github.com/dystonse/dystonse-gtfs-data)). Sie haben also alle die selbe Codebasis, aber laufen als eigenständige Prozesse. Außerdem muss eine [MySQL](https://www.mysql.com/)-Datenbank laufen, auf welche die anderen Komponenten zugreifen, und ein gemeinsam genutztes Verzeichnis für die Dateiablage vorhanden sein. Zusammen mit [phpMyAdmin](https://www.phpmyadmin.net/), das wir zur Pflege der Datenbank verwenden, erreicht der Software-Stack also schon einiges an Komplexität.
 
@@ -164,9 +167,11 @@ Aber die Pandemie geht ja hoffentlich bald vorbei, und Vertrauen in den ÖPNV wi
 
 Die Umstellung vom DemoDay in Berlin zur DemoWeek im Internet hat gegen Ende auch noch für zusätzliche Zeitknappheit gesorgt. Aber wir sind ja flexibel, und ganz im Sinne des Prototype-Fund-Learnings [„Brauchst du dieses Feature wirklich?“](https://prototypefund.de/12-learnings/) haben wir – mit Hilfe eines geförderten Coachings – ein neues Konzept für die Präsentation in Form des erweiterten Abfahrtsmonitors statt der Routensuche erarbeitet.
 
+Wir freuen uns sehr, dass wir in der Förderrunde 7 dabei sein durften. Danke an das PF-Team für die gute Betreuung, und an das BMBF und das DLR dafür, dass sie dieses Projekt möglich gemacht haben!
+
 Außerdem haben wir während der Förderzeit eine [aktive Community](https://twitter.com/dystonse/following) gefunden - nicht nur innerhalb der Projekte in Runde 7, sondern auch in der großen "Nerd-Bubble" zu unserem Themengebiet.
 
-Ein Dank geht hier auf jeden Fall an den [Verkehrsverbund Bremen/Niedersachsen](https://www.vbn.de/), die unser Projekt so begeistert aufgenommen haben. Wir würden uns freuen, wenn sich andere Verkehrsverbünde davon inspirieren lassen und in Zukunft auch offen für solche OpenData-Anwendungen sind - und mit diesem Wunsch sind wir Teil einer engagierten Community, die sich für Open Data in allen Bereichen der Mobilität einsetzt. Als Beispiel ist hier das [Open Transport Meetup](https://hackmd.okfn.de/opentransportmeetup) zu nennen, bei dem sich Entwickler\*innen und andere Interessierte regelmäßig austauschen und vernetzen.
+Ein Dank geht hier auch an den [Verkehrsverbund Bremen/Niedersachsen](https://www.vbn.de/), die unser Projekt so begeistert aufgenommen haben. Wir würden uns freuen, wenn sich andere Verkehrsverbünde davon inspirieren lassen und in Zukunft auch offen für solche OpenData-Anwendungen sind - und mit diesem Wunsch sind wir Teil einer engagierten Community, die sich für Open Data in allen Bereichen der Mobilität einsetzt. Als Beispiel ist hier das [Open Transport Meetup](https://hackmd.okfn.de/opentransportmeetup) zu nennen, bei dem sich Entwickler\*innen und andere Interessierte regelmäßig austauschen und vernetzen.
 Außerdem konnten wir in unserer Arbeit auf viele Open Source-Grundlagen zurückgreifen, die von der Community entwickelt wurden und werden – z.B. das Paket [gtfs-structures](https://github.com/dystonse/gtfs-structure), sowie diverse Tools und Erfahrungswerte von [Jannis Redmann (derhuerst)](https://github.com/derhuerst/).
 
 Wenn ihr wissen wollt, wie es mit Dystonse weiter geht, schaut gerne auf [unserem Blog](https://blog.dystonse.org) vorbei - dort wird es demnächst noch viele spannende Artikel geben – und [folgt uns auch gerne auf Twitter](https://twitter.com/dystonse).
