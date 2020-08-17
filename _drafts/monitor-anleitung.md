@@ -98,6 +98,7 @@ Die Kürzel bestehen aus zwei Teilen. Der erste Buchstabe gibt an, ob wir aktuel
 
 
 Der Zweite Teil des Kürzels gibt an, wie genau die Statistische Auswertung auf diese Fahrt und Haltestelle zugeschnitten ist:
+
 | ------ | ------------------------------------------------------------------------------------------------------------------------ |
 | **S+** | Statistik für diese Wochen-/Tageszeit, diese Linienvariante und diese Haltestelle, Verknüpft mit aktuellen Echtzeitdaten |
 | **S**  | Statistik für diese Linienvariante und diese Haltestelle, Verknüpft mit aktuellen Echtzeitdaten |
