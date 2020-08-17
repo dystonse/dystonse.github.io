@@ -2,6 +2,7 @@
 layout: post
 title:  "Dystonse - Wahrscheinlichkeitsbasierte ÖPNV-Routenplanung"
 image: "/assets/demoweek/logo_dark_theme_transparent.png"
+authors: "Lena Schimmel, Kirstin Rohwer"
 summary: "Der erweiterte Abfahrtsmonitor macht die Wahrscheinlichkeitsverteilung von Ankunfts- und Abfahrtszeiten im ÖPNV sichtbar und berechnet die Chance für erfolgreiche Umstiege."
 categories: demoweek
 excerpt_separator: <!--more-->
