@@ -16,7 +16,7 @@ Deshalb haben wir den erweiterten Abfahrtsmonitor entwickelt. Hier kannst du die
 
 Außerdem kannst du nicht nur die Abfahrten an einer Haltestelle sehen, sondern auch ausprobieren, wie deine Fahrt weitergeht, und deine **Reisekette mit Umstiegen** selbst zusammenstellen. Natürlich auch inklusive grafisch dargestellter Wahrscheinlichkeitsverteilung der Ankunfts- und Abfahrtszeiten.
 
-Und weil das auch manchmal nicht übersichtlich genug ist, kannst du bei uns auch den **Pronzentwert** sehen, mit welcher Chance du alle Anschlüsse auf deiner Reise bekommen wirst.
+Und weil das auch manchmal nicht übersichtlich genug ist, kannst du bei uns auch den **Prozentwert** sehen, mit welcher Chance du alle Anschlüsse auf deiner Reise bekommen wirst.
 
 <!--more-->
 
@@ -92,7 +92,7 @@ An den Kürzeln ganz rechts in jeder Zeile kannst du sehen, was die Grundlage f�
 Die Kürzel bestehen aus zwei Teilen. Der erste Buchstabe gibt an, ob wir aktuelle Echtzeitdaten für diese Fahrt haben und sie zur Berechnung der Verteilung mit einbeziehen:
 
 - E : Aktuelle Echtzeitdaten werden genutzt.
-- U : Wir haben zwar aktuelle Echtzeitdaten, aber noch nicht genug historische Aufzeichnungen zu dieser Linienvariante, um sie damit zu verknüpfen - deswegen werden die Echtzeitdaten hier noch nicht genutzt.
+- U : <div>Wir haben zwar aktuelle Echtzeitdaten, aber noch nicht genug historische Aufzeichnungen zu dieser Linienvariante, um sie damit zu verknüpfen - deswegen werden die Echtzeitdaten hier noch nicht genutzt.</div>
 - P : Für diese Fahrt haben wir keine aktuellen Echtzeitdaten.
 
 Der Zweite Teil des Kürzels gibt an, wie genau die Statistische Auswertung auf diese Fahrt und Haltestelle zugeschnitten ist:
