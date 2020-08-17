@@ -39,7 +39,7 @@ Hier kannst du den erweiterten Abfahrtsmonitor für den **Verkehrsverbund Bremen
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="140" src="https://monitor.dystonse.org/embed"></iframe>
 {% endraw %}
 
-<img title="Hinweis darauf, dass das weiter oben kein Bild ist. Das hier ist ein Bild." src="/assets/demoweek/pfeil.png">
+<img title="Hinweis darauf, dass das weiter oben kein Bild ist. Das hier ist ein Bild." src="/assets/demoweek/pfeil_pink.png">
 
 _(falls über dieser Zeile keine Suchmaske angezeigt wird, kannst du auch [den Monitor direkt aufrufen](https://monitor.dystonse.org/))_
 
@@ -172,6 +172,6 @@ Wir freuen uns sehr, dass wir in der Förderrunde 7 dabei sein durften. Danke an
 Außerdem haben wir während der Förderzeit eine [aktive Community](https://twitter.com/dystonse/following) gefunden - nicht nur innerhalb der Projekte in Runde 7, sondern auch in der großen "Nerd-Bubble" zu unserem Themengebiet.
 
 Ein Dank geht hier auch an den [Verkehrsverbund Bremen/Niedersachsen](https://www.vbn.de/), die unser Projekt so begeistert aufgenommen haben. Wir würden uns freuen, wenn sich andere Verkehrsverbünde davon inspirieren lassen und in Zukunft auch offen für solche OpenData-Anwendungen sind - und mit diesem Wunsch sind wir Teil einer engagierten Community, die sich für Open Data in allen Bereichen der Mobilität einsetzt. Als Beispiel ist hier das [Open Transport Meetup](https://hackmd.okfn.de/opentransportmeetup) zu nennen, bei dem sich Entwickler\*innen und andere Interessierte regelmäßig austauschen und vernetzen.
-Außerdem konnten wir in unserer Arbeit auf viele Open Source-Grundlagen zurückgreifen, die von der Community entwickelt wurden und werden – z.B. das Paket [gtfs-structures](https://github.com/dystonse/gtfs-structure), sowie diverse Tools und Erfahrungswerte von [Jannis Redmann (derhuerst)](https://github.com/derhuerst/).
+Außerdem konnten wir in unserer Arbeit auf viele Open Source-Grundlagen zurückgreifen, die von der Community entwickelt wurden und werden – z.B. das Paket [gtfs-structures](https://github.com/dystonse/gtfs-structure), sowie diverse Tools und Erfahrungswerte von [Jannis Redmann](https://github.com/derhuerst/).
 
 Wenn ihr wissen wollt, wie es mit Dystonse weiter geht, schaut gerne auf [unserem Blog](https://blog.dystonse.org) vorbei - dort wird es demnächst noch viele spannende Artikel geben – und [folgt uns auch gerne auf Twitter](https://twitter.com/dystonse).
