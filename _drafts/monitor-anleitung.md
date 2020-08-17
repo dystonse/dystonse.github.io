@@ -87,7 +87,7 @@ Um die Wahrscheinlichkeits-Verteilung von Abfahrt und Ankunft auszurechnen, habe
 
 An den Kürzeln ganz rechts in jeder Zeile kannst du sehen, was die Grundlage für die dort angezeigte Verteilung ist.
 
-[Screenshot Daten-Symbole mit Tooltip]
+![Screenshot: Verschiedene Daten-Kürzel mit Tooltip](/assets/monitor/symbole-fuer-datenqualitaet-mit-tooltip.png)
 
 Die Kürzel bestehen aus zwei Teilen. Der erste Buchstabe gibt an, ob wir aktuelle Echtzeitdaten für diese Fahrt haben und sie zur Berechnung der Verteilung mit einbeziehen:
 
