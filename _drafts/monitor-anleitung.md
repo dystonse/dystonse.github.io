@@ -79,7 +79,7 @@ So kannst du dir deine ganze Reisekette zusammenstellen, und sehen, wie wahrsche
 
 In der Navigationszeile oben links kannst du jederzeit zu früheren Teilen der Reise zurückspringen, um andere Varianten auszuprobieren.
 
-[Screenshot Breadcrumbs]
+![Screenshot Breadcrumbs-Navigation](/assets/monitor/breadcrumbs.png)
 
 ## Datenqualität
 
