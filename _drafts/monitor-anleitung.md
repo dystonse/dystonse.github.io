@@ -79,11 +79,10 @@ In beiden folgenden Beispielen beginnt die Reise um 19:00 an der Haltestelle "Br
 
 Mit der schnelleren Verbindung kommst du evtl. schon um 19:42 in Salzgitter-Lebenstedt an - aber die Umstiege sind nur mit 5% Chance überhaupt schaffbar.
 
-![Schnelle, aber unsichere Verbindung](/assets/monitor/reisekette_schnell_aber_unwahrscheinlich.png)
-
 Mit der langsameren Verbindung bist du zwar erst um 20:10 in Salzgitter, aber dafür sind die Umsteigezeiten lang genug, dass diese Verbindung zu 100% klappt.
 
-![Langsame, aber sichere Verbindung](/assets/monitor/reisekette_langsam_aber_wahrscheinlich.png)
+<a href="/assets/monitor/reisekette_schnell_aber_unwahrscheinlich.png"><img title="Schnelle, aber unsichere Verbindung" src="/assets/monitor/reisekette_schnell_aber_unwahrscheinlich.png" width="49%"></a>
+<a href="/assets/monitor/reisekette_langsam_aber_wahrscheinlich.png"><img title="Langsame, aber sichere Verbindung" src="/assets/monitor/reisekette_langsam_aber_wahrscheinlich.png" width="49%"></a>
 
 In der Navigationszeile oben links kannst du jederzeit zu früheren Teilen der Reise zurückspringen, um andere Varianten auszuprobieren.
 
