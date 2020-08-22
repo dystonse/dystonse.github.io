@@ -9,9 +9,7 @@ excerpt_separator: <!--more-->
 
 Die meisten Abfahrtsmonitore zeigen immer nur **genau eine Zeit** pro Fahrzeug an. Manchmal sind das einfach die Zeiten aus dem Fahrplan, manchmal ist es eine Echtzeit-basierte Prognose vom Verkehrsanbieter, der z.B. die aktuelle Position des Fahrzeugs kennt. Meistens weiß man gar nicht so genau, worauf diese Zeit im Einzelfall basiert und wie zuverlässig sie ist.
 
-Wer eine bestimmte Linie gut kennt, hat vielleicht eine Intuition dafür, wie weit die Abfahrtszeiten in Wirklichkeit verteilt sind. Das kann sich allerdings kein Mensch für alle Fahrzeuge merken – aber für einen Computer ist das eigentlich einfach.
-
-Leider haben wir bisher trotzdem noch kein Abfahrtsdisplay gesehen, wo aus diesen Informationen mehr gemacht wird, als nur eine einfache Uhrzeit, vielleicht noch mit einer zusätzlichen Verspätungsangabe in Minuten.
+Wer eine bestimmte Linie gut kennt, hat vielleicht eine Intuition dafür, wie weit die Abfahrtszeiten in Wirklichkeit verteilt sind. Das kann sich allerdings kein Mensch für alle Fahrzeuge merken – aber für einen Computer ist das eigentlich einfach. Leider haben wir bisher trotzdem noch kein Abfahrtsdisplay gesehen, wo aus diesen Informationen mehr gemacht wird, als nur eine einfache Uhrzeit, vielleicht noch mit einer zusätzlichen Verspätungsangabe in Minuten.
 
 Deshalb haben wir den erweiterten Abfahrtsmonitor entwickelt. Hier kannst du die **Wahrscheinlichkeitsverteilung**, wann dein Bus abfahren wird, als **grafische Visualisierung** sehen. Weil wir davon überzeugt sind, dass diese Information dir ein umfassenderes Bild davon vermitteln kann, wie sicher dein Ein-/Umstieg in Wirklichkeit ist. 
 
