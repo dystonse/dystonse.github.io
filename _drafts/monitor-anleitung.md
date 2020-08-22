@@ -7,8 +7,8 @@ excerpt_separator: <!--more-->
 
 # Was ist der erweiterte Abfahrtsmonitor?
 
-Die meisten Abfahrtsmonitore, denen wir bisher begegnet sind – egal ob im Internet oder an einer Bus-/Bahnhaltestelle – zeigen immer nur **genau eine Zeit** pro Fahrzeug an. Manchmal sind das einfach die Zeiten aus dem Fahrplan, manchmal ist es eine Echtzeit-basierte Prognose vom Verkehrsanbieter, der z.B. die aktuelle Position des Fahrzeugs kennt. Manchmal weiß man auch gar nicht so genau, worauf diese Zeit im Einzelfall basiert. Wir haben jedenfalls schon oft genug erlebt, dass auf die Zahlen, die auf so einem Haltestellendisplay stehen, nicht immer Verlass ist. 
-Aber um zu wissen, ob so eine Zahl zuverlässig ist, muss man schon ziemlich oft mit genau diesem Bus gefahren sein - dann hat man vielleicht eine Intuition dafür, wie weit die Abfahrtszeiten in Wirklichkeit verteilt sind. Das kann sich kein Mensch für alle Fahrzeuge merken – aber zum Glück gibt es inzwischen Computer, die uns diese Arbeit abnehmen.
+Die meisten Abfahrtsmonitore zeigen immer nur **genau eine Zeit** pro Fahrzeug an. Manchmal sind das einfach die Zeiten aus dem Fahrplan, manchmal ist es eine Echtzeit-basierte Prognose vom Verkehrsanbieter, der z.B. die aktuelle Position des Fahrzeugs kennt. Meistens weiß man gar nicht so genau, worauf diese Zeit im Einzelfall basiert und wie zuverlässig sie ist.
+Um zu wissen, ob so eine Zahl zuverlässig ist, muss man schon ziemlich oft mit genau diesem Bus gefahren sein - dann hat man vielleicht eine Intuition dafür, wie weit die Abfahrtszeiten in Wirklichkeit verteilt sind. Das kann sich zwar kein Mensch für alle Fahrzeuge merken – aber für einen Computer ist das eigentlich einfach.
 
 Leider haben wir bisher trotzdem noch kein Abfahrtsdisplay gesehen, wo aus diesen Informationen mehr gemacht wird, als nur eine einfache Uhrzeit, vielleicht noch mit einer zusätzlichen Verspätungsangabe in Minuten.
 
