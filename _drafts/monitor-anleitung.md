@@ -75,11 +75,11 @@ Du gelangst dann auf eine ähnliche Seite wie die vorherige, wo die weiteren Abf
 
 So kannst du dir deine ganze Reisekette zusammenstellen, und sehen, wie wahrscheinlich du alle Umstiege erreichst. Je nach Vorliebe kannst du dich damit schon vor der Fahrt entscheiden, ob du lieber eine Route nimmst, die nicht unbedingt klappt, aber wenn, dann eben schneller am Ziel ist – oder lieber eine sichere Route, die dafür etwas längere Umsteigezeiten enthält. Und natürlich alles dazwischen.
 
-In beiden folgenden Beispielen beginnt die Reise um 19:00 an der Haltestelle "Braunschweig Rudolfplatz":
+In beiden folgenden Beispielen beginnt die Reise um **19:00** an der Haltestelle **Braunschweig Rudolfplatz**.
 
-Mit der schnelleren Verbindung kommst du evtl. schon um 19:42 in Salzgitter-Lebenstedt an - aber die Umstiege sind nur mit 5% Chance überhaupt schaffbar.
+Mit der schnelleren Verbindung kommst du evtl. schon um **19:42** in **Salzgitter-Lebenstedt** an - aber die Ein- und Umstiege sind insgesamt nur mit **5%** Chance überhaupt schaffbar.
 
-Mit der langsameren Verbindung bist du zwar erst um 20:10 in Salzgitter, aber dafür sind die Umsteigezeiten lang genug, dass diese Verbindung zu 100% klappt.
+Mit der langsameren Verbindung bist du zwar erst um **20:10** in **Salzgitter-Lebenstedt**, aber dafür sind die Umsteigezeiten lang genug, dass diese Verbindung zu **100%** klappt.
 
 <a href="/assets/monitor/reisekette_schnell_aber_unwahrscheinlich.png"><img title="Schnelle, aber unsichere Verbindung" src="/assets/monitor/reisekette_schnell_aber_unwahrscheinlich.png" width="49%"></a>
 <a href="/assets/monitor/reisekette_langsam_aber_wahrscheinlich.png"><img title="Langsame, aber sichere Verbindung" src="/assets/monitor/reisekette_langsam_aber_wahrscheinlich.png" width="49%"></a>
